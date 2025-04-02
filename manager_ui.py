@@ -1,5 +1,5 @@
 from tkinter import *
-from constants import LIST_MASHINES
+from constants import DATA_MACHINES_ALL
 
 class ManagerMachines():
 	def __init__(self):
@@ -36,7 +36,7 @@ class Window():
 		self.ui_column_entry = 1
 		self.size_padding_grid = 1
 		self.size_padding_btn = 5
-		self.list_machines = LIST_MASHINES
+		self.list_machines = DATA_MACHINES_ALL
 		self.manager_machines = ManagerMachines()
 		self.manager_entries = ManagerEntries()
 
@@ -45,14 +45,14 @@ class Window():
 		self.win.title(self.title_window)
 		self.win.config(width = self.width_window, height = self.height_window)
 		
-		for name, i in zip(self.list_machines, range(len(self.list_machines))) :
-			temp_label = Label(self.win, text=name)
+		for machine, i in zip(self.list_machines, range(len(self.list_machines))) :
+			temp_label = Label(self.win, text=machine.NAME)
 			temp_entry = Entry(self.win)
 
 			temp_label.grid(row=i, column=self.ui_column_label, ipadx=self.size_padding_grid, ipady=self.size_padding_grid, padx=self.size_padding_grid, pady=self.size_padding_grid)
 			temp_entry.grid(row=i, column=self.ui_column_entry, ipadx=self.size_padding_grid, ipady=self.size_padding_grid, padx=self.size_padding_grid, pady=self.size_padding_grid)
 
-			self._managers_write(name, temp_entry)
+			self._managers_write(machine.NAME, temp_entry)
 			
 		
 		self.btn_appply_machines = Button(

@@ -1,115 +1,112 @@
-
-
 from sys import*
-import os
 import matplotlib.pyplot as plt
 from tkinter import*
 
 
 def mycom():
-    Button1 = Button(win, text = 'WAIT...', bg = 'YELLOW')
-    Button1.place(x = 10, y = 400, width = 265, height = 40)
+	Button1 = Button(win, text = 'WAIT...', bg = 'YELLOW')
+	Button1.place(x = 10, y = 400, width = 265, height = 40)
 
 
 def Tex(xx, yy, width_d, height_h, texted):
-    Label1 = Label(win, text = texted, fg = 'red')
-    Label1.place(x = xx, y = yy, width = width_d, height = height_h)
+	Label1 = Label(win, text = texted, fg = 'red')
+	Label1.place(x = xx, y = yy, width = width_d, height = height_h)
 
 
 def Del(yy):
-    Button1 = Button(win, text = '', bg = 'grey')
-    Button1.place(x = 0, y = yy, width = 285, height = 2)
+	Button1 = Button(win, text = '', bg = 'grey')
+	Button1.place(x = 0, y = yy, width = 285, height = 2)
 
 def Answer(xx, yy, width_d, height_h, tex):
-    Label1 = Label(win, text = tex)
-    Label1.place(x = xx, y = yy, width = width_d, height = height_h)
+	Label1 = Label(win, text = tex)
+	Label1.place(x = xx, y = yy, width = width_d, height = height_h)
 
 def save_K_700():
-    global K_700
-    K_700 = Entr_K_700.get()
-    K_700 = int(K_700)
-    
+	global K_700
+	K_700 = Entr_K_700.get()
+	K_700 = int(K_700)
+	
 def save_K_701():
-    global K_701
-    K_701 = Entr_K_701.get()
-    K_701 = int(K_701)
+	global K_701
+	K_701 = Entr_K_701.get()
+	K_701 = int(K_701)
 
 def save_DT():
-    global DT
-    DT = Entr_DT.get()
-    DT = int(DT)
+	global DT
+	DT = Entr_DT.get()
+	DT = int(DT)
 
 def save_MTZ2():
-    global MTZ2
-    MTZ2 = Entr_MTZ2.get()
-    MTZ2 = int(MTZ2)
+	global MTZ2
+	MTZ2 = Entr_MTZ2.get()
+	MTZ2 = int(MTZ2)
 
 def save_MZT():
-    global MZT
-    MZT = Entr_MZT.get()
-    MZT = int(MZT)
+	global MZT
+	MZT = Entr_MZT.get()
+	MZT = int(MZT)
 
 def save_T40():
-    global T40
-    T40 = Entr_T40.get()
-    T40 = int(T40)
+	global T40
+	T40 = Entr_T40.get()
+	T40 = int(T40)
 
 def save_T25():
-    global T25
-    T25 = Entr_T25.get()
-    T25 = int(T25)
+	global T25
+	T25 = Entr_T25.get()
+	T25 = int(T25)
 
 def save_T16():
-    global T16
-    T16 = Entr_T16.get()
-    T16 = int(T16)
+	global T16
+	T16 = Entr_T16.get()
+	T16 = int(T16)
 
 def save_UAZ():
-    global UAZ
-    UAZ = Entr_UAZ.get()
-    UAZ = int(UAZ)
+	global UAZ
+	UAZ = Entr_UAZ.get()
+	UAZ = int(UAZ)
 
 def save_KAMAZ():
-    global KAMAZ
-    KAMAZ = Entr_KAMAZ.get()
-    KAMAZ = int(KAMAZ)
+	global KAMAZ
+	KAMAZ = Entr_KAMAZ.get()
+	KAMAZ = int(KAMAZ)
 
 def save_GAZ():
-    global GAZ
-    GAZ = Entr_GAZ.get()
-    GAZ = int(GAZ)
+	global GAZ
+	GAZ = Entr_GAZ.get()
+	GAZ = int(GAZ)
 
 def save_ZIL():
-    global ZIL
-    ZIL = Entr_ZIL.get()
-    ZIL = int(ZIL)
+	global ZIL
+	ZIL = Entr_ZIL.get()
+	ZIL = int(ZIL)
 
 def save_CK():
-    global CK
-    CK = Entr_CK.get()
-    CK = int(CK)
+	global CK
+	CK = Entr_CK.get()
+	CK = int(CK)
 
 def save_KKU():
-    global KKU
-    KKU = Entr_KKU.get()
-    KKU = int(KKU)
+	global KKU
+	KKU = Entr_KKU.get()
+	KKU = int(KKU)
 
 def save_PLN():
-    global PLN
-    PLN = Entr_PLN.get()
-    PLN = int(PLN)
+	global PLN
+	PLN = Entr_PLN.get()
+	PLN = int(PLN)
 
 def save_SZ():
-    global SZ
-    SZ = Entr_SZ.get()
-    SZ = int(SZ)
+	global SZ
+	SZ = Entr_SZ.get()
+	SZ = int(SZ)
 
 def save_BDT():
-    global BDT
-    BDT = Entr_BDT.get()
-    BDT = int(BDT)
+	global BDT
+	BDT = Entr_BDT.get()
+	BDT = int(BDT)
 
-    
+	
 
 win = Tk()
 win.title('KURSOVAYA TO')
@@ -265,12 +262,12 @@ from tabulate import tabulate
 
 
 d = { 'K-700': K_700, 'K-701': K_701,
-     'ДТ-75 МВ': DT, 'МТЗ-82': MTZ2, 'МТЗ-80': MZT,
-     'Т-40': T40, 'Т-25': T25, 'Т-16': T16,
-      'УАЗ-469': UAZ,  'KAMAЗ-5320':KAMAZ, 'ГАЗ-53 А':GAZ,
-      'ЗИЛ-130': ZIL, 'CK-5': CK, 'KKУ-2 А': KKU,
-      'ПЛН-4-35': PLN, 'СЗ-3-6': SZ, 'БДТ-3': BDT,
-      }
+	 'ДТ-75 МВ': DT, 'МТЗ-82': MTZ2, 'МТЗ-80': MZT,
+	 'Т-40': T40, 'Т-25': T25, 'Т-16': T16,
+	  'УАЗ-469': UAZ,  'KAMAЗ-5320':KAMAZ, 'ГАЗ-53 А':GAZ,
+	  'ЗИЛ-130': ZIL, 'CK-5': CK, 'KKУ-2 А': KKU,
+	  'ПЛН-4-35': PLN, 'СЗ-3-6': SZ, 'БДТ-3': BDT,
+	  }
 print(tabulate(d.items(), headers=['МАРКА', 'КОЛ-ВО'], tablefmt="grid"))
 
 
@@ -307,8 +304,8 @@ print ()
 
 # ОБЪЯВЛЕНИЕ ФУНКЦИИ ДЛЯ ОКРУГЛЕНИЯ ЗНАЧЕНИЙ
 def int_r(num):
-    num = int(num + (0.5 if num > 0 else -0.5))
-    return num
+	num = int(num + (0.5 if num > 0 else -0.5))
+	return num
 
 #____________________________________________________________________________________________________________
 # ОБЪЯВЛЕНИЕ ПОСТОЯННЫХ ЗНАЧЕНИЙС
@@ -408,8 +405,8 @@ print ()
 #___________________________________________________________________________________________________________
 # ОБЪЯВЛЕНИЕ ФУНКЦИИ ДЛЯ ОКРУГЛЕНИЯ ЗНАЧЕНИЙ
 def int_r(num):
-    num = int(num + (0.5 if num > 0 else -0.5))
-    return num
+	num = int(num + (0.5 if num > 0 else -0.5))
+	return num
 
 #____________________________________________________________________________________________________________
 # ОБЪЯВЛЕНИЕ ПОСТОЯННЫХ ЗНАЧЕНИЙ
@@ -499,8 +496,8 @@ print ()
 #___________________________________________________________________________________________________________
 # ОБЪЯВЛЕНИЕ ФУНКЦИИ ДЛЯ ОКРУГЛЕНИЯ ЗНАЧЕНИЙ
 def int_r(num):
-    num = int(num + (0.5 if num > 0 else -0.5))
-    return num
+	num = int(num + (0.5 if num > 0 else -0.5))
+	return num
 
 #____________________________________________________________________________________________________________
 # ОБЪЯВЛЕНИЕ ПОСТОЯННЫХ ЗНАЧЕНИЙ
@@ -590,8 +587,8 @@ print ()
 #___________________________________________________________________________________________________________
 # ОБЪЯВЛЕНИЕ ФУНКЦИИ ДЛЯ ОКРУГЛЕНИЯ ЗНАЧЕНИЙ
 def int_r(num):
-    num = int(num + (0.5 if num > 0 else -0.5))
-    return num
+	num = int(num + (0.5 if num > 0 else -0.5))
+	return num
 
 #____________________________________________________________________________________________________________
 # ОБЪЯВЛЕНИЕ ПОСТОЯННЫХ ЗНАЧЕНИЙ
@@ -681,8 +678,8 @@ print ()
 #___________________________________________________________________________________________________________
 # ОБЪЯВЛЕНИЕ ФУНКЦИИ ДЛЯ ОКРУГЛЕНИЯ ЗНАЧЕНИЙ
 def int_r(num):
-    num = int(num + (0.5 if num > 0 else -0.5))
-    return num
+	num = int(num + (0.5 if num > 0 else -0.5))
+	return num
 
 #____________________________________________________________________________________________________________
 # ОБЪЯВЛЕНИЕ ПОСТОЯННЫХ ЗНАЧЕНИЙ
@@ -772,8 +769,8 @@ print ()
 #___________________________________________________________________________________________________________
 # ОБЪЯВЛЕНИЕ ФУНКЦИИ ДЛЯ ОКРУГЛЕНИЯ ЗНАЧЕНИЙ
 def int_r(num):
-    num = int(num + (0.5 if num > 0 else -0.5))
-    return num
+	num = int(num + (0.5 if num > 0 else -0.5))
+	return num
 
 #____________________________________________________________________________________________________________
 # ОБЪЯВЛЕНИЕ ПОСТОЯННЫХ ЗНАЧЕНИЙ
@@ -861,8 +858,8 @@ print ()
 #___________________________________________________________________________________________________________
 # ОБЪЯВЛЕНИЕ ФУНКЦИИ ДЛЯ ОКРУГЛЕНИЯ ЗНАЧЕНИЙ
 def int_r(num):
-    num = int(num + (0.5 if num > 0 else -0.5))
-    return num
+	num = int(num + (0.5 if num > 0 else -0.5))
+	return num
 
 #____________________________________________________________________________________________________________
 # ОБЪЯВЛЕНИЕ ПОСТОЯННЫХ ЗНАЧЕНИЙ
@@ -952,8 +949,8 @@ print ()
 #___________________________________________________________________________________________________________
 # ОБЪЯВЛЕНИЕ ФУНКЦИИ ДЛЯ ОКРУГЛЕНИЯ ЗНАЧЕНИЙ
 def int_r(num):
-    num = int(num + (0.5 if num > 0 else -0.5))
-    return num
+	num = int(num + (0.5 if num > 0 else -0.5))
+	return num
 
 #____________________________________________________________________________________________________________
 # ОБЪЯВЛЕНИЕ ПОСТОЯННЫХ ЗНАЧЕНИЙ
@@ -1043,8 +1040,8 @@ print ()
 #_______________________________________________________
 # ЦИКЛ ДЛЯ ОКРУГЛЕНИЯ ЗНАЧЕНИЙ
 def int_r(num):
-    num = int(num + (0.5 if num > 0 else -0.5))
-    return num
+	num = int(num + (0.5 if num > 0 else -0.5))
+	return num
 
 #_______________________________________________________
 # ВВЕДЕНИЕ ПОСТОЯННЫХ ЗНАЧЕНИЙ
@@ -1085,8 +1082,8 @@ print ()
 #_______________________________________________________
 # ЦИКЛ ДЛЯ ОКРУГЛЕНИЯ ЗНАЧЕНИЙ
 def int_r(num):
-    num = int(num + (0.5 if num > 0 else -0.5))
-    return num
+	num = int(num + (0.5 if num > 0 else -0.5))
+	return num
 
 #_______________________________________________________
 # ВВЕДЕНИЕ ПОСТОЯННЫХ ЗНАЧЕНИЙ
@@ -1128,8 +1125,8 @@ print ()
 #_______________________________________________________
 # ЦИКЛ ДЛЯ ОКРУГЛЕНИЯ ЗНАЧЕНИЙ
 def int_r(num):
-    num = int(num + (0.5 if num > 0 else -0.5))
-    return num
+	num = int(num + (0.5 if num > 0 else -0.5))
+	return num
 
 #_______________________________________________________
 # ВВЕДЕНИЕ ПОСТОЯННЫХ ЗНАЧЕНИЙ
@@ -1170,8 +1167,8 @@ print ()
 #_______________________________________________________
 # ЦИКЛ ДЛЯ ОКРУГЛЕНИЯ ЗНАЧЕНИЙ
 def int_r(num):
-    num = int(num + (0.5 if num > 0 else -0.5))
-    return num
+	num = int(num + (0.5 if num > 0 else -0.5))
+	return num
 
 #_______________________________________________________
 # ВВЕДЕНИЕ ПОСТОЯННЫХ ЗНАЧЕНИЙ
@@ -1210,8 +1207,8 @@ print ()
 #_______________________________________________________
 # ЦИКЛ ДЛЯ ОКРУГЛЕНИЯ ЗНАЧЕНИЙ
 def int_r(num):
-    num = int(num + (0.5 if num > 0 else -0.5))
-    return num
+	num = int(num + (0.5 if num > 0 else -0.5))
+	return num
 
 #_______________________________________________________
 # ВВЕДЕНИЕ ПОСТОЯННЫХ ЗНАЧЕНИЙ
@@ -1291,8 +1288,8 @@ print ()
 #___________________________________________________________________________________________________________
 # ОБЪЯВЛЕНИЕ ФУНКЦИИ ДЛЯ ОКРУГЛЕНИЯ ЗНАЧЕНИЙ
 def int_r(num):
-    num = int(num + (0.5 if num > 0 else -0.5))
-    return num
+	num = int(num + (0.5 if num > 0 else -0.5))
+	return num
 
 #____________________________________________________________________________________________________________
 # ОБЪЯВЛЕНИЕ ПОСТОЯННЫХ ЗНАЧЕНИЙ
@@ -1363,8 +1360,8 @@ print ()
 #___________________________________________________________________________________________________________
 # ОБЪЯВЛЕНИЕ ФУНКЦИИ ДЛЯ ОКРУГЛЕНИЯ ЗНАЧЕНИЙ
 def int_r(num):
-    num = int(num + (0.5 if num > 0 else -0.5))
-    return num
+	num = int(num + (0.5 if num > 0 else -0.5))
+	return num
 
 #____________________________________________________________________________________________________________
 # ОБЪЯВЛЕНИЕ ПОСТОЯННЫХ ЗНАЧЕНИЙ
@@ -1436,8 +1433,8 @@ print ()
 #___________________________________________________________________________________________________________
 # ОБЪЯВЛЕНИЕ ФУНКЦИИ ДЛЯ ОКРУГЛЕНИЯ ЗНАЧЕНИЙ
 def int_r(num):
-    num = int(num + (0.5 if num > 0 else -0.5))
-    return num
+	num = int(num + (0.5 if num > 0 else -0.5))
+	return num
 
 #____________________________________________________________________________________________________________
 # ОБЪЯВЛЕНИЕ ПОСТОЯННЫХ ЗНАЧЕНИЙ
@@ -1509,8 +1506,8 @@ print ()
 #___________________________________________________________________________________________________________
 # ОБЪЯВЛЕНИЕ ФУНКЦИИ ДЛЯ ОКРУГЛЕНИЯ ЗНАЧЕНИЙ
 def int_r(num):
-    num = int(num + (0.5 if num > 0 else -0.5))
-    return num
+	num = int(num + (0.5 if num > 0 else -0.5))
+	return num
 
 #____________________________________________________________________________________________________________
 # ОБЪЯВЛЕНИЕ ПОСТОЯННЫХ ЗНАЧЕНИЙ
@@ -2335,13 +2332,13 @@ from prettytable import PrettyTable
 th = ['МАРКА', 'КОЛ-ВО', 'КР', 'ТР', 'ТО-3', 'TO-2', 'TO-1', 'CTO']
 
 td = ['К-700', K_700, NKR_K_700_d, NTR_K_700, NTO_3_K_700, NTO_2_K_700, NTO_1_K_700, K_700_N_CTO,
-      'К-701', K_701, NKR_K_701_d, NTR_K_701, NTO_3_K_701, NTO_2_K_701, NTO_1_K_701, K_701_N_CTO,
-      'ДТ-75 МВ', DT, NKR_DT_d, NTR_DT, NTO_3_DT, NTO_2_DT, NTO_1_DT, DT_N_CTO,
-      'МТЗ-82', MTZ2, NKR_MTZ2_d, NTR_MTZ2, NTO_3_MTZ2, NTO_2_MTZ2, NTO_1_MTZ2, MTZ2_N_CTO,
-      'МТЗ-80', MZT, NKR_MZT_d, NTR_MZT, NTO_3_MZT, NTO_2_MZT, NTO_1_MZT, MZT_N_CTO,
-      'Т-40', T40, NKR_T40_d, NTR_T40, NTO_3_T40, NTO_2_T40, NTO_1_T40, T40_N_CTO,
-      'Т-25', T25, NKR_T25_d, NTR_T25, NTO_3_T25, NTO_2_T25, NTO_1_T25, T25_N_CTO,
-      'Т-16', T16, NKR_T16_d, NTR_T16, NTO_3_T16, NTO_2_T16, NTO_1_T16, T16_N_CTO]
+	  'К-701', K_701, NKR_K_701_d, NTR_K_701, NTO_3_K_701, NTO_2_K_701, NTO_1_K_701, K_701_N_CTO,
+	  'ДТ-75 МВ', DT, NKR_DT_d, NTR_DT, NTO_3_DT, NTO_2_DT, NTO_1_DT, DT_N_CTO,
+	  'МТЗ-82', MTZ2, NKR_MTZ2_d, NTR_MTZ2, NTO_3_MTZ2, NTO_2_MTZ2, NTO_1_MTZ2, MTZ2_N_CTO,
+	  'МТЗ-80', MZT, NKR_MZT_d, NTR_MZT, NTO_3_MZT, NTO_2_MZT, NTO_1_MZT, MZT_N_CTO,
+	  'Т-40', T40, NKR_T40_d, NTR_T40, NTO_3_T40, NTO_2_T40, NTO_1_T40, T40_N_CTO,
+	  'Т-25', T25, NKR_T25_d, NTR_T25, NTO_3_T25, NTO_2_T25, NTO_1_T25, T25_N_CTO,
+	  'Т-16', T16, NKR_T16_d, NTR_T16, NTO_3_T16, NTO_2_T16, NTO_1_T16, T16_N_CTO]
 
 # Определяем твою шапку и данные.
 #th = [...]
@@ -2357,12 +2354,12 @@ td_data = td[:]
 # Цикл будет выполняться до тех пор пока у нас не кончатся данные
 # для заполнения строк таблицы (список td_data).
 while td_data:
-    # Используя срез добавляем первые пять элементов в строку.
-    # (columns = 5).
-    table.add_row(td_data[:columns])
-    # Используя срез переопределяем td_data так, чтобы он
-    # больше не содержал первых 5 элементов.
-    td_data = td_data[columns:]
+	# Используя срез добавляем первые пять элементов в строку.
+	# (columns = 5).
+	table.add_row(td_data[:columns])
+	# Используя срез переопределяем td_data так, чтобы он
+	# больше не содержал первых 5 элементов.
+	td_data = td_data[columns:]
 
 print(table)  # Печатаем таблицу
 
@@ -2385,10 +2382,10 @@ from prettytable import PrettyTable
 th = ['МАРКА', 'КОЛ-ВО', 'КОЭФ.РЕМ.', 'КОЭФ.ПСТО', 'КОЛ-ВО ТР', 'КОЛ-ВО ПСТО']
 
 td = ['ККУ-2 А', KKU, "0.8", "1", KKU_NTR_d, KKU_NCTO,
-      'ПЛН-4-35', PLN, "0.8", "2", PLN_NTR_d, PLN_NCTO,
-      'БДТ-3', BDT, '0.78', "2", BDT_NTR_d, BDT_NCTO,
-      'СЗ-3-6', SZ, "0.78", "2", SZ_NTR_d, SZ_NCTO,
-      'СК-5', CK, '-', "1", NTR_CK_d, NCTO_CK]
+	  'ПЛН-4-35', PLN, "0.8", "2", PLN_NTR_d, PLN_NCTO,
+	  'БДТ-3', BDT, '0.78', "2", BDT_NTR_d, BDT_NCTO,
+	  'СЗ-3-6', SZ, "0.78", "2", SZ_NTR_d, SZ_NCTO,
+	  'СК-5', CK, '-', "1", NTR_CK_d, NCTO_CK]
 
 # Определяем твою шапку и данные.
 #th = [...]
@@ -2404,12 +2401,12 @@ td_data = td[:]
 # Цикл будет выполняться до тех пор пока у нас не кончатся данные
 # для заполнения строк таблицы (список td_data).
 while td_data:
-    # Используя срез добавляем первые пять элементов в строку.
-    # (columns = 5).
-    table.add_row(td_data[:columns])
-    # Используя срез переопределяем td_data так, чтобы он
-    # больше не содержал первых 5 элементов.
-    td_data = td_data[columns:]
+	# Используя срез добавляем первые пять элементов в строку.
+	# (columns = 5).
+	table.add_row(td_data[:columns])
+	# Используя срез переопределяем td_data так, чтобы он
+	# больше не содержал первых 5 элементов.
+	td_data = td_data[columns:]
 
 print(table)  # Печатаем таблицу
 
@@ -2428,115 +2425,115 @@ print(table)  # Печатаем таблицу
 # w перезапись с удалением всего что было
 # a дозапись с сохранением старого
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nК-700:')
+	file_object.write('\nК-700:')
 
 ################################################    NKR
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNкр')
-    file_object.write(' = ')
-    file_object.write(str(K_700_NKR_U))
-    file_object.write(' * ')
-    file_object.write(str(K_700))
-    file_object.write(' / ')
-    file_object.write(str(K_700_NKR_N))
-    file_object.write(' = ')
-    file_object.write(str(NKR_K_700))
-    file_object.write('\nПринимаю = ')
-    file_object.write(str(NKR_K_700_d))
+	file_object.write('\nNкр')
+	file_object.write(' = ')
+	file_object.write(str(K_700_NKR_U))
+	file_object.write(' * ')
+	file_object.write(str(K_700))
+	file_object.write(' / ')
+	file_object.write(str(K_700_NKR_N))
+	file_object.write(' = ')
+	file_object.write(str(NKR_K_700))
+	file_object.write('\nПринимаю = ')
+	file_object.write(str(NKR_K_700_d))
 
 ################################################   NTR
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNтр')
-    file_object.write(' = ')
-    file_object.write(str(K_700_NKR_U))
-    file_object.write(' * ')
-    file_object.write(str(K_700))
-    file_object.write(' / ')
-    file_object.write(str(K_700_NTR_N))
-    file_object.write(' - ')
-    file_object.write(str(NKR_K_700_d))
-    file_object.write(' = ')
-    file_object.write(str(NTR_K_700))
-    file_object.write('\nПринимаю = ')
-    file_object.write(str(NTO_2_K_700_d))
+	file_object.write('\nNтр')
+	file_object.write(' = ')
+	file_object.write(str(K_700_NKR_U))
+	file_object.write(' * ')
+	file_object.write(str(K_700))
+	file_object.write(' / ')
+	file_object.write(str(K_700_NTR_N))
+	file_object.write(' - ')
+	file_object.write(str(NKR_K_700_d))
+	file_object.write(' = ')
+	file_object.write(str(NTR_K_700))
+	file_object.write('\nПринимаю = ')
+	file_object.write(str(NTO_2_K_700_d))
 
 ################################################    NTO-3
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNто-3')
-    file_object.write(' = ')
-    file_object.write(str(K_700_NKR_U))
-    file_object.write(' * ')
-    file_object.write(str(K_700))
-    file_object.write(' / ')
-    file_object.write(str(NKR_K_700_d))
-    file_object.write(' - ')
-    file_object.write(str(K_700_NTO_3_N))
-    file_object.write(' - ')
-    file_object.write(str(NKR_K_700_d))
-    file_object.write(' - ')
-    file_object.write(str(NTO_2_K_700_d))
-    file_object.write(' = ')
-    file_object.write(str(NTO_3_K_700))
-    file_object.write('\nПринимаю = ')
-    file_object.write(str(NTO_3_K_700_d))
+	file_object.write('\nNто-3')
+	file_object.write(' = ')
+	file_object.write(str(K_700_NKR_U))
+	file_object.write(' * ')
+	file_object.write(str(K_700))
+	file_object.write(' / ')
+	file_object.write(str(NKR_K_700_d))
+	file_object.write(' - ')
+	file_object.write(str(K_700_NTO_3_N))
+	file_object.write(' - ')
+	file_object.write(str(NKR_K_700_d))
+	file_object.write(' - ')
+	file_object.write(str(NTO_2_K_700_d))
+	file_object.write(' = ')
+	file_object.write(str(NTO_3_K_700))
+	file_object.write('\nПринимаю = ')
+	file_object.write(str(NTO_3_K_700_d))
 
 ################################################    NTO-2
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNто-2')
-    file_object.write(' = ')
-    file_object.write(str(K_700_NKR_U))
-    file_object.write(' * ')
-    file_object.write(str(K_700))
-    file_object.write(' / ')
-    file_object.write(str(NKR_K_700_d))
-    file_object.write(' - ')
-    file_object.write(str(K_700_NTO_3_N))
-    file_object.write(' - ')
-    file_object.write(str(NKR_K_700_d))
-    file_object.write(' - ')
-    file_object.write(str(NTO_2_K_700_d))
-    file_object.write(' - ')
-    file_object.write(str(K_700_NTO_2_N))
-    file_object.write(' = ')
-    file_object.write(str(NTO_2_K_700))
-    file_object.write('\nПринимаю = ')
-    file_object.write(str(NTO_2_K_700_d))
+	file_object.write('\nNто-2')
+	file_object.write(' = ')
+	file_object.write(str(K_700_NKR_U))
+	file_object.write(' * ')
+	file_object.write(str(K_700))
+	file_object.write(' / ')
+	file_object.write(str(NKR_K_700_d))
+	file_object.write(' - ')
+	file_object.write(str(K_700_NTO_3_N))
+	file_object.write(' - ')
+	file_object.write(str(NKR_K_700_d))
+	file_object.write(' - ')
+	file_object.write(str(NTO_2_K_700_d))
+	file_object.write(' - ')
+	file_object.write(str(K_700_NTO_2_N))
+	file_object.write(' = ')
+	file_object.write(str(NTO_2_K_700))
+	file_object.write('\nПринимаю = ')
+	file_object.write(str(NTO_2_K_700_d))
 
 ################################################    NTO-1
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNто-1')
-    file_object.write(' = ')
-    file_object.write(str(K_700_NKR_U))
-    file_object.write(' * ')
-    file_object.write(str(K_700))
-    file_object.write(' / ')
-    file_object.write(str(NKR_K_700_d))
-    file_object.write(' - ')
-    file_object.write(str(K_700_NTO_3_N))
-    file_object.write(' - ')
-    file_object.write(str(NKR_K_700_d))
-    file_object.write(' - ')
-    file_object.write(str(NTO_2_K_700_d))
-    file_object.write(' - ')
-    file_object.write(str(K_700_NTO_2_N))
-    file_object.write(' - ')
-    file_object.write(str(K_700_NTO_1_N))
-    file_object.write(' = ')
-    file_object.write(str(NTO_1_K_700))
-    file_object.write('\nПринимаю = ')
-    file_object.write(str(NTO_1_K_700_d))
+	file_object.write('\nNто-1')
+	file_object.write(' = ')
+	file_object.write(str(K_700_NKR_U))
+	file_object.write(' * ')
+	file_object.write(str(K_700))
+	file_object.write(' / ')
+	file_object.write(str(NKR_K_700_d))
+	file_object.write(' - ')
+	file_object.write(str(K_700_NTO_3_N))
+	file_object.write(' - ')
+	file_object.write(str(NKR_K_700_d))
+	file_object.write(' - ')
+	file_object.write(str(NTO_2_K_700_d))
+	file_object.write(' - ')
+	file_object.write(str(K_700_NTO_2_N))
+	file_object.write(' - ')
+	file_object.write(str(K_700_NTO_1_N))
+	file_object.write(' = ')
+	file_object.write(str(NTO_1_K_700))
+	file_object.write('\nПринимаю = ')
+	file_object.write(str(NTO_1_K_700_d))
 
 
 
 ################################################    NCTO
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNсто')
-    file_object.write(' = ')
-    file_object.write(str(K_700_NKR_U))
-    file_object.write(' * ')
-    file_object.write(str(K_700))
-    file_object.write(' = ')
-    file_object.write(str(K_700_N_CTO))
+	file_object.write('\nNсто')
+	file_object.write(' = ')
+	file_object.write(str(K_700_NKR_U))
+	file_object.write(' * ')
+	file_object.write(str(K_700))
+	file_object.write(' = ')
+	file_object.write(str(K_700_N_CTO))
 
 ####################################################################
 #                           K-701
@@ -2546,114 +2543,114 @@ with open('KURSOVAYA_v1.txt', 'a')as file_object:
 # w перезапись с удалением всего что было
 # a дозапись с сохранением старого
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\n')
-    file_object.write('\nК-701:')
+	file_object.write('\n')
+	file_object.write('\nК-701:')
 
 ################################################    NKR
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNкр')
-    file_object.write(' = ')
-    file_object.write(str(K_701_NKR_U))
-    file_object.write(' * ')
-    file_object.write(str(K_701))
-    file_object.write(' / ')
-    file_object.write(str(K_701_NKR_N))
-    file_object.write(' = ')
-    file_object.write(str(NKR_K_701))
-    file_object.write('\nПринимаю = ')
-    file_object.write(str(NKR_K_701_d))
+	file_object.write('\nNкр')
+	file_object.write(' = ')
+	file_object.write(str(K_701_NKR_U))
+	file_object.write(' * ')
+	file_object.write(str(K_701))
+	file_object.write(' / ')
+	file_object.write(str(K_701_NKR_N))
+	file_object.write(' = ')
+	file_object.write(str(NKR_K_701))
+	file_object.write('\nПринимаю = ')
+	file_object.write(str(NKR_K_701_d))
 
 ################################################   NTR
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNтр')
-    file_object.write(' = ')
-    file_object.write(str(K_701_NKR_U))
-    file_object.write(' * ')
-    file_object.write(str(K_701))
-    file_object.write(' / ')
-    file_object.write(str(K_701_NTR_N))
-    file_object.write(' - ')
-    file_object.write(str(NKR_K_701_d))
-    file_object.write(' = ')
-    file_object.write(str(NTR_K_701))
-    file_object.write('\nПринимаю = ')
-    file_object.write(str(NTO_2_K_701_d))
+	file_object.write('\nNтр')
+	file_object.write(' = ')
+	file_object.write(str(K_701_NKR_U))
+	file_object.write(' * ')
+	file_object.write(str(K_701))
+	file_object.write(' / ')
+	file_object.write(str(K_701_NTR_N))
+	file_object.write(' - ')
+	file_object.write(str(NKR_K_701_d))
+	file_object.write(' = ')
+	file_object.write(str(NTR_K_701))
+	file_object.write('\nПринимаю = ')
+	file_object.write(str(NTO_2_K_701_d))
 
 ################################################    NTO-3
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNто-3')
-    file_object.write(' = ')
-    file_object.write(str(K_701_NKR_U))
-    file_object.write(' * ')
-    file_object.write(str(K_701))
-    file_object.write(' / ')
-    file_object.write(str(NKR_K_701_d))
-    file_object.write(' - ')
-    file_object.write(str(K_701_NTO_3_N))
-    file_object.write(' - ')
-    file_object.write(str(NKR_K_701_d))
-    file_object.write(' - ')
-    file_object.write(str(NTO_2_K_701_d))
-    file_object.write(' = ')
-    file_object.write(str(NTO_3_K_701))
-    file_object.write('\nПринимаю = ')
-    file_object.write(str(NTO_3_K_701_d))
+	file_object.write('\nNто-3')
+	file_object.write(' = ')
+	file_object.write(str(K_701_NKR_U))
+	file_object.write(' * ')
+	file_object.write(str(K_701))
+	file_object.write(' / ')
+	file_object.write(str(NKR_K_701_d))
+	file_object.write(' - ')
+	file_object.write(str(K_701_NTO_3_N))
+	file_object.write(' - ')
+	file_object.write(str(NKR_K_701_d))
+	file_object.write(' - ')
+	file_object.write(str(NTO_2_K_701_d))
+	file_object.write(' = ')
+	file_object.write(str(NTO_3_K_701))
+	file_object.write('\nПринимаю = ')
+	file_object.write(str(NTO_3_K_701_d))
 
 ################################################    NTO-2
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNто-2')
-    file_object.write(' = ')
-    file_object.write(str(K_701_NKR_U))
-    file_object.write(' * ')
-    file_object.write(str(K_701))
-    file_object.write(' / ')
-    file_object.write(str(NKR_K_701_d))
-    file_object.write(' - ')
-    file_object.write(str(K_701_NTO_3_N))
-    file_object.write(' - ')
-    file_object.write(str(NKR_K_701_d))
-    file_object.write(' - ')
-    file_object.write(str(NTO_2_K_701_d))
-    file_object.write(' - ')
-    file_object.write(str(K_701_NTO_2_N))
-    file_object.write(' = ')
-    file_object.write(str(NTO_2_K_701))
-    file_object.write('\nПринимаю = ')
-    file_object.write(str(NTO_2_K_701_d))
+	file_object.write('\nNто-2')
+	file_object.write(' = ')
+	file_object.write(str(K_701_NKR_U))
+	file_object.write(' * ')
+	file_object.write(str(K_701))
+	file_object.write(' / ')
+	file_object.write(str(NKR_K_701_d))
+	file_object.write(' - ')
+	file_object.write(str(K_701_NTO_3_N))
+	file_object.write(' - ')
+	file_object.write(str(NKR_K_701_d))
+	file_object.write(' - ')
+	file_object.write(str(NTO_2_K_701_d))
+	file_object.write(' - ')
+	file_object.write(str(K_701_NTO_2_N))
+	file_object.write(' = ')
+	file_object.write(str(NTO_2_K_701))
+	file_object.write('\nПринимаю = ')
+	file_object.write(str(NTO_2_K_701_d))
 
 ################################################    NTO-1
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNто-1')
-    file_object.write(' = ')
-    file_object.write(str(K_701_NKR_U))
-    file_object.write(' * ')
-    file_object.write(str(K_701))
-    file_object.write(' / ')
-    file_object.write(str(NKR_K_701_d))
-    file_object.write(' - ')
-    file_object.write(str(K_701_NTO_3_N))
-    file_object.write(' - ')
-    file_object.write(str(NKR_K_701_d))
-    file_object.write(' - ')
-    file_object.write(str(NTO_2_K_701_d))
-    file_object.write(' - ')
-    file_object.write(str(K_701_NTO_2_N))
-    file_object.write(' - ')
-    file_object.write(str(K_701_NTO_1_N))
-    file_object.write(' = ')
-    file_object.write(str(NTO_1_K_701))
-    file_object.write('\nПринимаю = ')
-    file_object.write(str(NTO_1_K_701_d))
+	file_object.write('\nNто-1')
+	file_object.write(' = ')
+	file_object.write(str(K_701_NKR_U))
+	file_object.write(' * ')
+	file_object.write(str(K_701))
+	file_object.write(' / ')
+	file_object.write(str(NKR_K_701_d))
+	file_object.write(' - ')
+	file_object.write(str(K_701_NTO_3_N))
+	file_object.write(' - ')
+	file_object.write(str(NKR_K_701_d))
+	file_object.write(' - ')
+	file_object.write(str(NTO_2_K_701_d))
+	file_object.write(' - ')
+	file_object.write(str(K_701_NTO_2_N))
+	file_object.write(' - ')
+	file_object.write(str(K_701_NTO_1_N))
+	file_object.write(' = ')
+	file_object.write(str(NTO_1_K_701))
+	file_object.write('\nПринимаю = ')
+	file_object.write(str(NTO_1_K_701_d))
 
 ################################################    NCTO
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNсто')
-    file_object.write(' = ')
-    file_object.write(str(K_701_NKR_U))
-    file_object.write(' * ')
-    file_object.write(str(K_701))
-    file_object.write(' = ')
-    file_object.write(str(K_701_N_CTO))
+	file_object.write('\nNсто')
+	file_object.write(' = ')
+	file_object.write(str(K_701_NKR_U))
+	file_object.write(' * ')
+	file_object.write(str(K_701))
+	file_object.write(' = ')
+	file_object.write(str(K_701_N_CTO))
 
 
 
@@ -2665,114 +2662,114 @@ with open('KURSOVAYA_v1.txt', 'a')as file_object:
 # w перезапись с удалением всего что было
 # a дозапись с сохранением старого
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\n')
-    file_object.write('\nДТ-75 МВ:')
+	file_object.write('\n')
+	file_object.write('\nДТ-75 МВ:')
 
 ################################################    NKR
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNкр')
-    file_object.write(' = ')
-    file_object.write(str(DT_NKR_U))
-    file_object.write(' * ')
-    file_object.write(str(DT))
-    file_object.write(' / ')
-    file_object.write(str(DT_NKR_N))
-    file_object.write(' = ')
-    file_object.write(str(NKR_DT))
-    file_object.write('\nПринимаю = ')
-    file_object.write(str(NKR_DT_d))
+	file_object.write('\nNкр')
+	file_object.write(' = ')
+	file_object.write(str(DT_NKR_U))
+	file_object.write(' * ')
+	file_object.write(str(DT))
+	file_object.write(' / ')
+	file_object.write(str(DT_NKR_N))
+	file_object.write(' = ')
+	file_object.write(str(NKR_DT))
+	file_object.write('\nПринимаю = ')
+	file_object.write(str(NKR_DT_d))
 
 ################################################   NTR
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNтр')
-    file_object.write(' = ')
-    file_object.write(str(DT_NKR_U))
-    file_object.write(' * ')
-    file_object.write(str(DT))
-    file_object.write(' / ')
-    file_object.write(str(DT_NTR_N))
-    file_object.write(' - ')
-    file_object.write(str(NKR_DT_d))
-    file_object.write(' = ')
-    file_object.write(str(NTR_DT))
-    file_object.write('\nПринимаю = ')
-    file_object.write(str(NTO_2_DT_d))
+	file_object.write('\nNтр')
+	file_object.write(' = ')
+	file_object.write(str(DT_NKR_U))
+	file_object.write(' * ')
+	file_object.write(str(DT))
+	file_object.write(' / ')
+	file_object.write(str(DT_NTR_N))
+	file_object.write(' - ')
+	file_object.write(str(NKR_DT_d))
+	file_object.write(' = ')
+	file_object.write(str(NTR_DT))
+	file_object.write('\nПринимаю = ')
+	file_object.write(str(NTO_2_DT_d))
 
 ################################################    NTO-3
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNто-3')
-    file_object.write(' = ')
-    file_object.write(str(DT_NKR_U))
-    file_object.write(' * ')
-    file_object.write(str(DT))
-    file_object.write(' / ')
-    file_object.write(str(NKR_DT_d))
-    file_object.write(' - ')
-    file_object.write(str(DT_NTO_3_N))
-    file_object.write(' - ')
-    file_object.write(str(NKR_DT_d))
-    file_object.write(' - ')
-    file_object.write(str(NTO_2_DT_d))
-    file_object.write(' = ')
-    file_object.write(str(NTO_3_DT))
-    file_object.write('\nПринимаю = ')
-    file_object.write(str(NTO_3_DT_d))
+	file_object.write('\nNто-3')
+	file_object.write(' = ')
+	file_object.write(str(DT_NKR_U))
+	file_object.write(' * ')
+	file_object.write(str(DT))
+	file_object.write(' / ')
+	file_object.write(str(NKR_DT_d))
+	file_object.write(' - ')
+	file_object.write(str(DT_NTO_3_N))
+	file_object.write(' - ')
+	file_object.write(str(NKR_DT_d))
+	file_object.write(' - ')
+	file_object.write(str(NTO_2_DT_d))
+	file_object.write(' = ')
+	file_object.write(str(NTO_3_DT))
+	file_object.write('\nПринимаю = ')
+	file_object.write(str(NTO_3_DT_d))
 
 ################################################    NTO-2
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNто-2')
-    file_object.write(' = ')
-    file_object.write(str(DT_NKR_U))
-    file_object.write(' * ')
-    file_object.write(str(DT))
-    file_object.write(' / ')
-    file_object.write(str(NKR_DT_d))
-    file_object.write(' - ')
-    file_object.write(str(DT_NTO_3_N))
-    file_object.write(' - ')
-    file_object.write(str(NKR_DT_d))
-    file_object.write(' - ')
-    file_object.write(str(NTO_2_DT_d))
-    file_object.write(' - ')
-    file_object.write(str(DT_NTO_2_N))
-    file_object.write(' = ')
-    file_object.write(str(NTO_2_DT))
-    file_object.write('\nПринимаю = ')
-    file_object.write(str(NTO_2_DT_d))
+	file_object.write('\nNто-2')
+	file_object.write(' = ')
+	file_object.write(str(DT_NKR_U))
+	file_object.write(' * ')
+	file_object.write(str(DT))
+	file_object.write(' / ')
+	file_object.write(str(NKR_DT_d))
+	file_object.write(' - ')
+	file_object.write(str(DT_NTO_3_N))
+	file_object.write(' - ')
+	file_object.write(str(NKR_DT_d))
+	file_object.write(' - ')
+	file_object.write(str(NTO_2_DT_d))
+	file_object.write(' - ')
+	file_object.write(str(DT_NTO_2_N))
+	file_object.write(' = ')
+	file_object.write(str(NTO_2_DT))
+	file_object.write('\nПринимаю = ')
+	file_object.write(str(NTO_2_DT_d))
 
 ################################################    NTO-1
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNто-1')
-    file_object.write(' = ')
-    file_object.write(str(DT_NKR_U))
-    file_object.write(' * ')
-    file_object.write(str(DT))
-    file_object.write(' / ')
-    file_object.write(str(NKR_DT_d))
-    file_object.write(' - ')
-    file_object.write(str(DT_NTO_3_N))
-    file_object.write(' - ')
-    file_object.write(str(NKR_DT_d))
-    file_object.write(' - ')
-    file_object.write(str(NTO_2_DT_d))
-    file_object.write(' - ')
-    file_object.write(str(DT_NTO_2_N))
-    file_object.write(' - ')
-    file_object.write(str(DT_NTO_1_N))
-    file_object.write(' = ')
-    file_object.write(str(NTO_1_DT))
-    file_object.write('\nПринимаю = ')
-    file_object.write(str(NTO_1_DT_d))
+	file_object.write('\nNто-1')
+	file_object.write(' = ')
+	file_object.write(str(DT_NKR_U))
+	file_object.write(' * ')
+	file_object.write(str(DT))
+	file_object.write(' / ')
+	file_object.write(str(NKR_DT_d))
+	file_object.write(' - ')
+	file_object.write(str(DT_NTO_3_N))
+	file_object.write(' - ')
+	file_object.write(str(NKR_DT_d))
+	file_object.write(' - ')
+	file_object.write(str(NTO_2_DT_d))
+	file_object.write(' - ')
+	file_object.write(str(DT_NTO_2_N))
+	file_object.write(' - ')
+	file_object.write(str(DT_NTO_1_N))
+	file_object.write(' = ')
+	file_object.write(str(NTO_1_DT))
+	file_object.write('\nПринимаю = ')
+	file_object.write(str(NTO_1_DT_d))
 
 ################################################    NCTO
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNсто')
-    file_object.write(' = ')
-    file_object.write(str(DT_NKR_U))
-    file_object.write(' * ')
-    file_object.write(str(DT))
-    file_object.write(' = ')
-    file_object.write(str(DT_N_CTO))
+	file_object.write('\nNсто')
+	file_object.write(' = ')
+	file_object.write(str(DT_NKR_U))
+	file_object.write(' * ')
+	file_object.write(str(DT))
+	file_object.write(' = ')
+	file_object.write(str(DT_N_CTO))
 
 
 
@@ -2784,114 +2781,114 @@ with open('KURSOVAYA_v1.txt', 'a')as file_object:
 # w перезапись с удалением всего что было
 # a дозапись с сохранением старого
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\n')
-    file_object.write('\nМТЗ-82:')
+	file_object.write('\n')
+	file_object.write('\nМТЗ-82:')
 
 ################################################    NKR
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNкр')
-    file_object.write(' = ')
-    file_object.write(str(MTZ2_NKR_U))
-    file_object.write(' * ')
-    file_object.write(str(MTZ2))
-    file_object.write(' / ')
-    file_object.write(str(MTZ2_NKR_N))
-    file_object.write(' = ')
-    file_object.write(str(NKR_MTZ2))
-    file_object.write('\nПринимаю = ')
-    file_object.write(str(NKR_MTZ2_d))
+	file_object.write('\nNкр')
+	file_object.write(' = ')
+	file_object.write(str(MTZ2_NKR_U))
+	file_object.write(' * ')
+	file_object.write(str(MTZ2))
+	file_object.write(' / ')
+	file_object.write(str(MTZ2_NKR_N))
+	file_object.write(' = ')
+	file_object.write(str(NKR_MTZ2))
+	file_object.write('\nПринимаю = ')
+	file_object.write(str(NKR_MTZ2_d))
 
 ################################################   NTR
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNтр')
-    file_object.write(' = ')
-    file_object.write(str(MTZ2_NKR_U))
-    file_object.write(' * ')
-    file_object.write(str(MTZ2))
-    file_object.write(' / ')
-    file_object.write(str(MTZ2_NTR_N))
-    file_object.write(' - ')
-    file_object.write(str(NKR_MTZ2_d))
-    file_object.write(' = ')
-    file_object.write(str(NTR_MTZ2))
-    file_object.write('\nПринимаю = ')
-    file_object.write(str(NTO_2_MTZ2_d))
+	file_object.write('\nNтр')
+	file_object.write(' = ')
+	file_object.write(str(MTZ2_NKR_U))
+	file_object.write(' * ')
+	file_object.write(str(MTZ2))
+	file_object.write(' / ')
+	file_object.write(str(MTZ2_NTR_N))
+	file_object.write(' - ')
+	file_object.write(str(NKR_MTZ2_d))
+	file_object.write(' = ')
+	file_object.write(str(NTR_MTZ2))
+	file_object.write('\nПринимаю = ')
+	file_object.write(str(NTO_2_MTZ2_d))
 
 ################################################    NTO-3
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNто-3')
-    file_object.write(' = ')
-    file_object.write(str(MTZ2_NKR_U))
-    file_object.write(' * ')
-    file_object.write(str(MTZ2))
-    file_object.write(' / ')
-    file_object.write(str(NKR_MTZ2_d))
-    file_object.write(' - ')
-    file_object.write(str(MTZ2_NTO_3_N))
-    file_object.write(' - ')
-    file_object.write(str(NKR_MTZ2_d))
-    file_object.write(' - ')
-    file_object.write(str(NTO_2_MTZ2_d))
-    file_object.write(' = ')
-    file_object.write(str(NTO_3_MTZ2))
-    file_object.write('\nПринимаю = ')
-    file_object.write(str(NTO_3_MTZ2_d))
+	file_object.write('\nNто-3')
+	file_object.write(' = ')
+	file_object.write(str(MTZ2_NKR_U))
+	file_object.write(' * ')
+	file_object.write(str(MTZ2))
+	file_object.write(' / ')
+	file_object.write(str(NKR_MTZ2_d))
+	file_object.write(' - ')
+	file_object.write(str(MTZ2_NTO_3_N))
+	file_object.write(' - ')
+	file_object.write(str(NKR_MTZ2_d))
+	file_object.write(' - ')
+	file_object.write(str(NTO_2_MTZ2_d))
+	file_object.write(' = ')
+	file_object.write(str(NTO_3_MTZ2))
+	file_object.write('\nПринимаю = ')
+	file_object.write(str(NTO_3_MTZ2_d))
 
 ################################################    NTO-2
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNто-2')
-    file_object.write(' = ')
-    file_object.write(str(MTZ2_NKR_U))
-    file_object.write(' * ')
-    file_object.write(str(MTZ2))
-    file_object.write(' / ')
-    file_object.write(str(NKR_MTZ2_d))
-    file_object.write(' - ')
-    file_object.write(str(MTZ2_NTO_3_N))
-    file_object.write(' - ')
-    file_object.write(str(NKR_MTZ2_d))
-    file_object.write(' - ')
-    file_object.write(str(NTO_2_MTZ2_d))
-    file_object.write(' - ')
-    file_object.write(str(MTZ2_NTO_2_N))
-    file_object.write(' = ')
-    file_object.write(str(NTO_2_MTZ2))
-    file_object.write('\nПринимаю = ')
-    file_object.write(str(NTO_2_MTZ2_d))
+	file_object.write('\nNто-2')
+	file_object.write(' = ')
+	file_object.write(str(MTZ2_NKR_U))
+	file_object.write(' * ')
+	file_object.write(str(MTZ2))
+	file_object.write(' / ')
+	file_object.write(str(NKR_MTZ2_d))
+	file_object.write(' - ')
+	file_object.write(str(MTZ2_NTO_3_N))
+	file_object.write(' - ')
+	file_object.write(str(NKR_MTZ2_d))
+	file_object.write(' - ')
+	file_object.write(str(NTO_2_MTZ2_d))
+	file_object.write(' - ')
+	file_object.write(str(MTZ2_NTO_2_N))
+	file_object.write(' = ')
+	file_object.write(str(NTO_2_MTZ2))
+	file_object.write('\nПринимаю = ')
+	file_object.write(str(NTO_2_MTZ2_d))
 
 ################################################    NTO-1
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNто-1')
-    file_object.write(' = ')
-    file_object.write(str(MTZ2_NKR_U))
-    file_object.write(' * ')
-    file_object.write(str(MTZ2))
-    file_object.write(' / ')
-    file_object.write(str(NKR_MTZ2_d))
-    file_object.write(' - ')
-    file_object.write(str(MTZ2_NTO_3_N))
-    file_object.write(' - ')
-    file_object.write(str(NKR_MTZ2_d))
-    file_object.write(' - ')
-    file_object.write(str(NTO_2_MTZ2_d))
-    file_object.write(' - ')
-    file_object.write(str(MTZ2_NTO_2_N))
-    file_object.write(' - ')
-    file_object.write(str(MTZ2_NTO_1_N))
-    file_object.write(' = ')
-    file_object.write(str(NTO_1_MTZ2))
-    file_object.write('\nПринимаю = ')
-    file_object.write(str(NTO_1_MTZ2_d))
+	file_object.write('\nNто-1')
+	file_object.write(' = ')
+	file_object.write(str(MTZ2_NKR_U))
+	file_object.write(' * ')
+	file_object.write(str(MTZ2))
+	file_object.write(' / ')
+	file_object.write(str(NKR_MTZ2_d))
+	file_object.write(' - ')
+	file_object.write(str(MTZ2_NTO_3_N))
+	file_object.write(' - ')
+	file_object.write(str(NKR_MTZ2_d))
+	file_object.write(' - ')
+	file_object.write(str(NTO_2_MTZ2_d))
+	file_object.write(' - ')
+	file_object.write(str(MTZ2_NTO_2_N))
+	file_object.write(' - ')
+	file_object.write(str(MTZ2_NTO_1_N))
+	file_object.write(' = ')
+	file_object.write(str(NTO_1_MTZ2))
+	file_object.write('\nПринимаю = ')
+	file_object.write(str(NTO_1_MTZ2_d))
 
 ################################################    NCTO
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNсто')
-    file_object.write(' = ')
-    file_object.write(str(MTZ2_NKR_U))
-    file_object.write(' * ')
-    file_object.write(str(MTZ2))
-    file_object.write(' = ')
-    file_object.write(str(MTZ2_N_CTO))
+	file_object.write('\nNсто')
+	file_object.write(' = ')
+	file_object.write(str(MTZ2_NKR_U))
+	file_object.write(' * ')
+	file_object.write(str(MTZ2))
+	file_object.write(' = ')
+	file_object.write(str(MTZ2_N_CTO))
 
 
 ####################################################################
@@ -2902,114 +2899,114 @@ with open('KURSOVAYA_v1.txt', 'a')as file_object:
 # w перезапись с удалением всего что было
 # a дозапись с сохранением старого
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\n')
-    file_object.write('\nМТЗ-80:')
+	file_object.write('\n')
+	file_object.write('\nМТЗ-80:')
 
 ################################################    NKR
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNкр')
-    file_object.write(' = ')
-    file_object.write(str(MZT_NKR_U))
-    file_object.write(' * ')
-    file_object.write(str(MZT))
-    file_object.write(' / ')
-    file_object.write(str(MZT_NKR_N))
-    file_object.write(' = ')
-    file_object.write(str(NKR_MZT))
-    file_object.write('\nПринимаю = ')
-    file_object.write(str(NKR_MZT_d))
+	file_object.write('\nNкр')
+	file_object.write(' = ')
+	file_object.write(str(MZT_NKR_U))
+	file_object.write(' * ')
+	file_object.write(str(MZT))
+	file_object.write(' / ')
+	file_object.write(str(MZT_NKR_N))
+	file_object.write(' = ')
+	file_object.write(str(NKR_MZT))
+	file_object.write('\nПринимаю = ')
+	file_object.write(str(NKR_MZT_d))
 
 ################################################   NTR
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNтр')
-    file_object.write(' = ')
-    file_object.write(str(MZT_NKR_U))
-    file_object.write(' * ')
-    file_object.write(str(MZT))
-    file_object.write(' / ')
-    file_object.write(str(MZT_NTR_N))
-    file_object.write(' - ')
-    file_object.write(str(NKR_MZT_d))
-    file_object.write(' = ')
-    file_object.write(str(NTR_MZT))
-    file_object.write('\nПринимаю = ')
-    file_object.write(str(NTO_2_MZT_d))
+	file_object.write('\nNтр')
+	file_object.write(' = ')
+	file_object.write(str(MZT_NKR_U))
+	file_object.write(' * ')
+	file_object.write(str(MZT))
+	file_object.write(' / ')
+	file_object.write(str(MZT_NTR_N))
+	file_object.write(' - ')
+	file_object.write(str(NKR_MZT_d))
+	file_object.write(' = ')
+	file_object.write(str(NTR_MZT))
+	file_object.write('\nПринимаю = ')
+	file_object.write(str(NTO_2_MZT_d))
 
 ################################################    NTO-3
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNто-3')
-    file_object.write(' = ')
-    file_object.write(str(MZT_NKR_U))
-    file_object.write(' * ')
-    file_object.write(str(MZT))
-    file_object.write(' / ')
-    file_object.write(str(NKR_MZT_d))
-    file_object.write(' - ')
-    file_object.write(str(MZT_NTO_3_N))
-    file_object.write(' - ')
-    file_object.write(str(NKR_MZT_d))
-    file_object.write(' - ')
-    file_object.write(str(NTO_2_MZT_d))
-    file_object.write(' = ')
-    file_object.write(str(NTO_3_MZT))
-    file_object.write('\nПринимаю = ')
-    file_object.write(str(NTO_3_MZT_d))
+	file_object.write('\nNто-3')
+	file_object.write(' = ')
+	file_object.write(str(MZT_NKR_U))
+	file_object.write(' * ')
+	file_object.write(str(MZT))
+	file_object.write(' / ')
+	file_object.write(str(NKR_MZT_d))
+	file_object.write(' - ')
+	file_object.write(str(MZT_NTO_3_N))
+	file_object.write(' - ')
+	file_object.write(str(NKR_MZT_d))
+	file_object.write(' - ')
+	file_object.write(str(NTO_2_MZT_d))
+	file_object.write(' = ')
+	file_object.write(str(NTO_3_MZT))
+	file_object.write('\nПринимаю = ')
+	file_object.write(str(NTO_3_MZT_d))
 
 ################################################    NTO-2
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNто-2')
-    file_object.write(' = ')
-    file_object.write(str(MZT_NKR_U))
-    file_object.write(' * ')
-    file_object.write(str(MZT))
-    file_object.write(' / ')
-    file_object.write(str(NKR_MZT_d))
-    file_object.write(' - ')
-    file_object.write(str(MZT_NTO_3_N))
-    file_object.write(' - ')
-    file_object.write(str(NKR_MZT_d))
-    file_object.write(' - ')
-    file_object.write(str(NTO_2_MZT_d))
-    file_object.write(' - ')
-    file_object.write(str(MZT_NTO_2_N))
-    file_object.write(' = ')
-    file_object.write(str(NTO_2_MZT))
-    file_object.write('\nПринимаю = ')
-    file_object.write(str(NTO_2_MZT_d))
+	file_object.write('\nNто-2')
+	file_object.write(' = ')
+	file_object.write(str(MZT_NKR_U))
+	file_object.write(' * ')
+	file_object.write(str(MZT))
+	file_object.write(' / ')
+	file_object.write(str(NKR_MZT_d))
+	file_object.write(' - ')
+	file_object.write(str(MZT_NTO_3_N))
+	file_object.write(' - ')
+	file_object.write(str(NKR_MZT_d))
+	file_object.write(' - ')
+	file_object.write(str(NTO_2_MZT_d))
+	file_object.write(' - ')
+	file_object.write(str(MZT_NTO_2_N))
+	file_object.write(' = ')
+	file_object.write(str(NTO_2_MZT))
+	file_object.write('\nПринимаю = ')
+	file_object.write(str(NTO_2_MZT_d))
 
 ################################################    NTO-1
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNто-1')
-    file_object.write(' = ')
-    file_object.write(str(MZT_NKR_U))
-    file_object.write(' * ')
-    file_object.write(str(MZT))
-    file_object.write(' / ')
-    file_object.write(str(NKR_MZT_d))
-    file_object.write(' - ')
-    file_object.write(str(MZT_NTO_3_N))
-    file_object.write(' - ')
-    file_object.write(str(NKR_MZT_d))
-    file_object.write(' - ')
-    file_object.write(str(NTO_2_MZT_d))
-    file_object.write(' - ')
-    file_object.write(str(MZT_NTO_2_N))
-    file_object.write(' - ')
-    file_object.write(str(MZT_NTO_1_N))
-    file_object.write(' = ')
-    file_object.write(str(NTO_1_MZT))
-    file_object.write('\nПринимаю = ')
-    file_object.write(str(NTO_1_MZT_d))
+	file_object.write('\nNто-1')
+	file_object.write(' = ')
+	file_object.write(str(MZT_NKR_U))
+	file_object.write(' * ')
+	file_object.write(str(MZT))
+	file_object.write(' / ')
+	file_object.write(str(NKR_MZT_d))
+	file_object.write(' - ')
+	file_object.write(str(MZT_NTO_3_N))
+	file_object.write(' - ')
+	file_object.write(str(NKR_MZT_d))
+	file_object.write(' - ')
+	file_object.write(str(NTO_2_MZT_d))
+	file_object.write(' - ')
+	file_object.write(str(MZT_NTO_2_N))
+	file_object.write(' - ')
+	file_object.write(str(MZT_NTO_1_N))
+	file_object.write(' = ')
+	file_object.write(str(NTO_1_MZT))
+	file_object.write('\nПринимаю = ')
+	file_object.write(str(NTO_1_MZT_d))
 
 ################################################    NCTO
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNсто')
-    file_object.write(' = ')
-    file_object.write(str(MZT_NKR_U))
-    file_object.write(' * ')
-    file_object.write(str(MZT))
-    file_object.write(' = ')
-    file_object.write(str(MZT_N_CTO))
+	file_object.write('\nNсто')
+	file_object.write(' = ')
+	file_object.write(str(MZT_NKR_U))
+	file_object.write(' * ')
+	file_object.write(str(MZT))
+	file_object.write(' = ')
+	file_object.write(str(MZT_N_CTO))
 
 
 
@@ -3022,114 +3019,114 @@ with open('KURSOVAYA_v1.txt', 'a')as file_object:
 # a дозапись с сохранением старого
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
 
-    file_object.write('\n')
-    file_object.write('\nT40:')
+	file_object.write('\n')
+	file_object.write('\nT40:')
 
 ################################################    NKR
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNкр')
-    file_object.write(' = ')
-    file_object.write(str(T40_NKR_U))
-    file_object.write(' * ')
-    file_object.write(str(T40))
-    file_object.write(' / ')
-    file_object.write(str(T40_NKR_N))
-    file_object.write(' = ')
-    file_object.write(str(NKR_T40))
-    file_object.write('\nПринимаю = ')
-    file_object.write(str(NKR_T40_d))
+	file_object.write('\nNкр')
+	file_object.write(' = ')
+	file_object.write(str(T40_NKR_U))
+	file_object.write(' * ')
+	file_object.write(str(T40))
+	file_object.write(' / ')
+	file_object.write(str(T40_NKR_N))
+	file_object.write(' = ')
+	file_object.write(str(NKR_T40))
+	file_object.write('\nПринимаю = ')
+	file_object.write(str(NKR_T40_d))
 
 ################################################   NTR
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNтр')
-    file_object.write(' = ')
-    file_object.write(str(T40_NKR_U))
-    file_object.write(' * ')
-    file_object.write(str(T40))
-    file_object.write(' / ')
-    file_object.write(str(T40_NTR_N))
-    file_object.write(' - ')
-    file_object.write(str(NKR_T40_d))
-    file_object.write(' = ')
-    file_object.write(str(NTR_T40))
-    file_object.write('\nПринимаю = ')
-    file_object.write(str(NTO_2_T40_d))
+	file_object.write('\nNтр')
+	file_object.write(' = ')
+	file_object.write(str(T40_NKR_U))
+	file_object.write(' * ')
+	file_object.write(str(T40))
+	file_object.write(' / ')
+	file_object.write(str(T40_NTR_N))
+	file_object.write(' - ')
+	file_object.write(str(NKR_T40_d))
+	file_object.write(' = ')
+	file_object.write(str(NTR_T40))
+	file_object.write('\nПринимаю = ')
+	file_object.write(str(NTO_2_T40_d))
 
 ################################################    NTO-3
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNто-3')
-    file_object.write(' = ')
-    file_object.write(str(T40_NKR_U))
-    file_object.write(' * ')
-    file_object.write(str(T40))
-    file_object.write(' / ')
-    file_object.write(str(NKR_T40_d))
-    file_object.write(' - ')
-    file_object.write(str(T40_NTO_3_N))
-    file_object.write(' - ')
-    file_object.write(str(NKR_T40_d))
-    file_object.write(' - ')
-    file_object.write(str(NTO_2_T40_d))
-    file_object.write(' = ')
-    file_object.write(str(NTO_3_T40))
-    file_object.write('\nПринимаю = ')
-    file_object.write(str(NTO_3_T40_d))
+	file_object.write('\nNто-3')
+	file_object.write(' = ')
+	file_object.write(str(T40_NKR_U))
+	file_object.write(' * ')
+	file_object.write(str(T40))
+	file_object.write(' / ')
+	file_object.write(str(NKR_T40_d))
+	file_object.write(' - ')
+	file_object.write(str(T40_NTO_3_N))
+	file_object.write(' - ')
+	file_object.write(str(NKR_T40_d))
+	file_object.write(' - ')
+	file_object.write(str(NTO_2_T40_d))
+	file_object.write(' = ')
+	file_object.write(str(NTO_3_T40))
+	file_object.write('\nПринимаю = ')
+	file_object.write(str(NTO_3_T40_d))
 
 ################################################    NTO-2
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNто-2')
-    file_object.write(' = ')
-    file_object.write(str(T40_NKR_U))
-    file_object.write(' * ')
-    file_object.write(str(T40))
-    file_object.write(' / ')
-    file_object.write(str(NKR_T40_d))
-    file_object.write(' - ')
-    file_object.write(str(T40_NTO_3_N))
-    file_object.write(' - ')
-    file_object.write(str(NKR_T40_d))
-    file_object.write(' - ')
-    file_object.write(str(NTO_2_T40_d))
-    file_object.write(' - ')
-    file_object.write(str(T40_NTO_2_N))
-    file_object.write(' = ')
-    file_object.write(str(NTO_2_T40))
-    file_object.write('\nПринимаю = ')
-    file_object.write(str(NTO_2_T40_d))
+	file_object.write('\nNто-2')
+	file_object.write(' = ')
+	file_object.write(str(T40_NKR_U))
+	file_object.write(' * ')
+	file_object.write(str(T40))
+	file_object.write(' / ')
+	file_object.write(str(NKR_T40_d))
+	file_object.write(' - ')
+	file_object.write(str(T40_NTO_3_N))
+	file_object.write(' - ')
+	file_object.write(str(NKR_T40_d))
+	file_object.write(' - ')
+	file_object.write(str(NTO_2_T40_d))
+	file_object.write(' - ')
+	file_object.write(str(T40_NTO_2_N))
+	file_object.write(' = ')
+	file_object.write(str(NTO_2_T40))
+	file_object.write('\nПринимаю = ')
+	file_object.write(str(NTO_2_T40_d))
 
 ################################################    NTO-1
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNто-1')
-    file_object.write(' = ')
-    file_object.write(str(T40_NKR_U))
-    file_object.write(' * ')
-    file_object.write(str(T40))
-    file_object.write(' / ')
-    file_object.write(str(NKR_T40_d))
-    file_object.write(' - ')
-    file_object.write(str(T40_NTO_3_N))
-    file_object.write(' - ')
-    file_object.write(str(NKR_T40_d))
-    file_object.write(' - ')
-    file_object.write(str(NTO_2_T40_d))
-    file_object.write(' - ')
-    file_object.write(str(T40_NTO_2_N))
-    file_object.write(' - ')
-    file_object.write(str(T40_NTO_1_N))
-    file_object.write(' = ')
-    file_object.write(str(NTO_1_T40))
-    file_object.write('\nПринимаю = ')
-    file_object.write(str(NTO_1_T40_d))
+	file_object.write('\nNто-1')
+	file_object.write(' = ')
+	file_object.write(str(T40_NKR_U))
+	file_object.write(' * ')
+	file_object.write(str(T40))
+	file_object.write(' / ')
+	file_object.write(str(NKR_T40_d))
+	file_object.write(' - ')
+	file_object.write(str(T40_NTO_3_N))
+	file_object.write(' - ')
+	file_object.write(str(NKR_T40_d))
+	file_object.write(' - ')
+	file_object.write(str(NTO_2_T40_d))
+	file_object.write(' - ')
+	file_object.write(str(T40_NTO_2_N))
+	file_object.write(' - ')
+	file_object.write(str(T40_NTO_1_N))
+	file_object.write(' = ')
+	file_object.write(str(NTO_1_T40))
+	file_object.write('\nПринимаю = ')
+	file_object.write(str(NTO_1_T40_d))
 
 ################################################    NCTO
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNсто')
-    file_object.write(' = ')
-    file_object.write(str(T40_NKR_U))
-    file_object.write(' * ')
-    file_object.write(str(T40))
-    file_object.write(' = ')
-    file_object.write(str(T40_N_CTO))
+	file_object.write('\nNсто')
+	file_object.write(' = ')
+	file_object.write(str(T40_NKR_U))
+	file_object.write(' * ')
+	file_object.write(str(T40))
+	file_object.write(' = ')
+	file_object.write(str(T40_N_CTO))
 
 
 ####################################################################
@@ -3140,114 +3137,114 @@ with open('KURSOVAYA_v1.txt', 'a')as file_object:
 # w перезапись с удалением всего что было
 # a дозапись с сохранением старого
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\n')
-    file_object.write('\nT-25:')
+	file_object.write('\n')
+	file_object.write('\nT-25:')
 
 ################################################    NKR
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNкр')
-    file_object.write(' = ')
-    file_object.write(str(T25_NKR_U))
-    file_object.write(' * ')
-    file_object.write(str(T25))
-    file_object.write(' / ')
-    file_object.write(str(T25_NKR_N))
-    file_object.write(' = ')
-    file_object.write(str(NKR_T25))
-    file_object.write('\nПринимаю = ')
-    file_object.write(str(NKR_T25_d))
+	file_object.write('\nNкр')
+	file_object.write(' = ')
+	file_object.write(str(T25_NKR_U))
+	file_object.write(' * ')
+	file_object.write(str(T25))
+	file_object.write(' / ')
+	file_object.write(str(T25_NKR_N))
+	file_object.write(' = ')
+	file_object.write(str(NKR_T25))
+	file_object.write('\nПринимаю = ')
+	file_object.write(str(NKR_T25_d))
 
 ################################################   NTR
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNтр')
-    file_object.write(' = ')
-    file_object.write(str(T25_NKR_U))
-    file_object.write(' * ')
-    file_object.write(str(T25))
-    file_object.write(' / ')
-    file_object.write(str(T25_NTR_N))
-    file_object.write(' - ')
-    file_object.write(str(NKR_T25_d))
-    file_object.write(' = ')
-    file_object.write(str(NTR_T25))
-    file_object.write('\nПринимаю = ')
-    file_object.write(str(NTO_2_T25_d))
+	file_object.write('\nNтр')
+	file_object.write(' = ')
+	file_object.write(str(T25_NKR_U))
+	file_object.write(' * ')
+	file_object.write(str(T25))
+	file_object.write(' / ')
+	file_object.write(str(T25_NTR_N))
+	file_object.write(' - ')
+	file_object.write(str(NKR_T25_d))
+	file_object.write(' = ')
+	file_object.write(str(NTR_T25))
+	file_object.write('\nПринимаю = ')
+	file_object.write(str(NTO_2_T25_d))
 
 ################################################    NTO-3
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNто-3')
-    file_object.write(' = ')
-    file_object.write(str(T25_NKR_U))
-    file_object.write(' * ')
-    file_object.write(str(T25))
-    file_object.write(' / ')
-    file_object.write(str(NKR_T25_d))
-    file_object.write(' - ')
-    file_object.write(str(T25_NTO_3_N))
-    file_object.write(' - ')
-    file_object.write(str(NKR_T25_d))
-    file_object.write(' - ')
-    file_object.write(str(NTO_2_T25_d))
-    file_object.write(' = ')
-    file_object.write(str(NTO_3_T25))
-    file_object.write('\nПринимаю = ')
-    file_object.write(str(NTO_3_T25_d))
+	file_object.write('\nNто-3')
+	file_object.write(' = ')
+	file_object.write(str(T25_NKR_U))
+	file_object.write(' * ')
+	file_object.write(str(T25))
+	file_object.write(' / ')
+	file_object.write(str(NKR_T25_d))
+	file_object.write(' - ')
+	file_object.write(str(T25_NTO_3_N))
+	file_object.write(' - ')
+	file_object.write(str(NKR_T25_d))
+	file_object.write(' - ')
+	file_object.write(str(NTO_2_T25_d))
+	file_object.write(' = ')
+	file_object.write(str(NTO_3_T25))
+	file_object.write('\nПринимаю = ')
+	file_object.write(str(NTO_3_T25_d))
 
 ################################################    NTO-2
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNто-2')
-    file_object.write(' = ')
-    file_object.write(str(T25_NKR_U))
-    file_object.write(' * ')
-    file_object.write(str(T25))
-    file_object.write(' / ')
-    file_object.write(str(NKR_T25_d))
-    file_object.write(' - ')
-    file_object.write(str(T25_NTO_3_N))
-    file_object.write(' - ')
-    file_object.write(str(NKR_T25_d))
-    file_object.write(' - ')
-    file_object.write(str(NTO_2_T25_d))
-    file_object.write(' - ')
-    file_object.write(str(T25_NTO_2_N))
-    file_object.write(' = ')
-    file_object.write(str(NTO_2_T25))
-    file_object.write('\nПринимаю = ')
-    file_object.write(str(NTO_2_T25_d))
+	file_object.write('\nNто-2')
+	file_object.write(' = ')
+	file_object.write(str(T25_NKR_U))
+	file_object.write(' * ')
+	file_object.write(str(T25))
+	file_object.write(' / ')
+	file_object.write(str(NKR_T25_d))
+	file_object.write(' - ')
+	file_object.write(str(T25_NTO_3_N))
+	file_object.write(' - ')
+	file_object.write(str(NKR_T25_d))
+	file_object.write(' - ')
+	file_object.write(str(NTO_2_T25_d))
+	file_object.write(' - ')
+	file_object.write(str(T25_NTO_2_N))
+	file_object.write(' = ')
+	file_object.write(str(NTO_2_T25))
+	file_object.write('\nПринимаю = ')
+	file_object.write(str(NTO_2_T25_d))
 
 ################################################    NTO-1
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNто-1')
-    file_object.write(' = ')
-    file_object.write(str(T25_NKR_U))
-    file_object.write(' * ')
-    file_object.write(str(T25))
-    file_object.write(' / ')
-    file_object.write(str(NKR_T25_d))
-    file_object.write(' - ')
-    file_object.write(str(T25_NTO_3_N))
-    file_object.write(' - ')
-    file_object.write(str(NKR_T25_d))
-    file_object.write(' - ')
-    file_object.write(str(NTO_2_T25_d))
-    file_object.write(' - ')
-    file_object.write(str(T25_NTO_2_N))
-    file_object.write(' - ')
-    file_object.write(str(T25_NTO_1_N))
-    file_object.write(' = ')
-    file_object.write(str(NTO_1_T25))
-    file_object.write('\nПринимаю = ')
-    file_object.write(str(NTO_1_T25_d))
+	file_object.write('\nNто-1')
+	file_object.write(' = ')
+	file_object.write(str(T25_NKR_U))
+	file_object.write(' * ')
+	file_object.write(str(T25))
+	file_object.write(' / ')
+	file_object.write(str(NKR_T25_d))
+	file_object.write(' - ')
+	file_object.write(str(T25_NTO_3_N))
+	file_object.write(' - ')
+	file_object.write(str(NKR_T25_d))
+	file_object.write(' - ')
+	file_object.write(str(NTO_2_T25_d))
+	file_object.write(' - ')
+	file_object.write(str(T25_NTO_2_N))
+	file_object.write(' - ')
+	file_object.write(str(T25_NTO_1_N))
+	file_object.write(' = ')
+	file_object.write(str(NTO_1_T25))
+	file_object.write('\nПринимаю = ')
+	file_object.write(str(NTO_1_T25_d))
 
 ################################################    NCTO
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNсто')
-    file_object.write(' = ')
-    file_object.write(str(T25_NKR_U))
-    file_object.write(' * ')
-    file_object.write(str(T25))
-    file_object.write(' = ')
-    file_object.write(str(T25_N_CTO))
+	file_object.write('\nNсто')
+	file_object.write(' = ')
+	file_object.write(str(T25_NKR_U))
+	file_object.write(' * ')
+	file_object.write(str(T25))
+	file_object.write(' = ')
+	file_object.write(str(T25_N_CTO))
 
 
 ####################################################################
@@ -3258,114 +3255,114 @@ with open('KURSOVAYA_v1.txt', 'a')as file_object:
 # w перезапись с удалением всего что было
 # a дозапись с сохранением старого
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\n')
-    file_object.write('\nT16:')
+	file_object.write('\n')
+	file_object.write('\nT16:')
 
 ################################################    NKR
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNкр')
-    file_object.write(' = ')
-    file_object.write(str(T16_NKR_U))
-    file_object.write(' * ')
-    file_object.write(str(T16))
-    file_object.write(' / ')
-    file_object.write(str(T16_NKR_N))
-    file_object.write(' = ')
-    file_object.write(str(NKR_T16))
-    file_object.write('\nПринимаю = ')
-    file_object.write(str(NKR_T16_d))
+	file_object.write('\nNкр')
+	file_object.write(' = ')
+	file_object.write(str(T16_NKR_U))
+	file_object.write(' * ')
+	file_object.write(str(T16))
+	file_object.write(' / ')
+	file_object.write(str(T16_NKR_N))
+	file_object.write(' = ')
+	file_object.write(str(NKR_T16))
+	file_object.write('\nПринимаю = ')
+	file_object.write(str(NKR_T16_d))
 
 ################################################   NTR
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNтр')
-    file_object.write(' = ')
-    file_object.write(str(T16_NKR_U))
-    file_object.write(' * ')
-    file_object.write(str(T16))
-    file_object.write(' / ')
-    file_object.write(str(T16_NTR_N))
-    file_object.write(' - ')
-    file_object.write(str(NKR_T16_d))
-    file_object.write(' = ')
-    file_object.write(str(NTR_T16))
-    file_object.write('\nПринимаю = ')
-    file_object.write(str(NTO_2_T16_d))
+	file_object.write('\nNтр')
+	file_object.write(' = ')
+	file_object.write(str(T16_NKR_U))
+	file_object.write(' * ')
+	file_object.write(str(T16))
+	file_object.write(' / ')
+	file_object.write(str(T16_NTR_N))
+	file_object.write(' - ')
+	file_object.write(str(NKR_T16_d))
+	file_object.write(' = ')
+	file_object.write(str(NTR_T16))
+	file_object.write('\nПринимаю = ')
+	file_object.write(str(NTO_2_T16_d))
 
 ################################################    NTO-3
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNто-3')
-    file_object.write(' = ')
-    file_object.write(str(T16_NKR_U))
-    file_object.write(' * ')
-    file_object.write(str(T16))
-    file_object.write(' / ')
-    file_object.write(str(NKR_T16_d))
-    file_object.write(' - ')
-    file_object.write(str(T16_NTO_3_N))
-    file_object.write(' - ')
-    file_object.write(str(NKR_T16_d))
-    file_object.write(' - ')
-    file_object.write(str(NTO_2_T16_d))
-    file_object.write(' = ')
-    file_object.write(str(NTO_3_T16))
-    file_object.write('\nПринимаю = ')
-    file_object.write(str(NTO_3_T16_d))
+	file_object.write('\nNто-3')
+	file_object.write(' = ')
+	file_object.write(str(T16_NKR_U))
+	file_object.write(' * ')
+	file_object.write(str(T16))
+	file_object.write(' / ')
+	file_object.write(str(NKR_T16_d))
+	file_object.write(' - ')
+	file_object.write(str(T16_NTO_3_N))
+	file_object.write(' - ')
+	file_object.write(str(NKR_T16_d))
+	file_object.write(' - ')
+	file_object.write(str(NTO_2_T16_d))
+	file_object.write(' = ')
+	file_object.write(str(NTO_3_T16))
+	file_object.write('\nПринимаю = ')
+	file_object.write(str(NTO_3_T16_d))
 
 ################################################    NTO-2
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNто-2')
-    file_object.write(' = ')
-    file_object.write(str(T16_NKR_U))
-    file_object.write(' * ')
-    file_object.write(str(T16))
-    file_object.write(' / ')
-    file_object.write(str(NKR_T16_d))
-    file_object.write(' - ')
-    file_object.write(str(T16_NTO_3_N))
-    file_object.write(' - ')
-    file_object.write(str(NKR_T16_d))
-    file_object.write(' - ')
-    file_object.write(str(NTO_2_T16_d))
-    file_object.write(' - ')
-    file_object.write(str(T16_NTO_2_N))
-    file_object.write(' = ')
-    file_object.write(str(NTO_2_T16))
-    file_object.write('\nПринимаю = ')
-    file_object.write(str(NTO_2_T16_d))
+	file_object.write('\nNто-2')
+	file_object.write(' = ')
+	file_object.write(str(T16_NKR_U))
+	file_object.write(' * ')
+	file_object.write(str(T16))
+	file_object.write(' / ')
+	file_object.write(str(NKR_T16_d))
+	file_object.write(' - ')
+	file_object.write(str(T16_NTO_3_N))
+	file_object.write(' - ')
+	file_object.write(str(NKR_T16_d))
+	file_object.write(' - ')
+	file_object.write(str(NTO_2_T16_d))
+	file_object.write(' - ')
+	file_object.write(str(T16_NTO_2_N))
+	file_object.write(' = ')
+	file_object.write(str(NTO_2_T16))
+	file_object.write('\nПринимаю = ')
+	file_object.write(str(NTO_2_T16_d))
 
 ################################################    NTO-1
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNто-1')
-    file_object.write(' = ')
-    file_object.write(str(T16_NKR_U))
-    file_object.write(' * ')
-    file_object.write(str(T16))
-    file_object.write(' / ')
-    file_object.write(str(NKR_T16_d))
-    file_object.write(' - ')
-    file_object.write(str(T16_NTO_3_N))
-    file_object.write(' - ')
-    file_object.write(str(NKR_T16_d))
-    file_object.write(' - ')
-    file_object.write(str(NTO_2_T16_d))
-    file_object.write(' - ')
-    file_object.write(str(T16_NTO_2_N))
-    file_object.write(' - ')
-    file_object.write(str(T16_NTO_1_N))
-    file_object.write(' = ')
-    file_object.write(str(NTO_1_T16))
-    file_object.write('\nПринимаю = ')
-    file_object.write(str(NTO_1_T16_d))
+	file_object.write('\nNто-1')
+	file_object.write(' = ')
+	file_object.write(str(T16_NKR_U))
+	file_object.write(' * ')
+	file_object.write(str(T16))
+	file_object.write(' / ')
+	file_object.write(str(NKR_T16_d))
+	file_object.write(' - ')
+	file_object.write(str(T16_NTO_3_N))
+	file_object.write(' - ')
+	file_object.write(str(NKR_T16_d))
+	file_object.write(' - ')
+	file_object.write(str(NTO_2_T16_d))
+	file_object.write(' - ')
+	file_object.write(str(T16_NTO_2_N))
+	file_object.write(' - ')
+	file_object.write(str(T16_NTO_1_N))
+	file_object.write(' = ')
+	file_object.write(str(NTO_1_T16))
+	file_object.write('\nПринимаю = ')
+	file_object.write(str(NTO_1_T16_d))
 
 ################################################    NCTO
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNсто')
-    file_object.write(' = ')
-    file_object.write(str(T16_NKR_U))
-    file_object.write(' * ')
-    file_object.write(str(T16))
-    file_object.write(' = ')
-    file_object.write(str(T16_N_CTO))
+	file_object.write('\nNсто')
+	file_object.write(' = ')
+	file_object.write(str(T16_NKR_U))
+	file_object.write(' * ')
+	file_object.write(str(T16))
+	file_object.write(' = ')
+	file_object.write(str(T16_N_CTO))
 
 
 
@@ -3378,69 +3375,69 @@ with open('KURSOVAYA_v1.txt', 'a')as file_object:
 # w перезапись с удалением всего что было
 # a дозапись с сохранением старого
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\n')
-    file_object.write('\nУАЗ-469:')
+	file_object.write('\n')
+	file_object.write('\nУАЗ-469:')
 
 ################################################    NKR
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNкр')
-    file_object.write(' = ')
-    file_object.write(str(UAZ_NKR_U))
-    file_object.write(' * ')
-    file_object.write(str(UAZ))
-    file_object.write(' / ')
-    file_object.write(str(UAZ_NKR_N))
-    file_object.write(' = ')
-    file_object.write(str(NKR_UAZ))
-    file_object.write('\nПринимаю = ')
-    file_object.write(str(NKR_UAZ_d))
+	file_object.write('\nNкр')
+	file_object.write(' = ')
+	file_object.write(str(UAZ_NKR_U))
+	file_object.write(' * ')
+	file_object.write(str(UAZ))
+	file_object.write(' / ')
+	file_object.write(str(UAZ_NKR_N))
+	file_object.write(' = ')
+	file_object.write(str(NKR_UAZ))
+	file_object.write('\nПринимаю = ')
+	file_object.write(str(NKR_UAZ_d))
 
 
 ################################################    NTO-2
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNто-2')
-    file_object.write(' = ')
-    file_object.write(str(UAZ_NKR_U))
-    file_object.write(' * ')
-    file_object.write(str(UAZ))
-    file_object.write(' / ')
-    file_object.write(str(UAZ_NTO_2_N))
-    file_object.write(' - ')
-    file_object.write(str(NKR_UAZ_d))
-    file_object.write(' = ')
-    file_object.write(str(NTO_2_UAZ))
-    file_object.write('\nПринимаю = ')
-    file_object.write(str(NTO_2_UAZ_d))
+	file_object.write('\nNто-2')
+	file_object.write(' = ')
+	file_object.write(str(UAZ_NKR_U))
+	file_object.write(' * ')
+	file_object.write(str(UAZ))
+	file_object.write(' / ')
+	file_object.write(str(UAZ_NTO_2_N))
+	file_object.write(' - ')
+	file_object.write(str(NKR_UAZ_d))
+	file_object.write(' = ')
+	file_object.write(str(NTO_2_UAZ))
+	file_object.write('\nПринимаю = ')
+	file_object.write(str(NTO_2_UAZ_d))
 
 ################################################    NTO-1
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNто-1')
-    file_object.write(' = ')
-    file_object.write(str(UAZ_NKR_U))
-    file_object.write(' * ')
-    file_object.write(str(UAZ))
-    file_object.write(' / ')
-    file_object.write(str(UAZ_NTO_1_N))
-    file_object.write(' - ')
-    file_object.write(str(NKR_UAZ_d))
-    file_object.write(' - ')
-    file_object.write(str(NTO_2_UAZ_d))
-    file_object.write(' = ')
-    file_object.write(str(NTO_1_UAZ))
-    file_object.write('\nПринимаю = ')
-    file_object.write(str(NTO_1_UAZ_d))
+	file_object.write('\nNто-1')
+	file_object.write(' = ')
+	file_object.write(str(UAZ_NKR_U))
+	file_object.write(' * ')
+	file_object.write(str(UAZ))
+	file_object.write(' / ')
+	file_object.write(str(UAZ_NTO_1_N))
+	file_object.write(' - ')
+	file_object.write(str(NKR_UAZ_d))
+	file_object.write(' - ')
+	file_object.write(str(NTO_2_UAZ_d))
+	file_object.write(' = ')
+	file_object.write(str(NTO_1_UAZ))
+	file_object.write('\nПринимаю = ')
+	file_object.write(str(NTO_1_UAZ_d))
 
 
 
 ################################################    NCTO
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNсто')
-    file_object.write(' = ')
-    file_object.write(str(UAZ_NCTO))
-    file_object.write(' * ')
-    file_object.write(str(UAZ))
-    file_object.write(' = ')
-    file_object.write(str(UAZ_N_CTO))
+	file_object.write('\nNсто')
+	file_object.write(' = ')
+	file_object.write(str(UAZ_NCTO))
+	file_object.write(' * ')
+	file_object.write(str(UAZ))
+	file_object.write(' = ')
+	file_object.write(str(UAZ_N_CTO))
 
 
 ####################################################################
@@ -3451,69 +3448,69 @@ with open('KURSOVAYA_v1.txt', 'a')as file_object:
 # w перезапись с удалением всего что было
 # a дозапись с сохранением старого
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\n')
-    file_object.write('\nКАМАЗ-5320:')
+	file_object.write('\n')
+	file_object.write('\nКАМАЗ-5320:')
 
 ################################################    NKR
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNкр')
-    file_object.write(' = ')
-    file_object.write(str(KAMAZ_NKR_U))
-    file_object.write(' * ')
-    file_object.write(str(KAMAZ))
-    file_object.write(' / ')
-    file_object.write(str(KAMAZ_NKR_N))
-    file_object.write(' = ')
-    file_object.write(str(NKR_KAMAZ))
-    file_object.write('\nПринимаю = ')
-    file_object.write(str(NKR_KAMAZ_d))
+	file_object.write('\nNкр')
+	file_object.write(' = ')
+	file_object.write(str(KAMAZ_NKR_U))
+	file_object.write(' * ')
+	file_object.write(str(KAMAZ))
+	file_object.write(' / ')
+	file_object.write(str(KAMAZ_NKR_N))
+	file_object.write(' = ')
+	file_object.write(str(NKR_KAMAZ))
+	file_object.write('\nПринимаю = ')
+	file_object.write(str(NKR_KAMAZ_d))
 
 
 ################################################    NTO-2
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNто-2')
-    file_object.write(' = ')
-    file_object.write(str(KAMAZ_NKR_U))
-    file_object.write(' * ')
-    file_object.write(str(KAMAZ))
-    file_object.write(' / ')
-    file_object.write(str(KAMAZ_NTO_2_N))
-    file_object.write(' - ')
-    file_object.write(str(NKR_KAMAZ_d))
-    file_object.write(' = ')
-    file_object.write(str(NTO_2_KAMAZ))
-    file_object.write('\nПринимаю = ')
-    file_object.write(str(NTO_2_KAMAZ_d))
+	file_object.write('\nNто-2')
+	file_object.write(' = ')
+	file_object.write(str(KAMAZ_NKR_U))
+	file_object.write(' * ')
+	file_object.write(str(KAMAZ))
+	file_object.write(' / ')
+	file_object.write(str(KAMAZ_NTO_2_N))
+	file_object.write(' - ')
+	file_object.write(str(NKR_KAMAZ_d))
+	file_object.write(' = ')
+	file_object.write(str(NTO_2_KAMAZ))
+	file_object.write('\nПринимаю = ')
+	file_object.write(str(NTO_2_KAMAZ_d))
 
 ################################################    NTO-1
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNто-1')
-    file_object.write(' = ')
-    file_object.write(str(KAMAZ_NKR_U))
-    file_object.write(' * ')
-    file_object.write(str(KAMAZ))
-    file_object.write(' / ')
-    file_object.write(str(KAMAZ_NTO_1_N))
-    file_object.write(' - ')
-    file_object.write(str(NKR_KAMAZ_d))
-    file_object.write(' - ')
-    file_object.write(str(NTO_2_KAMAZ_d))
-    file_object.write(' = ')
-    file_object.write(str(NTO_1_KAMAZ))
-    file_object.write('\nПринимаю = ')
-    file_object.write(str(NTO_1_KAMAZ_d))
+	file_object.write('\nNто-1')
+	file_object.write(' = ')
+	file_object.write(str(KAMAZ_NKR_U))
+	file_object.write(' * ')
+	file_object.write(str(KAMAZ))
+	file_object.write(' / ')
+	file_object.write(str(KAMAZ_NTO_1_N))
+	file_object.write(' - ')
+	file_object.write(str(NKR_KAMAZ_d))
+	file_object.write(' - ')
+	file_object.write(str(NTO_2_KAMAZ_d))
+	file_object.write(' = ')
+	file_object.write(str(NTO_1_KAMAZ))
+	file_object.write('\nПринимаю = ')
+	file_object.write(str(NTO_1_KAMAZ_d))
 
 
 
 ################################################    NCTO
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNсто')
-    file_object.write(' = ')
-    file_object.write(str(KAMAZ_NCTO))
-    file_object.write(' * ')
-    file_object.write(str(KAMAZ))
-    file_object.write(' = ')
-    file_object.write(str(KAMAZ_N_CTO))
+	file_object.write('\nNсто')
+	file_object.write(' = ')
+	file_object.write(str(KAMAZ_NCTO))
+	file_object.write(' * ')
+	file_object.write(str(KAMAZ))
+	file_object.write(' = ')
+	file_object.write(str(KAMAZ_N_CTO))
 
 
 ####################################################################
@@ -3524,69 +3521,69 @@ with open('KURSOVAYA_v1.txt', 'a')as file_object:
 # w перезапись с удалением всего что было
 # a дозапись с сохранением старого
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\n')
-    file_object.write('\nГАЗ-53:')
+	file_object.write('\n')
+	file_object.write('\nГАЗ-53:')
 
 ################################################    NKR
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNкр')
-    file_object.write(' = ')
-    file_object.write(str(GAZ_NKR_U))
-    file_object.write(' * ')
-    file_object.write(str(GAZ))
-    file_object.write(' / ')
-    file_object.write(str(GAZ_NKR_N))
-    file_object.write(' = ')
-    file_object.write(str(NKR_GAZ))
-    file_object.write('\nПринимаю = ')
-    file_object.write(str(NKR_GAZ_d))
+	file_object.write('\nNкр')
+	file_object.write(' = ')
+	file_object.write(str(GAZ_NKR_U))
+	file_object.write(' * ')
+	file_object.write(str(GAZ))
+	file_object.write(' / ')
+	file_object.write(str(GAZ_NKR_N))
+	file_object.write(' = ')
+	file_object.write(str(NKR_GAZ))
+	file_object.write('\nПринимаю = ')
+	file_object.write(str(NKR_GAZ_d))
 
 
 ################################################    NTO-2
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNто-2')
-    file_object.write(' = ')
-    file_object.write(str(GAZ_NKR_U))
-    file_object.write(' * ')
-    file_object.write(str(GAZ))
-    file_object.write(' / ')
-    file_object.write(str(GAZ_NTO_2_N))
-    file_object.write(' - ')
-    file_object.write(str(NKR_GAZ_d))
-    file_object.write(' = ')
-    file_object.write(str(NTO_2_GAZ))
-    file_object.write('\nПринимаю = ')
-    file_object.write(str(NTO_2_GAZ_d))
+	file_object.write('\nNто-2')
+	file_object.write(' = ')
+	file_object.write(str(GAZ_NKR_U))
+	file_object.write(' * ')
+	file_object.write(str(GAZ))
+	file_object.write(' / ')
+	file_object.write(str(GAZ_NTO_2_N))
+	file_object.write(' - ')
+	file_object.write(str(NKR_GAZ_d))
+	file_object.write(' = ')
+	file_object.write(str(NTO_2_GAZ))
+	file_object.write('\nПринимаю = ')
+	file_object.write(str(NTO_2_GAZ_d))
 
 ################################################    NTO-1
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNто-1')
-    file_object.write(' = ')
-    file_object.write(str(GAZ_NKR_U))
-    file_object.write(' * ')
-    file_object.write(str(GAZ))
-    file_object.write(' / ')
-    file_object.write(str(GAZ_NTO_1_N))
-    file_object.write(' - ')
-    file_object.write(str(NKR_GAZ_d))
-    file_object.write(' - ')
-    file_object.write(str(NTO_2_GAZ_d))
-    file_object.write(' = ')
-    file_object.write(str(NTO_1_GAZ))
-    file_object.write('\nПринимаю = ')
-    file_object.write(str(NTO_1_GAZ_d))
+	file_object.write('\nNто-1')
+	file_object.write(' = ')
+	file_object.write(str(GAZ_NKR_U))
+	file_object.write(' * ')
+	file_object.write(str(GAZ))
+	file_object.write(' / ')
+	file_object.write(str(GAZ_NTO_1_N))
+	file_object.write(' - ')
+	file_object.write(str(NKR_GAZ_d))
+	file_object.write(' - ')
+	file_object.write(str(NTO_2_GAZ_d))
+	file_object.write(' = ')
+	file_object.write(str(NTO_1_GAZ))
+	file_object.write('\nПринимаю = ')
+	file_object.write(str(NTO_1_GAZ_d))
 
 
 
 ################################################    NCTO
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNсто')
-    file_object.write(' = ')
-    file_object.write(str(GAZ_NCTO))
-    file_object.write(' * ')
-    file_object.write(str(GAZ))
-    file_object.write(' = ')
-    file_object.write(str(GAZ_N_CTO))
+	file_object.write('\nNсто')
+	file_object.write(' = ')
+	file_object.write(str(GAZ_NCTO))
+	file_object.write(' * ')
+	file_object.write(str(GAZ))
+	file_object.write(' = ')
+	file_object.write(str(GAZ_N_CTO))
 
 
 
@@ -3598,69 +3595,69 @@ with open('KURSOVAYA_v1.txt', 'a')as file_object:
 # w перезапись с удалением всего что было
 # a дозапись с сохранением старого
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\n')
-    file_object.write('\nЗИЛ-130:')
+	file_object.write('\n')
+	file_object.write('\nЗИЛ-130:')
 
 ################################################    NKR
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNкр')
-    file_object.write(' = ')
-    file_object.write(str(ZIL_NKR_U))
-    file_object.write(' * ')
-    file_object.write(str(ZIL))
-    file_object.write(' / ')
-    file_object.write(str(ZIL_NKR_N))
-    file_object.write(' = ')
-    file_object.write(str(NKR_ZIL))
-    file_object.write('\nПринимаю = ')
-    file_object.write(str(NKR_ZIL_d))
+	file_object.write('\nNкр')
+	file_object.write(' = ')
+	file_object.write(str(ZIL_NKR_U))
+	file_object.write(' * ')
+	file_object.write(str(ZIL))
+	file_object.write(' / ')
+	file_object.write(str(ZIL_NKR_N))
+	file_object.write(' = ')
+	file_object.write(str(NKR_ZIL))
+	file_object.write('\nПринимаю = ')
+	file_object.write(str(NKR_ZIL_d))
 
 
 ################################################    NTO-2
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNто-2')
-    file_object.write(' = ')
-    file_object.write(str(ZIL_NKR_U))
-    file_object.write(' * ')
-    file_object.write(str(ZIL))
-    file_object.write(' / ')
-    file_object.write(str(ZIL_NTO_2_N))
-    file_object.write(' - ')
-    file_object.write(str(NKR_ZIL_d))
-    file_object.write(' = ')
-    file_object.write(str(NTO_2_ZIL))
-    file_object.write('\nПринимаю = ')
-    file_object.write(str(NTO_2_ZIL_d))
+	file_object.write('\nNто-2')
+	file_object.write(' = ')
+	file_object.write(str(ZIL_NKR_U))
+	file_object.write(' * ')
+	file_object.write(str(ZIL))
+	file_object.write(' / ')
+	file_object.write(str(ZIL_NTO_2_N))
+	file_object.write(' - ')
+	file_object.write(str(NKR_ZIL_d))
+	file_object.write(' = ')
+	file_object.write(str(NTO_2_ZIL))
+	file_object.write('\nПринимаю = ')
+	file_object.write(str(NTO_2_ZIL_d))
 
 ################################################    NTO-1
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNто-1')
-    file_object.write(' = ')
-    file_object.write(str(ZIL_NKR_U))
-    file_object.write(' * ')
-    file_object.write(str(ZIL))
-    file_object.write(' / ')
-    file_object.write(str(ZIL_NTO_1_N))
-    file_object.write(' - ')
-    file_object.write(str(NKR_ZIL_d))
-    file_object.write(' - ')
-    file_object.write(str(NTO_2_ZIL_d))
-    file_object.write(' = ')
-    file_object.write(str(NTO_1_ZIL))
-    file_object.write('\nПринимаю = ')
-    file_object.write(str(NTO_1_ZIL_d))
+	file_object.write('\nNто-1')
+	file_object.write(' = ')
+	file_object.write(str(ZIL_NKR_U))
+	file_object.write(' * ')
+	file_object.write(str(ZIL))
+	file_object.write(' / ')
+	file_object.write(str(ZIL_NTO_1_N))
+	file_object.write(' - ')
+	file_object.write(str(NKR_ZIL_d))
+	file_object.write(' - ')
+	file_object.write(str(NTO_2_ZIL_d))
+	file_object.write(' = ')
+	file_object.write(str(NTO_1_ZIL))
+	file_object.write('\nПринимаю = ')
+	file_object.write(str(NTO_1_ZIL_d))
 
 
 
 ################################################    NCTO
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNсто')
-    file_object.write(' = ')
-    file_object.write(str(ZIL_NCTO))
-    file_object.write(' * ')
-    file_object.write(str(ZIL))
-    file_object.write(' = ')
-    file_object.write(str(ZIL_N_CTO))
+	file_object.write('\nNсто')
+	file_object.write(' = ')
+	file_object.write(str(ZIL_NCTO))
+	file_object.write(' * ')
+	file_object.write(str(ZIL))
+	file_object.write(' = ')
+	file_object.write(str(ZIL_N_CTO))
 
 
 
@@ -3673,80 +3670,80 @@ with open('KURSOVAYA_v1.txt', 'a')as file_object:
 # w перезапись с удалением всего что было
 # a дозапись с сохранением старого
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\n')
-    file_object.write('\nCK-5:')
+	file_object.write('\n')
+	file_object.write('\nCK-5:')
 
 ################################################    NKR
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNкр')
-    file_object.write(' = ')
-    file_object.write(str(CK))
-    file_object.write(' * ')
-    file_object.write(str(CK_NKR))
-    file_object.write(' = ')
-    file_object.write(str(NKR_CK))
-    file_object.write('\nПринимаю = ')
-    file_object.write(str(NKR_CK_d))
+	file_object.write('\nNкр')
+	file_object.write(' = ')
+	file_object.write(str(CK))
+	file_object.write(' * ')
+	file_object.write(str(CK_NKR))
+	file_object.write(' = ')
+	file_object.write(str(NKR_CK))
+	file_object.write('\nПринимаю = ')
+	file_object.write(str(NKR_CK_d))
 
 ################################################   NTR
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNтр')
-    file_object.write(' = ')
-    file_object.write(str(CK))
-    file_object.write(' * ')
-    file_object.write(str(CK_NTR))
-    file_object.write(' = ')
-    file_object.write(str(NTR_CK))
-    file_object.write('\nПринимаю = ')
-    file_object.write(str(NTR_CK_d))
+	file_object.write('\nNтр')
+	file_object.write(' = ')
+	file_object.write(str(CK))
+	file_object.write(' * ')
+	file_object.write(str(CK_NTR))
+	file_object.write(' = ')
+	file_object.write(str(NTR_CK))
+	file_object.write('\nПринимаю = ')
+	file_object.write(str(NTR_CK_d))
 
 ################################################    NTO-2
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNто-2')
-    file_object.write(' = ')
-    file_object.write(str(CK_NTO))
-    file_object.write(' * ')
-    file_object.write(str(CK))
-    file_object.write(' / ')
-    file_object.write(str(CK_NTO_2))
-    file_object.write(' - ')
-    file_object.write(str(CK_NKR))
-    file_object.write(' - ')
-    file_object.write(str(NTR_CK))
-    file_object.write(' = ')
-    file_object.write(str(NTO_2_CK))
-    file_object.write('\nПринимаю = ')
-    file_object.write(str(NTO_2_CK_d))
+	file_object.write('\nNто-2')
+	file_object.write(' = ')
+	file_object.write(str(CK_NTO))
+	file_object.write(' * ')
+	file_object.write(str(CK))
+	file_object.write(' / ')
+	file_object.write(str(CK_NTO_2))
+	file_object.write(' - ')
+	file_object.write(str(CK_NKR))
+	file_object.write(' - ')
+	file_object.write(str(NTR_CK))
+	file_object.write(' = ')
+	file_object.write(str(NTO_2_CK))
+	file_object.write('\nПринимаю = ')
+	file_object.write(str(NTO_2_CK_d))
 
 ################################################    NTO-1
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNто-1')
-    file_object.write(' = ')
-    file_object.write(str(CK_NTO))
-    file_object.write(' * ')
-    file_object.write(str(CK))
-    file_object.write(' / ')
-    file_object.write(str(CK_NTO_1))
-    file_object.write(' - ')
-    file_object.write(str(NKR_CK))
-    file_object.write(' - ')
-    file_object.write(str(NTR_CK))
-    file_object.write(' - ')
-    file_object.write(str(NTO_2_CK))
-    file_object.write(' = ')
-    file_object.write(str(NTO_1_CK))
-    file_object.write('\nПринимаю = ')
-    file_object.write(str(NTO_1_CK_d))
+	file_object.write('\nNто-1')
+	file_object.write(' = ')
+	file_object.write(str(CK_NTO))
+	file_object.write(' * ')
+	file_object.write(str(CK))
+	file_object.write(' / ')
+	file_object.write(str(CK_NTO_1))
+	file_object.write(' - ')
+	file_object.write(str(NKR_CK))
+	file_object.write(' - ')
+	file_object.write(str(NTR_CK))
+	file_object.write(' - ')
+	file_object.write(str(NTO_2_CK))
+	file_object.write(' = ')
+	file_object.write(str(NTO_1_CK))
+	file_object.write('\nПринимаю = ')
+	file_object.write(str(NTO_1_CK_d))
 
 ################################################    NCTO
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNсто')
-    file_object.write(' = ')
-    file_object.write(str(CK))
-    file_object.write(' * ')
-    file_object.write(str(CK_NCTO))
-    file_object.write(' = ')
-    file_object.write(str(NCTO_CK))
+	file_object.write('\nNсто')
+	file_object.write(' = ')
+	file_object.write(str(CK))
+	file_object.write(' * ')
+	file_object.write(str(CK_NCTO))
+	file_object.write(' = ')
+	file_object.write(str(NCTO_CK))
 
 
 
@@ -3758,30 +3755,30 @@ with open('KURSOVAYA_v1.txt', 'a')as file_object:
 # w перезапись с удалением всего что было
 # a дозапись с сохранением старого
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\n')
-    file_object.write('\nПЛН-4-35:')
+	file_object.write('\n')
+	file_object.write('\nПЛН-4-35:')
 
 ################################################    NTR
 
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNтр')
-    file_object.write(' = ')
-    file_object.write(str(PLN))
-    file_object.write(' * ')
-    file_object.write(str(NTR_PLN))
-    file_object.write(' = ')
-    file_object.write(str(PLN_NTR))
+	file_object.write('\nNтр')
+	file_object.write(' = ')
+	file_object.write(str(PLN))
+	file_object.write(' * ')
+	file_object.write(str(NTR_PLN))
+	file_object.write(' = ')
+	file_object.write(str(PLN_NTR))
 
 ################################################    NCTO
 
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNсто')
-    file_object.write(' = ')
-    file_object.write(str(PLN))
-    file_object.write(' * ')
-    file_object.write(str(NCTO_PLN))
-    file_object.write(' = ')
-    file_object.write(str(PLN_NCTO))
+	file_object.write('\nNсто')
+	file_object.write(' = ')
+	file_object.write(str(PLN))
+	file_object.write(' * ')
+	file_object.write(str(NCTO_PLN))
+	file_object.write(' = ')
+	file_object.write(str(PLN_NCTO))
 
 
 
@@ -3793,30 +3790,30 @@ with open('KURSOVAYA_v1.txt', 'a')as file_object:
 # w перезапись с удалением всего что было
 # a дозапись с сохранением старого
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\n')
-    file_object.write('\nСЗ-3-6')
+	file_object.write('\n')
+	file_object.write('\nСЗ-3-6')
 
 ################################################    NTR
 
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNтр')
-    file_object.write(' = ')
-    file_object.write(str(SZ))
-    file_object.write(' * ')
-    file_object.write(str(NTR_SZ))
-    file_object.write(' = ')
-    file_object.write(str(SZ_NTR))
+	file_object.write('\nNтр')
+	file_object.write(' = ')
+	file_object.write(str(SZ))
+	file_object.write(' * ')
+	file_object.write(str(NTR_SZ))
+	file_object.write(' = ')
+	file_object.write(str(SZ_NTR))
 
 ################################################    NCTO
 
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNсто')
-    file_object.write(' = ')
-    file_object.write(str(SZ))
-    file_object.write(' * ')
-    file_object.write(str(NCTO_SZ))
-    file_object.write(' = ')
-    file_object.write(str(SZ_NCTO))
+	file_object.write('\nNсто')
+	file_object.write(' = ')
+	file_object.write(str(SZ))
+	file_object.write(' * ')
+	file_object.write(str(NCTO_SZ))
+	file_object.write(' = ')
+	file_object.write(str(SZ_NCTO))
 
 
 
@@ -3828,30 +3825,30 @@ with open('KURSOVAYA_v1.txt', 'a')as file_object:
 # w перезапись с удалением всего что было
 # a дозапись с сохранением старого
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\n')
-    file_object.write('\nККУ-2А')
+	file_object.write('\n')
+	file_object.write('\nККУ-2А')
 
 ################################################    NTR
 
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNтр')
-    file_object.write(' = ')
-    file_object.write(str(KKU))
-    file_object.write(' * ')
-    file_object.write(str(NTR_KKU))
-    file_object.write(' = ')
-    file_object.write(str(KKU_NTR))
+	file_object.write('\nNтр')
+	file_object.write(' = ')
+	file_object.write(str(KKU))
+	file_object.write(' * ')
+	file_object.write(str(NTR_KKU))
+	file_object.write(' = ')
+	file_object.write(str(KKU_NTR))
 
 ################################################    NCTO
 
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNсто')
-    file_object.write(' = ')
-    file_object.write(str(KKU))
-    file_object.write(' * ')
-    file_object.write(str(NCTO_KKU))
-    file_object.write(' = ')
-    file_object.write(str(KKU_NCTO))
+	file_object.write('\nNсто')
+	file_object.write(' = ')
+	file_object.write(str(KKU))
+	file_object.write(' * ')
+	file_object.write(str(NCTO_KKU))
+	file_object.write(' = ')
+	file_object.write(str(KKU_NCTO))
 
 
 
@@ -3863,38 +3860,38 @@ with open('KURSOVAYA_v1.txt', 'a')as file_object:
 # w перезапись с удалением всего что было
 # a дозапись с сохранением старого
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\n')
-    file_object.write('\nБДТ-3')
+	file_object.write('\n')
+	file_object.write('\nБДТ-3')
 
 ################################################    NTR
 
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNтр')
-    file_object.write(' = ')
-    file_object.write(str(BDT))
-    file_object.write(' * ')
-    file_object.write(str(NTR_BDT))
-    file_object.write(' = ')
-    file_object.write(str(BDT_NTR))
+	file_object.write('\nNтр')
+	file_object.write(' = ')
+	file_object.write(str(BDT))
+	file_object.write(' * ')
+	file_object.write(str(NTR_BDT))
+	file_object.write(' = ')
+	file_object.write(str(BDT_NTR))
 
 ################################################    NCTO
 
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNсто')
-    file_object.write(' = ')
-    file_object.write(str(BDT))
-    file_object.write(' * ')
-    file_object.write(str(NCTO_BDT))
-    file_object.write(' = ')
-    file_object.write(str(BDT_NCTO))
+	file_object.write('\nNсто')
+	file_object.write(' = ')
+	file_object.write(str(BDT))
+	file_object.write(' * ')
+	file_object.write(str(NCTO_BDT))
+	file_object.write(' = ')
+	file_object.write(str(BDT_NCTO))
 
 
 
 
 
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\n')
-    file_object.write('\nРАСЧЕТ ТРУДОЕМКОСТИ:')
+	file_object.write('\n')
+	file_object.write('\nРАСЧЕТ ТРУДОЕМКОСТИ:')
 
 
 ####################################################################
@@ -3905,65 +3902,65 @@ with open('KURSOVAYA_v1.txt', 'a')as file_object:
 # w перезапись с удалением всего что было
 # a дозапись с сохранением старого
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\n')
-    file_object.write('\nК-700:')
+	file_object.write('\n')
+	file_object.write('\nК-700:')
 
 ################################################    TKR
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nTкр')
-    file_object.write(' = ')
-    file_object.write(str(NKR_K_700_d))
-    file_object.write(' * ')
-    file_object.write(str(K_T_KR))
-    file_object.write(' = ')
-    file_object.write(str(T_KR_K))
+	file_object.write('\nTкр')
+	file_object.write(' = ')
+	file_object.write(str(NKR_K_700_d))
+	file_object.write(' * ')
+	file_object.write(str(K_T_KR))
+	file_object.write(' = ')
+	file_object.write(str(T_KR_K))
 
 ################################################   TTR
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nTтр')
-    file_object.write(' = ')
-    file_object.write(str(NTR_K_700_d))
-    file_object.write(' * ')
-    file_object.write(str(K_T_TR))
-    file_object.write(' = ')
-    file_object.write(str(T_TR_K))
+	file_object.write('\nTтр')
+	file_object.write(' = ')
+	file_object.write(str(NTR_K_700_d))
+	file_object.write(' * ')
+	file_object.write(str(K_T_TR))
+	file_object.write(' = ')
+	file_object.write(str(T_TR_K))
 ################################################    TTO-3
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nTто-3')
-    file_object.write(' = ')
-    file_object.write(str(NTO_3_K_700_d))
-    file_object.write(' * ')
-    file_object.write(str(K_T_TO_3))
-    file_object.write(' = ')
-    file_object.write(str(T_TO_3_K))
+	file_object.write('\nTто-3')
+	file_object.write(' = ')
+	file_object.write(str(NTO_3_K_700_d))
+	file_object.write(' * ')
+	file_object.write(str(K_T_TO_3))
+	file_object.write(' = ')
+	file_object.write(str(T_TO_3_K))
 ################################################    TTO-2
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nTто-2')
-    file_object.write(' = ')
-    file_object.write(str(NTO_2_K_700_d))
-    file_object.write(' * ')
-    file_object.write(str(K_T_TO_2))
-    file_object.write(' = ')
-    file_object.write(str(T_TO_2_K))
+	file_object.write('\nTто-2')
+	file_object.write(' = ')
+	file_object.write(str(NTO_2_K_700_d))
+	file_object.write(' * ')
+	file_object.write(str(K_T_TO_2))
+	file_object.write(' = ')
+	file_object.write(str(T_TO_2_K))
 ################################################    TTO-1
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNто-1')
-    file_object.write(' = ')
-    file_object.write(str(NTO_1_K_700_d))
-    file_object.write(' * ')
-    file_object.write(str(K_T_TO_1))
-    file_object.write(' = ')
-    file_object.write(str(T_TO_1_K))
+	file_object.write('\nNто-1')
+	file_object.write(' = ')
+	file_object.write(str(NTO_1_K_700_d))
+	file_object.write(' * ')
+	file_object.write(str(K_T_TO_1))
+	file_object.write(' = ')
+	file_object.write(str(T_TO_1_K))
 
 ################################################    TCTO
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nTсто')
-    file_object.write(' = ')
-    file_object.write(str(K_700_N_CTO))
-    file_object.write(' * ')
-    file_object.write(str(K_T_CTO))
-    file_object.write(' = ')
-    file_object.write(str(T_CTO_K))
+	file_object.write('\nTсто')
+	file_object.write(' = ')
+	file_object.write(str(K_700_N_CTO))
+	file_object.write(' * ')
+	file_object.write(str(K_T_CTO))
+	file_object.write(' = ')
+	file_object.write(str(T_CTO_K))
 
 ####################################################################
 #                           K-701
@@ -3973,67 +3970,67 @@ with open('KURSOVAYA_v1.txt', 'a')as file_object:
 # w перезапись с удалением всего что было
 # a дозапись с сохранением старого
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\n')
-    file_object.write('\nК-701:')
+	file_object.write('\n')
+	file_object.write('\nК-701:')
 
 ################################################    TKR
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nTкр')
-    file_object.write(' = ')
-    file_object.write(str(NKR_K_701_d))
-    file_object.write(' * ')
-    file_object.write(str(K1_T_KR))
-    file_object.write(' = ')
-    file_object.write(str(T_KR_K1))
+	file_object.write('\nTкр')
+	file_object.write(' = ')
+	file_object.write(str(NKR_K_701_d))
+	file_object.write(' * ')
+	file_object.write(str(K1_T_KR))
+	file_object.write(' = ')
+	file_object.write(str(T_KR_K1))
 
 ################################################   TTR
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nTтр')
-    file_object.write(' = ')
-    file_object.write(str(NTR_K_701_d))
-    file_object.write(' * ')
-    file_object.write(str(K1_T_TR))
-    file_object.write(' = ')
-    file_object.write(str(T_TR_K1))
+	file_object.write('\nTтр')
+	file_object.write(' = ')
+	file_object.write(str(NTR_K_701_d))
+	file_object.write(' * ')
+	file_object.write(str(K1_T_TR))
+	file_object.write(' = ')
+	file_object.write(str(T_TR_K1))
 
 ################################################    TTO-3
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nTто-3')
-    file_object.write(' = ')
-    file_object.write(str(NTO_3_K_701_d))
-    file_object.write(' * ')
-    file_object.write(str(K1_T_TO_3))
-    file_object.write(' = ')
-    file_object.write(str(T_TO_3_K1))
+	file_object.write('\nTто-3')
+	file_object.write(' = ')
+	file_object.write(str(NTO_3_K_701_d))
+	file_object.write(' * ')
+	file_object.write(str(K1_T_TO_3))
+	file_object.write(' = ')
+	file_object.write(str(T_TO_3_K1))
 
 ################################################    TTO-2
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nTто-2')
-    file_object.write(' = ')
-    file_object.write(str(NTO_2_K_701_d))
-    file_object.write(' * ')
-    file_object.write(str(K1_T_TO_2))
-    file_object.write(' = ')
-    file_object.write(str(T_TO_2_K1))
+	file_object.write('\nTто-2')
+	file_object.write(' = ')
+	file_object.write(str(NTO_2_K_701_d))
+	file_object.write(' * ')
+	file_object.write(str(K1_T_TO_2))
+	file_object.write(' = ')
+	file_object.write(str(T_TO_2_K1))
 ################################################    TTO-1
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nTто-1')
-    file_object.write(' = ')
-    file_object.write(str(NTO_1_K_701_d))
-    file_object.write(' * ')
-    file_object.write(str(K1_T_TO_1))
-    file_object.write(' = ')
-    file_object.write(str(T_TO_1_K1))
+	file_object.write('\nTто-1')
+	file_object.write(' = ')
+	file_object.write(str(NTO_1_K_701_d))
+	file_object.write(' * ')
+	file_object.write(str(K1_T_TO_1))
+	file_object.write(' = ')
+	file_object.write(str(T_TO_1_K1))
 
 ################################################    TCTO
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nTсто')
-    file_object.write(' = ')
-    file_object.write(str(K_701_N_CTO))
-    file_object.write(' * ')
-    file_object.write(str(K1_T_CTO))
-    file_object.write(' = ')
-    file_object.write(str(T_CTO_K1))
+	file_object.write('\nTсто')
+	file_object.write(' = ')
+	file_object.write(str(K_701_N_CTO))
+	file_object.write(' * ')
+	file_object.write(str(K1_T_CTO))
+	file_object.write(' = ')
+	file_object.write(str(T_CTO_K1))
 
 
 
@@ -4045,68 +4042,68 @@ with open('KURSOVAYA_v1.txt', 'a')as file_object:
 # w перезапись с удалением всего что было
 # a дозапись с сохранением старого
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\n')
-    file_object.write('\nДТ-75 МВ:')
+	file_object.write('\n')
+	file_object.write('\nДТ-75 МВ:')
 
 ################################################    TKR
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nTкр')
-    file_object.write(' = ')
-    file_object.write(str(NKR_DT_d))
-    file_object.write(' * ')
-    file_object.write(str(T_KR_DT))
-    file_object.write(' = ')
-    file_object.write(str(DT_T_KR))
+	file_object.write('\nTкр')
+	file_object.write(' = ')
+	file_object.write(str(NKR_DT_d))
+	file_object.write(' * ')
+	file_object.write(str(T_KR_DT))
+	file_object.write(' = ')
+	file_object.write(str(DT_T_KR))
 
 ################################################   TTR
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nTтр')
-    file_object.write(' = ')
-    file_object.write(str(NTR_DT_d))
-    file_object.write(' * ')
-    file_object.write(str(T_TR_DT))
-    file_object.write(' = ')
-    file_object.write(str(DT_T_TR))
+	file_object.write('\nTтр')
+	file_object.write(' = ')
+	file_object.write(str(NTR_DT_d))
+	file_object.write(' * ')
+	file_object.write(str(T_TR_DT))
+	file_object.write(' = ')
+	file_object.write(str(DT_T_TR))
 
 ################################################    TTO-3
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nTто-3')
-    file_object.write(' = ')
-    file_object.write(str(NTO_3_DT_d))
-    file_object.write(' * ')
-    file_object.write(str(T_TO_3_DT))
-    file_object.write(' = ')
-    file_object.write(str(DT_T_TO_3))
+	file_object.write('\nTто-3')
+	file_object.write(' = ')
+	file_object.write(str(NTO_3_DT_d))
+	file_object.write(' * ')
+	file_object.write(str(T_TO_3_DT))
+	file_object.write(' = ')
+	file_object.write(str(DT_T_TO_3))
 
 ################################################    TTO-2
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nTто-2')
-    file_object.write(' = ')
-    file_object.write(str(NTO_2_DT_d))
-    file_object.write(' * ')
-    file_object.write(str(T_TO_2_DT))
-    file_object.write(' = ')
-    file_object.write(str(DT_T_TO_2))
+	file_object.write('\nTто-2')
+	file_object.write(' = ')
+	file_object.write(str(NTO_2_DT_d))
+	file_object.write(' * ')
+	file_object.write(str(T_TO_2_DT))
+	file_object.write(' = ')
+	file_object.write(str(DT_T_TO_2))
 
 ################################################    TTO-1
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nTто-1')
-    file_object.write(' = ')
-    file_object.write(str(NTO_1_DT_d))
-    file_object.write(' * ')
-    file_object.write(str(T_TO_1_DT))
-    file_object.write(' = ')
-    file_object.write(str(DT_T_TO_1))
+	file_object.write('\nTто-1')
+	file_object.write(' = ')
+	file_object.write(str(NTO_1_DT_d))
+	file_object.write(' * ')
+	file_object.write(str(T_TO_1_DT))
+	file_object.write(' = ')
+	file_object.write(str(DT_T_TO_1))
 
 ################################################    TCTO
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nTсто')
-    file_object.write(' = ')
-    file_object.write(str(DT_N_CTO))
-    file_object.write(' * ')
-    file_object.write(str(T_CTO_DT))
-    file_object.write(' = ')
-    file_object.write(str(DT_T_CTO))
+	file_object.write('\nTсто')
+	file_object.write(' = ')
+	file_object.write(str(DT_N_CTO))
+	file_object.write(' * ')
+	file_object.write(str(T_CTO_DT))
+	file_object.write(' = ')
+	file_object.write(str(DT_T_CTO))
 
 
 
@@ -4117,68 +4114,68 @@ with open('KURSOVAYA_v1.txt', 'a')as file_object:
 # w перезапись с удалением всего что было
 # a дозапись с сохранением старого
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\n')
-    file_object.write('\nМТЗ-82:')
+	file_object.write('\n')
+	file_object.write('\nМТЗ-82:')
 
 ################################################    TKR
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nTкр')
-    file_object.write(' = ')
-    file_object.write(str(NKR_MTZ2_d))
-    file_object.write(' * ')
-    file_object.write(str(T_KR_MTZ2))
-    file_object.write(' = ')
-    file_object.write(str(MTZ2_T_KR))
+	file_object.write('\nTкр')
+	file_object.write(' = ')
+	file_object.write(str(NKR_MTZ2_d))
+	file_object.write(' * ')
+	file_object.write(str(T_KR_MTZ2))
+	file_object.write(' = ')
+	file_object.write(str(MTZ2_T_KR))
 
 ################################################   TTR
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nTтр')
-    file_object.write(' = ')
-    file_object.write(str(NTR_MTZ2_d))
-    file_object.write(' * ')
-    file_object.write(str(T_TR_MTZ2))
-    file_object.write(' = ')
-    file_object.write(str(MTZ2_T_TR))
+	file_object.write('\nTтр')
+	file_object.write(' = ')
+	file_object.write(str(NTR_MTZ2_d))
+	file_object.write(' * ')
+	file_object.write(str(T_TR_MTZ2))
+	file_object.write(' = ')
+	file_object.write(str(MTZ2_T_TR))
 
 ################################################    TTO-3
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nTто-3')
-    file_object.write(' = ')
-    file_object.write(str(NTO_3_MTZ2_d))
-    file_object.write(' * ')
-    file_object.write(str(T_TO_3_MTZ2))
-    file_object.write(' = ')
-    file_object.write(str(MTZ2_T_TO_3))
+	file_object.write('\nTто-3')
+	file_object.write(' = ')
+	file_object.write(str(NTO_3_MTZ2_d))
+	file_object.write(' * ')
+	file_object.write(str(T_TO_3_MTZ2))
+	file_object.write(' = ')
+	file_object.write(str(MTZ2_T_TO_3))
 
 ################################################    TTO-2
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nTто-2')
-    file_object.write(' = ')
-    file_object.write(str(NTO_2_MTZ2_d))
-    file_object.write(' * ')
-    file_object.write(str(T_TO_2_MTZ2))
-    file_object.write(' = ')
-    file_object.write(str(MTZ2_T_TO_2))
+	file_object.write('\nTто-2')
+	file_object.write(' = ')
+	file_object.write(str(NTO_2_MTZ2_d))
+	file_object.write(' * ')
+	file_object.write(str(T_TO_2_MTZ2))
+	file_object.write(' = ')
+	file_object.write(str(MTZ2_T_TO_2))
 
 ################################################    TTO-1
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nTто-1')
-    file_object.write(' = ')
-    file_object.write(str(NTO_1_MTZ2_d))
-    file_object.write(' * ')
-    file_object.write(str(T_TO_1_MTZ2))
-    file_object.write(' = ')
-    file_object.write(str(MTZ2_T_TO_1))
+	file_object.write('\nTто-1')
+	file_object.write(' = ')
+	file_object.write(str(NTO_1_MTZ2_d))
+	file_object.write(' * ')
+	file_object.write(str(T_TO_1_MTZ2))
+	file_object.write(' = ')
+	file_object.write(str(MTZ2_T_TO_1))
 
 ################################################    TCTO
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nTсто')
-    file_object.write(' = ')
-    file_object.write(str(MTZ2_N_CTO))
-    file_object.write(' * ')
-    file_object.write(str(T_CTO_MTZ2))
-    file_object.write(' = ')
-    file_object.write(str(MTZ2_T_CTO))
+	file_object.write('\nTсто')
+	file_object.write(' = ')
+	file_object.write(str(MTZ2_N_CTO))
+	file_object.write(' * ')
+	file_object.write(str(T_CTO_MTZ2))
+	file_object.write(' = ')
+	file_object.write(str(MTZ2_T_CTO))
 
 ####################################################################
 #                           MZT
@@ -4187,68 +4184,68 @@ with open('KURSOVAYA_v1.txt', 'a')as file_object:
 # w перезапись с удалением всего что было
 # a дозапись с сохранением старого
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\n')
-    file_object.write('\nМТЗ-80:')
+	file_object.write('\n')
+	file_object.write('\nМТЗ-80:')
 
 ################################################    TKR
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nTкр')
-    file_object.write(' = ')
-    file_object.write(str(NKR_MZT_d))
-    file_object.write(' * ')
-    file_object.write(str(T_KR_MZT))
-    file_object.write(' = ')
-    file_object.write(str(MZT_T_KR))
+	file_object.write('\nTкр')
+	file_object.write(' = ')
+	file_object.write(str(NKR_MZT_d))
+	file_object.write(' * ')
+	file_object.write(str(T_KR_MZT))
+	file_object.write(' = ')
+	file_object.write(str(MZT_T_KR))
 
 ################################################   TTR
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nTтр')
-    file_object.write(' = ')
-    file_object.write(str(NTR_MZT_d))
-    file_object.write(' * ')
-    file_object.write(str(T_TR_MZT))
-    file_object.write(' = ')
-    file_object.write(str(MZT_T_TR))
+	file_object.write('\nTтр')
+	file_object.write(' = ')
+	file_object.write(str(NTR_MZT_d))
+	file_object.write(' * ')
+	file_object.write(str(T_TR_MZT))
+	file_object.write(' = ')
+	file_object.write(str(MZT_T_TR))
 
 ################################################    TTO-3
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nTто-3')
-    file_object.write(' = ')
-    file_object.write(str(NTO_3_MZT_d))
-    file_object.write(' * ')
-    file_object.write(str(T_TO_3_MZT))
-    file_object.write(' = ')
-    file_object.write(str(MZT_T_TO_3))
+	file_object.write('\nTто-3')
+	file_object.write(' = ')
+	file_object.write(str(NTO_3_MZT_d))
+	file_object.write(' * ')
+	file_object.write(str(T_TO_3_MZT))
+	file_object.write(' = ')
+	file_object.write(str(MZT_T_TO_3))
 
 ################################################    TTO-2
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nTто-2')
-    file_object.write(' = ')
-    file_object.write(str(NTO_2_MZT_d))
-    file_object.write(' * ')
-    file_object.write(str(T_TO_2_MZT))
-    file_object.write(' = ')
-    file_object.write(str(MZT_T_TO_2))
+	file_object.write('\nTто-2')
+	file_object.write(' = ')
+	file_object.write(str(NTO_2_MZT_d))
+	file_object.write(' * ')
+	file_object.write(str(T_TO_2_MZT))
+	file_object.write(' = ')
+	file_object.write(str(MZT_T_TO_2))
 
 ################################################    TTO-1
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nTто-1')
-    file_object.write(' = ')
-    file_object.write(str(NTO_1_MZT_d))
-    file_object.write(' * ')
-    file_object.write(str(T_TO_1_MZT))
-    file_object.write(' = ')
-    file_object.write(str(MZT_T_TO_1))
+	file_object.write('\nTто-1')
+	file_object.write(' = ')
+	file_object.write(str(NTO_1_MZT_d))
+	file_object.write(' * ')
+	file_object.write(str(T_TO_1_MZT))
+	file_object.write(' = ')
+	file_object.write(str(MZT_T_TO_1))
 
 ################################################    TCTO
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nTсто')
-    file_object.write(' = ')
-    file_object.write(str(MZT_N_CTO))
-    file_object.write(' * ')
-    file_object.write(str(T_CTO_MZT))
-    file_object.write(' = ')
-    file_object.write(str(MZT_T_CTO))
+	file_object.write('\nTсто')
+	file_object.write(' = ')
+	file_object.write(str(MZT_N_CTO))
+	file_object.write(' * ')
+	file_object.write(str(T_CTO_MZT))
+	file_object.write(' = ')
+	file_object.write(str(MZT_T_CTO))
 
 
 ####################################################################
@@ -4259,68 +4256,68 @@ with open('KURSOVAYA_v1.txt', 'a')as file_object:
 # w перезапись с удалением всего что было
 # a дозапись с сохранением старого
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\n')
-    file_object.write('\nT-40:')
+	file_object.write('\n')
+	file_object.write('\nT-40:')
 
 ################################################    TKR
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nTкр')
-    file_object.write(' = ')
-    file_object.write(str(NKR_T40_d))
-    file_object.write(' * ')
-    file_object.write(str(T_KR_T40))
-    file_object.write(' = ')
-    file_object.write(str(T40_T_KR))
+	file_object.write('\nTкр')
+	file_object.write(' = ')
+	file_object.write(str(NKR_T40_d))
+	file_object.write(' * ')
+	file_object.write(str(T_KR_T40))
+	file_object.write(' = ')
+	file_object.write(str(T40_T_KR))
 
 ################################################   TTR
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nTтр')
-    file_object.write(' = ')
-    file_object.write(str(NTR_T40_d))
-    file_object.write(' * ')
-    file_object.write(str(T_TR_T40))
-    file_object.write(' = ')
-    file_object.write(str(T40_T_TR))
+	file_object.write('\nTтр')
+	file_object.write(' = ')
+	file_object.write(str(NTR_T40_d))
+	file_object.write(' * ')
+	file_object.write(str(T_TR_T40))
+	file_object.write(' = ')
+	file_object.write(str(T40_T_TR))
 
 ################################################    TTO-3
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nTто-3')
-    file_object.write(' = ')
-    file_object.write(str(NTO_3_T40_d))
-    file_object.write(' * ')
-    file_object.write(str(T_TO_3_T40))
-    file_object.write(' = ')
-    file_object.write(str(T40_T_TO_3))
+	file_object.write('\nTто-3')
+	file_object.write(' = ')
+	file_object.write(str(NTO_3_T40_d))
+	file_object.write(' * ')
+	file_object.write(str(T_TO_3_T40))
+	file_object.write(' = ')
+	file_object.write(str(T40_T_TO_3))
 
 ################################################    TTO-2
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nTто-2')
-    file_object.write(' = ')
-    file_object.write(str(NTO_2_T40_d))
-    file_object.write(' * ')
-    file_object.write(str(T_TO_2_T40))
-    file_object.write(' = ')
-    file_object.write(str(T40_T_TO_2))
+	file_object.write('\nTто-2')
+	file_object.write(' = ')
+	file_object.write(str(NTO_2_T40_d))
+	file_object.write(' * ')
+	file_object.write(str(T_TO_2_T40))
+	file_object.write(' = ')
+	file_object.write(str(T40_T_TO_2))
 
 ################################################    TTO-1
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nTто-1')
-    file_object.write(' = ')
-    file_object.write(str(NTO_1_T40_d))
-    file_object.write(' * ')
-    file_object.write(str(T_TO_1_T40))
-    file_object.write(' = ')
-    file_object.write(str(T40_T_TO_1))
+	file_object.write('\nTто-1')
+	file_object.write(' = ')
+	file_object.write(str(NTO_1_T40_d))
+	file_object.write(' * ')
+	file_object.write(str(T_TO_1_T40))
+	file_object.write(' = ')
+	file_object.write(str(T40_T_TO_1))
 
 ################################################    TCTO
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nTсто')
-    file_object.write(' = ')
-    file_object.write(str(T40_N_CTO))
-    file_object.write(' * ')
-    file_object.write(str(T_CTO_T40))
-    file_object.write(' = ')
-    file_object.write(str(T40_T_CTO))
+	file_object.write('\nTсто')
+	file_object.write(' = ')
+	file_object.write(str(T40_N_CTO))
+	file_object.write(' * ')
+	file_object.write(str(T_CTO_T40))
+	file_object.write(' = ')
+	file_object.write(str(T40_T_CTO))
 
 ####################################################################
 #                           T25
@@ -4330,68 +4327,68 @@ with open('KURSOVAYA_v1.txt', 'a')as file_object:
 # w перезапись с удалением всего что было
 # a дозапись с сохранением старого
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\n')
-    file_object.write('\nT-25:')
+	file_object.write('\n')
+	file_object.write('\nT-25:')
 
 ################################################    TKR
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nTкр')
-    file_object.write(' = ')
-    file_object.write(str(NKR_T25_d))
-    file_object.write(' * ')
-    file_object.write(str(T_KR_T25))
-    file_object.write(' = ')
-    file_object.write(str(T25_T_KR))
+	file_object.write('\nTкр')
+	file_object.write(' = ')
+	file_object.write(str(NKR_T25_d))
+	file_object.write(' * ')
+	file_object.write(str(T_KR_T25))
+	file_object.write(' = ')
+	file_object.write(str(T25_T_KR))
 
 ################################################   TTR
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nTтр')
-    file_object.write(' = ')
-    file_object.write(str(NTR_T25_d))
-    file_object.write(' * ')
-    file_object.write(str(T_TR_T25))
-    file_object.write(' = ')
-    file_object.write(str(T25_T_TR))
+	file_object.write('\nTтр')
+	file_object.write(' = ')
+	file_object.write(str(NTR_T25_d))
+	file_object.write(' * ')
+	file_object.write(str(T_TR_T25))
+	file_object.write(' = ')
+	file_object.write(str(T25_T_TR))
 
 ################################################    TTO-3
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nTто-3')
-    file_object.write(' = ')
-    file_object.write(str(NTO_3_T25_d))
-    file_object.write(' * ')
-    file_object.write(str(T_TO_3_T25))
-    file_object.write(' = ')
-    file_object.write(str(T25_T_TO_3))
+	file_object.write('\nTто-3')
+	file_object.write(' = ')
+	file_object.write(str(NTO_3_T25_d))
+	file_object.write(' * ')
+	file_object.write(str(T_TO_3_T25))
+	file_object.write(' = ')
+	file_object.write(str(T25_T_TO_3))
 
 ################################################    TTO-2
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nTто-2')
-    file_object.write(' = ')
-    file_object.write(str(NTO_2_T25_d))
-    file_object.write(' * ')
-    file_object.write(str(T_TO_2_T25))
-    file_object.write(' = ')
-    file_object.write(str(T25_T_TO_2))
+	file_object.write('\nTто-2')
+	file_object.write(' = ')
+	file_object.write(str(NTO_2_T25_d))
+	file_object.write(' * ')
+	file_object.write(str(T_TO_2_T25))
+	file_object.write(' = ')
+	file_object.write(str(T25_T_TO_2))
 
 ################################################    TTO-1
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nTто-1')
-    file_object.write(' = ')
-    file_object.write(str(NTO_1_T25_d))
-    file_object.write(' * ')
-    file_object.write(str(T_TO_1_T25))
-    file_object.write(' = ')
-    file_object.write(str(T25_T_TO_1))
+	file_object.write('\nTто-1')
+	file_object.write(' = ')
+	file_object.write(str(NTO_1_T25_d))
+	file_object.write(' * ')
+	file_object.write(str(T_TO_1_T25))
+	file_object.write(' = ')
+	file_object.write(str(T25_T_TO_1))
 
 ################################################    TCTO
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nTсто')
-    file_object.write(' = ')
-    file_object.write(str(T25_N_CTO))
-    file_object.write(' * ')
-    file_object.write(str(T_CTO_T25))
-    file_object.write(' = ')
-    file_object.write(str(T25_T_CTO))
+	file_object.write('\nTсто')
+	file_object.write(' = ')
+	file_object.write(str(T25_N_CTO))
+	file_object.write(' * ')
+	file_object.write(str(T_CTO_T25))
+	file_object.write(' = ')
+	file_object.write(str(T25_T_CTO))
 
 ####################################################################
 #                           T16
@@ -4401,68 +4398,68 @@ with open('KURSOVAYA_v1.txt', 'a')as file_object:
 # w перезапись с удалением всего что было
 # a дозапись с сохранением старого
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\n')
-    file_object.write('\nT-16:')
+	file_object.write('\n')
+	file_object.write('\nT-16:')
 
 ################################################    TKR
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nTкр')
-    file_object.write(' = ')
-    file_object.write(str(NKR_T16_d))
-    file_object.write(' * ')
-    file_object.write(str(T_KR_T16))
-    file_object.write(' = ')
-    file_object.write(str(T16_T_KR))
+	file_object.write('\nTкр')
+	file_object.write(' = ')
+	file_object.write(str(NKR_T16_d))
+	file_object.write(' * ')
+	file_object.write(str(T_KR_T16))
+	file_object.write(' = ')
+	file_object.write(str(T16_T_KR))
 
 ################################################   TTR
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nTтр')
-    file_object.write(' = ')
-    file_object.write(str(NTR_T16_d))
-    file_object.write(' * ')
-    file_object.write(str(T_TR_T16))
-    file_object.write(' = ')
-    file_object.write(str(T16_T_TR))
+	file_object.write('\nTтр')
+	file_object.write(' = ')
+	file_object.write(str(NTR_T16_d))
+	file_object.write(' * ')
+	file_object.write(str(T_TR_T16))
+	file_object.write(' = ')
+	file_object.write(str(T16_T_TR))
 
 ################################################    TTO-3
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nTто-3')
-    file_object.write(' = ')
-    file_object.write(str(NTO_3_T16_d))
-    file_object.write(' * ')
-    file_object.write(str(T_TO_3_T16))
-    file_object.write(' = ')
-    file_object.write(str(T16_T_TO_3))
+	file_object.write('\nTто-3')
+	file_object.write(' = ')
+	file_object.write(str(NTO_3_T16_d))
+	file_object.write(' * ')
+	file_object.write(str(T_TO_3_T16))
+	file_object.write(' = ')
+	file_object.write(str(T16_T_TO_3))
 
 ################################################    TTO-2
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nTто-2')
-    file_object.write(' = ')
-    file_object.write(str(NTO_2_T16_d))
-    file_object.write(' * ')
-    file_object.write(str(T_TO_2_T16))
-    file_object.write(' = ')
-    file_object.write(str(T16_T_TO_2))
+	file_object.write('\nTто-2')
+	file_object.write(' = ')
+	file_object.write(str(NTO_2_T16_d))
+	file_object.write(' * ')
+	file_object.write(str(T_TO_2_T16))
+	file_object.write(' = ')
+	file_object.write(str(T16_T_TO_2))
 
 ################################################    TTO-1
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nTто-1')
-    file_object.write(' = ')
-    file_object.write(str(NTO_1_T16_d))
-    file_object.write(' * ')
-    file_object.write(str(T_TO_1_T16))
-    file_object.write(' = ')
-    file_object.write(str(T16_T_TO_1))
+	file_object.write('\nTто-1')
+	file_object.write(' = ')
+	file_object.write(str(NTO_1_T16_d))
+	file_object.write(' * ')
+	file_object.write(str(T_TO_1_T16))
+	file_object.write(' = ')
+	file_object.write(str(T16_T_TO_1))
 
 ################################################    TCTO
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nTсто')
-    file_object.write(' = ')
-    file_object.write(str(T16_N_CTO))
-    file_object.write(' * ')
-    file_object.write(str(T_CTO_T16))
-    file_object.write(' = ')
-    file_object.write(str(T16_T_CTO))
+	file_object.write('\nTсто')
+	file_object.write(' = ')
+	file_object.write(str(T16_N_CTO))
+	file_object.write(' * ')
+	file_object.write(str(T_CTO_T16))
+	file_object.write(' = ')
+	file_object.write(str(T16_T_CTO))
 
 
 
@@ -4474,62 +4471,62 @@ with open('KURSOVAYA_v1.txt', 'a')as file_object:
 # w перезапись с удалением всего что было
 # a дозапись с сохранением старого
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\n')
-    file_object.write('\nУАЗ-469:')
+	file_object.write('\n')
+	file_object.write('\nУАЗ-469:')
 
 ################################################    TKR
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nTкр')
-    file_object.write(' = ')
-    file_object.write(str(NKR_UAZ_d))
-    file_object.write(' * ')
-    file_object.write(str(UAZ_T_KR))
-    file_object.write(' = ')
-    file_object.write(str(T_KR_UAZ))
+	file_object.write('\nTкр')
+	file_object.write(' = ')
+	file_object.write(str(NKR_UAZ_d))
+	file_object.write(' * ')
+	file_object.write(str(UAZ_T_KR))
+	file_object.write(' = ')
+	file_object.write(str(T_KR_UAZ))
 
 ################################################   TTR
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNто-1')
-    file_object.write(' = ')
-    file_object.write(str(UAZ_T_TR_U1))
-    file_object.write(' * ')
-    file_object.write(str(UAZ))
-    file_object.write(' / ')
-    file_object.write(str(UAZ_T_TR_D))
-    file_object.write(' * ')
-    file_object.write(str(UAZ_T_TR_Z))
-    file_object.write(' = ')
-    file_object.write(str(T_TR_UAZ))
+	file_object.write('\nNто-1')
+	file_object.write(' = ')
+	file_object.write(str(UAZ_T_TR_U1))
+	file_object.write(' * ')
+	file_object.write(str(UAZ))
+	file_object.write(' / ')
+	file_object.write(str(UAZ_T_TR_D))
+	file_object.write(' * ')
+	file_object.write(str(UAZ_T_TR_Z))
+	file_object.write(' = ')
+	file_object.write(str(T_TR_UAZ))
 
 ################################################    TTO-2
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nTто-2')
-    file_object.write(' = ')
-    file_object.write(str(NTO_2_UAZ_d))
-    file_object.write(' * ')
-    file_object.write(str(UAZ_T_TO_2))
-    file_object.write(' = ')
-    file_object.write(str(T_TO_2_UAZ))
+	file_object.write('\nTто-2')
+	file_object.write(' = ')
+	file_object.write(str(NTO_2_UAZ_d))
+	file_object.write(' * ')
+	file_object.write(str(UAZ_T_TO_2))
+	file_object.write(' = ')
+	file_object.write(str(T_TO_2_UAZ))
 
 ################################################    TTO-1
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nTто-1')
-    file_object.write(' = ')
-    file_object.write(str(NTO_1_UAZ_d))
-    file_object.write(' * ')
-    file_object.write(str(UAZ_T_TO_1))
-    file_object.write(' = ')
-    file_object.write(str(T_TO_1_UAZ))
+	file_object.write('\nTто-1')
+	file_object.write(' = ')
+	file_object.write(str(NTO_1_UAZ_d))
+	file_object.write(' * ')
+	file_object.write(str(UAZ_T_TO_1))
+	file_object.write(' = ')
+	file_object.write(str(T_TO_1_UAZ))
 
 ################################################    TCTO
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nTсто')
-    file_object.write(' = ')
-    file_object.write(str(UAZ_NCTO))
-    file_object.write(' * ')
-    file_object.write(str(UAZ_T_CTO))
-    file_object.write(' = ')
-    file_object.write(str(T_CTO_UAZ))
+	file_object.write('\nTсто')
+	file_object.write(' = ')
+	file_object.write(str(UAZ_NCTO))
+	file_object.write(' * ')
+	file_object.write(str(UAZ_T_CTO))
+	file_object.write(' = ')
+	file_object.write(str(T_CTO_UAZ))
 
 
 
@@ -4541,62 +4538,62 @@ with open('KURSOVAYA_v1.txt', 'a')as file_object:
 # w перезапись с удалением всего что было
 # a дозапись с сохранением старого
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\n')
-    file_object.write('\nКАМАЗ-5320:')
+	file_object.write('\n')
+	file_object.write('\nКАМАЗ-5320:')
 
 ################################################    TKR
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nTкр')
-    file_object.write(' = ')
-    file_object.write(str(NKR_KAMAZ_d))
-    file_object.write(' * ')
-    file_object.write(str(KAMAZ_T_KR))
-    file_object.write(' = ')
-    file_object.write(str(T_KR_KAMAZ))
+	file_object.write('\nTкр')
+	file_object.write(' = ')
+	file_object.write(str(NKR_KAMAZ_d))
+	file_object.write(' * ')
+	file_object.write(str(KAMAZ_T_KR))
+	file_object.write(' = ')
+	file_object.write(str(T_KR_KAMAZ))
 
 ################################################   TTR
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNто-1')
-    file_object.write(' = ')
-    file_object.write(str(KAMAZ_T_TR_U1))
-    file_object.write(' * ')
-    file_object.write(str(KAMAZ))
-    file_object.write(' / ')
-    file_object.write(str(KAMAZ_T_TR_D))
-    file_object.write(' * ')
-    file_object.write(str(KAMAZ_T_TR_Z))
-    file_object.write(' = ')
-    file_object.write(str(T_TR_KAMAZ))
+	file_object.write('\nNто-1')
+	file_object.write(' = ')
+	file_object.write(str(KAMAZ_T_TR_U1))
+	file_object.write(' * ')
+	file_object.write(str(KAMAZ))
+	file_object.write(' / ')
+	file_object.write(str(KAMAZ_T_TR_D))
+	file_object.write(' * ')
+	file_object.write(str(KAMAZ_T_TR_Z))
+	file_object.write(' = ')
+	file_object.write(str(T_TR_KAMAZ))
 
 ################################################    TTO-2
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nTто-2')
-    file_object.write(' = ')
-    file_object.write(str(NTO_2_KAMAZ_d))
-    file_object.write(' * ')
-    file_object.write(str(KAMAZ_T_TO_2))
-    file_object.write(' = ')
-    file_object.write(str(T_TO_2_KAMAZ))
+	file_object.write('\nTто-2')
+	file_object.write(' = ')
+	file_object.write(str(NTO_2_KAMAZ_d))
+	file_object.write(' * ')
+	file_object.write(str(KAMAZ_T_TO_2))
+	file_object.write(' = ')
+	file_object.write(str(T_TO_2_KAMAZ))
 
 ################################################    TTO-1
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nTто-1')
-    file_object.write(' = ')
-    file_object.write(str(NTO_1_KAMAZ_d))
-    file_object.write(' * ')
-    file_object.write(str(KAMAZ_T_TO_1))
-    file_object.write(' = ')
-    file_object.write(str(T_TO_1_KAMAZ))
+	file_object.write('\nTто-1')
+	file_object.write(' = ')
+	file_object.write(str(NTO_1_KAMAZ_d))
+	file_object.write(' * ')
+	file_object.write(str(KAMAZ_T_TO_1))
+	file_object.write(' = ')
+	file_object.write(str(T_TO_1_KAMAZ))
 
 ################################################    TCTO
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nTсто')
-    file_object.write(' = ')
-    file_object.write(str(KAMAZ_NCTO))
-    file_object.write(' * ')
-    file_object.write(str(KAMAZ_T_CTO))
-    file_object.write(' = ')
-    file_object.write(str(T_CTO_KAMAZ))
+	file_object.write('\nTсто')
+	file_object.write(' = ')
+	file_object.write(str(KAMAZ_NCTO))
+	file_object.write(' * ')
+	file_object.write(str(KAMAZ_T_CTO))
+	file_object.write(' = ')
+	file_object.write(str(T_CTO_KAMAZ))
 
 ####################################################################
 #                           ГАЗ-53
@@ -4606,62 +4603,62 @@ with open('KURSOVAYA_v1.txt', 'a')as file_object:
 # w перезапись с удалением всего что было
 # a дозапись с сохранением старого
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\n')
-    file_object.write('\nГАЗ-53:')
+	file_object.write('\n')
+	file_object.write('\nГАЗ-53:')
 
 ################################################    TKR
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nTкр')
-    file_object.write(' = ')
-    file_object.write(str(NKR_GAZ_d))
-    file_object.write(' * ')
-    file_object.write(str(GAZ_T_KR))
-    file_object.write(' = ')
-    file_object.write(str(T_KR_GAZ))
+	file_object.write('\nTкр')
+	file_object.write(' = ')
+	file_object.write(str(NKR_GAZ_d))
+	file_object.write(' * ')
+	file_object.write(str(GAZ_T_KR))
+	file_object.write(' = ')
+	file_object.write(str(T_KR_GAZ))
 
 ################################################   TTR
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNто-1')
-    file_object.write(' = ')
-    file_object.write(str(GAZ_T_TR_U1))
-    file_object.write(' * ')
-    file_object.write(str(GAZ))
-    file_object.write(' / ')
-    file_object.write(str(GAZ_T_TR_D))
-    file_object.write(' * ')
-    file_object.write(str(GAZ_T_TR_Z))
-    file_object.write(' = ')
-    file_object.write(str(T_TR_GAZ))
+	file_object.write('\nNто-1')
+	file_object.write(' = ')
+	file_object.write(str(GAZ_T_TR_U1))
+	file_object.write(' * ')
+	file_object.write(str(GAZ))
+	file_object.write(' / ')
+	file_object.write(str(GAZ_T_TR_D))
+	file_object.write(' * ')
+	file_object.write(str(GAZ_T_TR_Z))
+	file_object.write(' = ')
+	file_object.write(str(T_TR_GAZ))
 
 ################################################    TTO-2
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nTто-2')
-    file_object.write(' = ')
-    file_object.write(str(NTO_2_GAZ_d))
-    file_object.write(' * ')
-    file_object.write(str(GAZ_T_TO_2))
-    file_object.write(' = ')
-    file_object.write(str(T_TO_2_GAZ))
+	file_object.write('\nTто-2')
+	file_object.write(' = ')
+	file_object.write(str(NTO_2_GAZ_d))
+	file_object.write(' * ')
+	file_object.write(str(GAZ_T_TO_2))
+	file_object.write(' = ')
+	file_object.write(str(T_TO_2_GAZ))
 
 ################################################    TTO-1
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nTто-1')
-    file_object.write(' = ')
-    file_object.write(str(NTO_1_GAZ_d))
-    file_object.write(' * ')
-    file_object.write(str(GAZ_T_TO_1))
-    file_object.write(' = ')
-    file_object.write(str(T_TO_1_GAZ))
+	file_object.write('\nTто-1')
+	file_object.write(' = ')
+	file_object.write(str(NTO_1_GAZ_d))
+	file_object.write(' * ')
+	file_object.write(str(GAZ_T_TO_1))
+	file_object.write(' = ')
+	file_object.write(str(T_TO_1_GAZ))
 
 ################################################    TCTO
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nTсто')
-    file_object.write(' = ')
-    file_object.write(str(GAZ_NCTO))
-    file_object.write(' * ')
-    file_object.write(str(GAZ_T_CTO))
-    file_object.write(' = ')
-    file_object.write(str(T_CTO_GAZ))
+	file_object.write('\nTсто')
+	file_object.write(' = ')
+	file_object.write(str(GAZ_NCTO))
+	file_object.write(' * ')
+	file_object.write(str(GAZ_T_CTO))
+	file_object.write(' = ')
+	file_object.write(str(T_CTO_GAZ))
 
 ####################################################################
 #                           ЗИЛ-130
@@ -4671,62 +4668,62 @@ with open('KURSOVAYA_v1.txt', 'a')as file_object:
 # w перезапись с удалением всего что было
 # a дозапись с сохранением старого
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\n')
-    file_object.write('\nЗИЛ-130:')
+	file_object.write('\n')
+	file_object.write('\nЗИЛ-130:')
 
 ################################################    TKR
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nTкр')
-    file_object.write(' = ')
-    file_object.write(str(NKR_ZIL_d))
-    file_object.write(' * ')
-    file_object.write(str(ZIL_T_KR))
-    file_object.write(' = ')
-    file_object.write(str(T_KR_ZIL))
+	file_object.write('\nTкр')
+	file_object.write(' = ')
+	file_object.write(str(NKR_ZIL_d))
+	file_object.write(' * ')
+	file_object.write(str(ZIL_T_KR))
+	file_object.write(' = ')
+	file_object.write(str(T_KR_ZIL))
 
 ################################################   TTR
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNто-1')
-    file_object.write(' = ')
-    file_object.write(str(ZIL_T_TR_U1))
-    file_object.write(' * ')
-    file_object.write(str(ZIL))
-    file_object.write(' / ')
-    file_object.write(str(ZIL_T_TR_D))
-    file_object.write(' * ')
-    file_object.write(str(ZIL_T_TR_Z))
-    file_object.write(' = ')
-    file_object.write(str(T_TR_ZIL))
+	file_object.write('\nNто-1')
+	file_object.write(' = ')
+	file_object.write(str(ZIL_T_TR_U1))
+	file_object.write(' * ')
+	file_object.write(str(ZIL))
+	file_object.write(' / ')
+	file_object.write(str(ZIL_T_TR_D))
+	file_object.write(' * ')
+	file_object.write(str(ZIL_T_TR_Z))
+	file_object.write(' = ')
+	file_object.write(str(T_TR_ZIL))
 
 ################################################    TTO-2
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nTто-2')
-    file_object.write(' = ')
-    file_object.write(str(NTO_2_ZIL_d))
-    file_object.write(' * ')
-    file_object.write(str(ZIL_T_TO_2))
-    file_object.write(' = ')
-    file_object.write(str(T_TO_2_ZIL))
+	file_object.write('\nTто-2')
+	file_object.write(' = ')
+	file_object.write(str(NTO_2_ZIL_d))
+	file_object.write(' * ')
+	file_object.write(str(ZIL_T_TO_2))
+	file_object.write(' = ')
+	file_object.write(str(T_TO_2_ZIL))
 
 ################################################    TTO-1
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nTто-1')
-    file_object.write(' = ')
-    file_object.write(str(NTO_1_ZIL_d))
-    file_object.write(' * ')
-    file_object.write(str(ZIL_T_TO_1))
-    file_object.write(' = ')
-    file_object.write(str(T_TO_1_ZIL))
+	file_object.write('\nTто-1')
+	file_object.write(' = ')
+	file_object.write(str(NTO_1_ZIL_d))
+	file_object.write(' * ')
+	file_object.write(str(ZIL_T_TO_1))
+	file_object.write(' = ')
+	file_object.write(str(T_TO_1_ZIL))
 
 ################################################    TCTO
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nTсто')
-    file_object.write(' = ')
-    file_object.write(str(ZIL_NCTO))
-    file_object.write(' * ')
-    file_object.write(str(ZIL_T_CTO))
-    file_object.write(' = ')
-    file_object.write(str(T_CTO_ZIL))
+	file_object.write('\nTсто')
+	file_object.write(' = ')
+	file_object.write(str(ZIL_NCTO))
+	file_object.write(' * ')
+	file_object.write(str(ZIL_T_CTO))
+	file_object.write(' = ')
+	file_object.write(str(T_CTO_ZIL))
 
 
 ####################################################################
@@ -4737,58 +4734,58 @@ with open('KURSOVAYA_v1.txt', 'a')as file_object:
 # w перезапись с удалением всего что было
 # a дозапись с сохранением старого
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\n')
-    file_object.write('\nCK-5:')
+	file_object.write('\n')
+	file_object.write('\nCK-5:')
 
 ################################################    NKR
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNкр')
-    file_object.write(' = ')
-    file_object.write(str(NKR_CK_d))
-    file_object.write(' * ')
-    file_object.write(str(CK_T_KR))
-    file_object.write(' = ')
-    file_object.write(str(T_KR_CK))
+	file_object.write('\nNкр')
+	file_object.write(' = ')
+	file_object.write(str(NKR_CK_d))
+	file_object.write(' * ')
+	file_object.write(str(CK_T_KR))
+	file_object.write(' = ')
+	file_object.write(str(T_KR_CK))
 
 ################################################   NTR
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNтр')
-    file_object.write(' = ')
-    file_object.write(str(NTR_CK_d))
-    file_object.write(' * ')
-    file_object.write(str(CK_T_TR))
-    file_object.write(' = ')
-    file_object.write(str(T_TR_CK))
+	file_object.write('\nNтр')
+	file_object.write(' = ')
+	file_object.write(str(NTR_CK_d))
+	file_object.write(' * ')
+	file_object.write(str(CK_T_TR))
+	file_object.write(' = ')
+	file_object.write(str(T_TR_CK))
 
 ################################################    NTO-2
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNто-2')
-    file_object.write(' = ')
-    file_object.write(str(NTO_2_CK_d))
-    file_object.write(' * ')
-    file_object.write(str(CK_T_TO_2))
-    file_object.write(' = ')
-    file_object.write(str(T_TO_2_CK))
+	file_object.write('\nNто-2')
+	file_object.write(' = ')
+	file_object.write(str(NTO_2_CK_d))
+	file_object.write(' * ')
+	file_object.write(str(CK_T_TO_2))
+	file_object.write(' = ')
+	file_object.write(str(T_TO_2_CK))
 
 ################################################    NTO-1
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNто-1')
-    file_object.write(' = ')
-    file_object.write(str(NTO_1_CK_d))
-    file_object.write(' * ')
-    file_object.write(str(CK_T_TO_1))
-    file_object.write(' = ')
-    file_object.write(str(T_TO_1_CK))
+	file_object.write('\nNто-1')
+	file_object.write(' = ')
+	file_object.write(str(NTO_1_CK_d))
+	file_object.write(' * ')
+	file_object.write(str(CK_T_TO_1))
+	file_object.write(' = ')
+	file_object.write(str(T_TO_1_CK))
 
 ################################################    NCTO
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNсто')
-    file_object.write(' = ')
-    file_object.write(str(CK_NCTO))
-    file_object.write(' * ')
-    file_object.write(str(CK_T_CTO))
-    file_object.write(' = ')
-    file_object.write(str(T_CTO_CK))
+	file_object.write('\nNсто')
+	file_object.write(' = ')
+	file_object.write(str(CK_NCTO))
+	file_object.write(' * ')
+	file_object.write(str(CK_T_CTO))
+	file_object.write(' = ')
+	file_object.write(str(T_CTO_CK))
 
 
 
@@ -4801,30 +4798,30 @@ with open('KURSOVAYA_v1.txt', 'a')as file_object:
 # w перезапись с удалением всего что было
 # a дозапись с сохранением старого
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\n')
-    file_object.write('\nПЛН-4-35:')
+	file_object.write('\n')
+	file_object.write('\nПЛН-4-35:')
 
 ################################################    TTR
 
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nTтр')
-    file_object.write(' = ')
-    file_object.write(str(PLN_NTR_d))
-    file_object.write(' * ')
-    file_object.write(str(T_TR_PLN))
-    file_object.write(' = ')
-    file_object.write(str(PLN_T_TR))
+	file_object.write('\nTтр')
+	file_object.write(' = ')
+	file_object.write(str(PLN_NTR_d))
+	file_object.write(' * ')
+	file_object.write(str(T_TR_PLN))
+	file_object.write(' = ')
+	file_object.write(str(PLN_T_TR))
 
 ################################################    TCTO
 
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nTпсто')
-    file_object.write(' = ')
-    file_object.write(str(PLN_NCTO))
-    file_object.write(' * ')
-    file_object.write(str(T_CTO_PLN))
-    file_object.write(' = ')
-    file_object.write(str(PLN_T_CTO))
+	file_object.write('\nTпсто')
+	file_object.write(' = ')
+	file_object.write(str(PLN_NCTO))
+	file_object.write(' * ')
+	file_object.write(str(T_CTO_PLN))
+	file_object.write(' = ')
+	file_object.write(str(PLN_T_CTO))
 
 
 
@@ -4836,30 +4833,30 @@ with open('KURSOVAYA_v1.txt', 'a')as file_object:
 # w перезапись с удалением всего что было
 # a дозапись с сохранением старого
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\n')
-    file_object.write('\nСЗ-3-6')
+	file_object.write('\n')
+	file_object.write('\nСЗ-3-6')
 
 ################################################    ТTR
 
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nТтр')
-    file_object.write(' = ')
-    file_object.write(str(SZ_NTR_d))
-    file_object.write(' * ')
-    file_object.write(str(T_TR_SZ))
-    file_object.write(' = ')
-    file_object.write(str(SZ_T_TR))
+	file_object.write('\nТтр')
+	file_object.write(' = ')
+	file_object.write(str(SZ_NTR_d))
+	file_object.write(' * ')
+	file_object.write(str(T_TR_SZ))
+	file_object.write(' = ')
+	file_object.write(str(SZ_T_TR))
 
 ################################################    ТCTO
 
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nТпсто')
-    file_object.write(' = ')
-    file_object.write(str(SZ_NCTO))
-    file_object.write(' * ')
-    file_object.write(str(T_CTO_SZ))
-    file_object.write(' = ')
-    file_object.write(str(SZ_T_CTO))
+	file_object.write('\nТпсто')
+	file_object.write(' = ')
+	file_object.write(str(SZ_NCTO))
+	file_object.write(' * ')
+	file_object.write(str(T_CTO_SZ))
+	file_object.write(' = ')
+	file_object.write(str(SZ_T_CTO))
 
 
 
@@ -4871,30 +4868,30 @@ with open('KURSOVAYA_v1.txt', 'a')as file_object:
 # w перезапись с удалением всего что было
 # a дозапись с сохранением старого
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\n')
-    file_object.write('\nККУ-2А')
+	file_object.write('\n')
+	file_object.write('\nККУ-2А')
 
 ################################################    ТTR
 
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nТтр')
-    file_object.write(' = ')
-    file_object.write(str(KKU_NTR_d))
-    file_object.write(' * ')
-    file_object.write(str(T_TR_KKU))
-    file_object.write(' = ')
-    file_object.write(str(KKU_T_TR))
+	file_object.write('\nТтр')
+	file_object.write(' = ')
+	file_object.write(str(KKU_NTR_d))
+	file_object.write(' * ')
+	file_object.write(str(T_TR_KKU))
+	file_object.write(' = ')
+	file_object.write(str(KKU_T_TR))
 
 ################################################    ТCTO
 
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nТпсто')
-    file_object.write(' = ')
-    file_object.write(str(KKU_NCTO))
-    file_object.write(' * ')
-    file_object.write(str(T_CTO_KKU))
-    file_object.write(' = ')
-    file_object.write(str(KKU_T_CTO))
+	file_object.write('\nТпсто')
+	file_object.write(' = ')
+	file_object.write(str(KKU_NCTO))
+	file_object.write(' * ')
+	file_object.write(str(T_CTO_KKU))
+	file_object.write(' = ')
+	file_object.write(str(KKU_T_CTO))
 
 
 
@@ -4906,30 +4903,30 @@ with open('KURSOVAYA_v1.txt', 'a')as file_object:
 # w перезапись с удалением всего что было
 # a дозапись с сохранением старого
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\n')
-    file_object.write('\nБДТ-3')
+	file_object.write('\n')
+	file_object.write('\nБДТ-3')
 
 ################################################    NTR
 
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNтр')
-    file_object.write(' = ')
-    file_object.write(str(BDT_NTR_d))
-    file_object.write(' * ')
-    file_object.write(str(T_TR_BDT))
-    file_object.write(' = ')
-    file_object.write(str(BDT_T_TR))
+	file_object.write('\nNтр')
+	file_object.write(' = ')
+	file_object.write(str(BDT_NTR_d))
+	file_object.write(' * ')
+	file_object.write(str(T_TR_BDT))
+	file_object.write(' = ')
+	file_object.write(str(BDT_T_TR))
 
 ################################################    NCTO
 
 with open('KURSOVAYA_v1.txt', 'a')as file_object:
-    file_object.write('\nNсто')
-    file_object.write(' = ')
-    file_object.write(str(BDT_NCTO))
-    file_object.write(' * ')
-    file_object.write(str(T_CTO_BDT))
-    file_object.write(' = ')
-    file_object.write(str(BDT_T_CTO))
+	file_object.write('\nNсто')
+	file_object.write(' = ')
+	file_object.write(str(BDT_NCTO))
+	file_object.write(' * ')
+	file_object.write(str(T_CTO_BDT))
+	file_object.write(' = ')
+	file_object.write(str(BDT_T_CTO))
 
 
 import matplotlib.pyplot as plt
@@ -4979,99 +4976,99 @@ print(var)
 x = len(var)
 d = 1
 while var[0] == 0:
-    var.pop(0)
+	var.pop(0)
 
 
 while x != d:
 
-    if len(var) > d:
-        july = list(july)
-        july.append(var[0])
-        print('july',july)
-        jl = sum(map(float,july))
-        print(jl)
-        var.pop(0)
+	if len(var) > d:
+		july = list(july)
+		july.append(var[0])
+		print('july',july)
+		jl = sum(map(float,july))
+		print(jl)
+		var.pop(0)
 
-        if len(var) > d:
-            june.append(var[0])
-            print('june',june)
-            jn = sum(map(float,june))
-            print(jn)
-            var.pop(0)
+		if len(var) > d:
+			june.append(var[0])
+			print('june',june)
+			jn = sum(map(float,june))
+			print(jn)
+			var.pop(0)
 
-            if len(var) > d:
-                august.append(var[0])
-                print('august',august)
-                aug = sum(map(float,august))
-                print(aug)
-                var.pop(0)
+			if len(var) > d:
+				august.append(var[0])
+				print('august',august)
+				aug = sum(map(float,august))
+				print(aug)
+				var.pop(0)
 
-                if len(var) > d:
-                    may.append(var[0])
-                    print('may',may)
-                    m = sum(map(float,may))
-                    print(m)
-                    var.pop(0)
+				if len(var) > d:
+					may.append(var[0])
+					print('may',may)
+					m = sum(map(float,may))
+					print(m)
+					var.pop(0)
 
-                    if len(var) > d:
-                        september.append(var[0])
-                        print('september',september)
-                        sept = sum(map(float,september))
-                        print(sept)
-                        var.pop(0)
+					if len(var) > d:
+						september.append(var[0])
+						print('september',september)
+						sept = sum(map(float,september))
+						print(sept)
+						var.pop(0)
 
-                        if len(var) > d:
-                            april.append(var[0])
-                            print('april',april)
-                            apr = sum(map(float,april))
-                            print(apr)
-                            var.pop(0)
+						if len(var) > d:
+							april.append(var[0])
+							print('april',april)
+							apr = sum(map(float,april))
+							print(apr)
+							var.pop(0)
 
-                            if len(var) > d:
-                                october.append(var[0])
-                                print('october',october)
-                                octo = sum(map(float,october))
-                                print(octo)
-                                var.pop(0)
+							if len(var) > d:
+								october.append(var[0])
+								print('october',october)
+								octo = sum(map(float,october))
+								print(octo)
+								var.pop(0)
 
 
-                                if len(var) > d:
+								if len(var) > d:
 
-                                    march.append(var[0])
-                                    print('march',march)
-                                    mar = sum(map(float, march))
-                                    print(mar)
-                                    var.pop(0)
+									march.append(var[0])
+									print('march',march)
+									mar = sum(map(float, march))
+									print(mar)
+									var.pop(0)
 
-                                    if len(var) > d:
-                                        november.append(var[0])
-                                        print('november',november)
-                                        nov = sum(map(float,november))
-                                        print(nov)
-                                        var.pop(0)
+									if len(var) > d:
+										november.append(var[0])
+										print('november',november)
+										nov = sum(map(float,november))
+										print(nov)
+										var.pop(0)
 
-                                        if len(var) > d:
-                                            february.append(var[0])
-                                            print('february',february)
-                                            feb = sum(map(float,february))
-                                            print(feb)
-                                            var.pop(0)
+										if len(var) > d:
+											february.append(var[0])
+											print('february',february)
+											feb = sum(map(float,february))
+											print(feb)
+											var.pop(0)
 
-                                            if len(var) > d:
-                                                december.append(var[0])
-                                                print('december',december)
-                                                dec = sum(map(float,december))
-                                                print(dec)
-                                                var.pop(0)
+											if len(var) > d:
+												december.append(var[0])
+												print('december',december)
+												dec = sum(map(float,december))
+												print(dec)
+												var.pop(0)
 
-                                                if len(var) > d:
-                                                    january.append(var[0])
-                                                    print('january',january)
-                                                    jan = sum(map(float,january))
-                                                    print(jan)
-                                                    var.pop(0)
-    else:
-        break
+												if len(var) > d:
+													january.append(var[0])
+													print('january',january)
+													jan = sum(map(float,january))
+													print(jan)
+													var.pop(0)
+	else:
+		break
 
 
 import matplotlib.pyplot as plt

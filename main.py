@@ -1,334 +1,35 @@
-from sys import*
+from sys import *
 import matplotlib.pyplot as plt
 from tkinter import*
-
-
-def mycom():
-	Button1 = Button(win, text = 'WAIT...', bg = 'YELLOW')
-	Button1.place(x = 10, y = 400, width = 265, height = 40)
-
-
-def Tex(xx, yy, width_d, height_h, texted):
-	Label1 = Label(win, text = texted, fg = 'red')
-	Label1.place(x = xx, y = yy, width = width_d, height = height_h)
-
-
-def Del(yy):
-	Button1 = Button(win, text = '', bg = 'grey')
-	Button1.place(x = 0, y = yy, width = 285, height = 2)
-
-def Answer(xx, yy, width_d, height_h, tex):
-	Label1 = Label(win, text = tex)
-	Label1.place(x = xx, y = yy, width = width_d, height = height_h)
-
-def save_K_700():
-	global K_700
-	K_700 = Entr_K_700.get()
-	K_700 = int(K_700)
-	
-def save_K_701():
-	global K_701
-	K_701 = Entr_K_701.get()
-	K_701 = int(K_701)
-
-def save_DT():
-	global DT
-	DT = Entr_DT.get()
-	DT = int(DT)
-
-def save_MTZ2():
-	global MTZ2
-	MTZ2 = Entr_MTZ2.get()
-	MTZ2 = int(MTZ2)
-
-def save_MZT():
-	global MZT
-	MZT = Entr_MZT.get()
-	MZT = int(MZT)
-
-def save_T40():
-	global T40
-	T40 = Entr_T40.get()
-	T40 = int(T40)
-
-def save_T25():
-	global T25
-	T25 = Entr_T25.get()
-	T25 = int(T25)
-
-def save_T16():
-	global T16
-	T16 = Entr_T16.get()
-	T16 = int(T16)
-
-def save_UAZ():
-	global UAZ
-	UAZ = Entr_UAZ.get()
-	UAZ = int(UAZ)
-
-def save_KAMAZ():
-	global KAMAZ
-	KAMAZ = Entr_KAMAZ.get()
-	KAMAZ = int(KAMAZ)
-
-def save_GAZ():
-	global GAZ
-	GAZ = Entr_GAZ.get()
-	GAZ = int(GAZ)
-
-def save_ZIL():
-	global ZIL
-	ZIL = Entr_ZIL.get()
-	ZIL = int(ZIL)
-
-def save_CK():
-	global CK
-	CK = Entr_CK.get()
-	CK = int(CK)
-
-def save_KKU():
-	global KKU
-	KKU = Entr_KKU.get()
-	KKU = int(KKU)
-
-def save_PLN():
-	global PLN
-	PLN = Entr_PLN.get()
-	PLN = int(PLN)
-
-def save_SZ():
-	global SZ
-	SZ = Entr_SZ.get()
-	SZ = int(SZ)
-
-def save_BDT():
-	global BDT
-	BDT = Entr_BDT.get()
-	BDT = int(BDT)
-
-	
-
-win = Tk()
-win.title('KURSOVAYA TO')
-win.config(width = 285, height = 450)
-
-Tex(10,10,250,20,'ВВЕДИТЕ КОЛИЧЕСТВО МТП')
-
-Del(30)
-
-Answer(10,40,70,20,'K-700')
-Entr_K_700 = Entry(win)
-Entr_K_700.place(x = 90, y = 40, width = 70, height = 20)
-Button1 = Button(win, text = 'SAVE', command = save_K_700)
-Button1.place(x = 190, y = 40, width = 70, height = 20)
-
-
-Answer(10,60,70,20,'K-701')
-Entr_K_701 = Entry(win)
-Entr_K_701.place(x = 90, y = 60, width = 70, height = 20)
-Button1 = Button(win, text = 'SAVE', command = save_K_701)
-Button1.place(x = 190, y = 60, width = 70, height = 20)
-
-
-Answer(10,80,70,20,'ДТ-75')
-Entr_DT = Entry(win)
-Entr_DT.place(x = 90, y = 80, width = 70, height = 20)
-Button1 = Button(win, text = 'SAVE', command = save_DT)
-Button1.place(x = 190, y = 80, width = 70, height = 20)
-
-
-Answer(10,100,70,20,'Т-40')
-Entr_T40 = Entry(win)
-Entr_T40.place(x = 90, y = 100, width = 70, height = 20)
-Button1 = Button(win, text = 'SAVE', command = save_T40)
-Button1.place(x = 190, y = 100, width = 70, height = 20)
-
-
-Answer(10,120,70,20,'Т-25')
-Entr_T25 = Entry(win)
-Entr_T25.place(x = 90, y = 120, width = 70, height = 20)
-Button1 = Button(win, text = 'SAVE', command = save_T25)
-Button1.place(x = 190, y = 120, width = 70, height = 20)
-
-
-Answer(10,140,70,20,'Т-16')
-Entr_T16 = Entry(win)
-Entr_T16.place(x = 90, y = 140, width = 70, height = 20)
-Button1 = Button(win, text = 'SAVE', command = save_T16)
-Button1.place(x = 190, y = 140, width = 70, height = 20)
-
-
-Answer(10,160,70,20,'УАЗ-469')
-Entr_UAZ = Entry(win)
-Entr_UAZ.place(x = 90, y = 160, width = 70, height = 20)
-Button1 = Button(win, text = 'SAVE', command = save_UAZ)
-Button1.place(x = 190, y = 160, width = 70, height = 20)
-
-
-Answer(10,180,70,20,'КАМАЗ-5320')
-Entr_KAMAZ = Entry(win)
-Entr_KAMAZ.place(x = 90, y = 180, width = 70, height = 20)
-Button1 = Button(win, text = 'SAVE', command = save_KAMAZ)
-Button1.place(x = 190, y = 180, width = 70, height = 20)
-
-
-Answer(10,200,70,20,'ГАЗ-53')
-Entr_GAZ = Entry(win)
-Entr_GAZ.place(x = 90, y = 200, width = 70, height = 20)
-Button1 = Button(win, text = 'SAVE', command = save_GAZ)
-Button1.place(x = 190, y = 200, width = 70, height = 20)
-
-
-Answer(10,220,70,20,'ЗИЛ-130')
-Entr_ZIL = Entry(win)
-Entr_ZIL.place(x = 90, y = 220, width = 70, height = 20)
-Button1 = Button(win, text = 'SAVE', command = save_ZIL)
-Button1.place(x = 190, y = 220, width = 70, height = 20)
-
-
-Answer(10,240,70,20,'СК-5')
-Entr_CK = Entry(win)
-Entr_CK.place(x = 90, y = 240, width = 70, height = 20)
-Button1 = Button(win, text = 'SAVE', command = save_CK)
-Button1.place(x = 190, y = 240, width = 70, height = 20)
-
-
-Answer(10,260,70,20,'ККУ-2А')
-Entr_KKU = Entry(win)
-Entr_KKU.place(x = 90, y = 260, width = 70, height = 20)
-Button1 = Button(win, text = 'SAVE', command = save_KKU)
-Button1.place(x = 190, y = 260, width = 70, height = 20)
-
-
-Answer(10,280,70,20,'ПЛН-4-35')
-Entr_PLN = Entry(win)
-Entr_PLN.place(x = 90, y = 280, width = 70, height = 20)
-Button1 = Button(win, text = 'SAVE', command = save_PLN)
-Button1.place(x = 190, y = 280, width = 70, height = 20)
-
-
-Answer(10,300,70,20,'СЗ-3-6')
-Entr_SZ = Entry(win)
-Entr_SZ.place(x = 90, y = 300, width = 70, height = 20)
-Button1 = Button(win, text = 'SAVE', command = save_SZ)
-Button1.place(x = 190, y = 300, width = 70, height = 20)
-
-
-Answer(10,320,70,20,'БДТ-3')
-Entr_BDT = Entry(win)
-Entr_BDT.place(x = 90, y = 320, width = 70, height = 20)
-Button1 = Button(win, text = 'SAVE', command = save_BDT)
-Button1.place(x = 190, y = 320, width = 70, height = 20)
-
-Answer(10,340,70,20,'МТЗ-82')
-Entr_MTZ2 = Entry(win)
-Entr_MTZ2.place(x = 90, y = 340, width = 70, height = 20)
-Button1 = Button(win, text = 'SAVE', command = save_MTZ2)
-Button1.place(x = 190, y = 340, width = 70, height = 20)
-
-Answer(10,360,70,20,'МТЗ-80')
-Entr_MZT = Entry(win)
-Entr_MZT.place(x = 90, y = 360, width = 70, height = 20)
-Button1 = Button(win, text = 'SAVE', command = save_MZT)
-Button1.place(x = 190, y = 360, width = 70, height = 20)
-
-
-
-
-Del(390)
-
-
-Button1 = Button(win, text = 'RUN >>>', bg = 'green', command = mycom)
-Button1.place(x = 10, y = 400, width = 265, height = 40)
-
-
-
+from manager_ui import Window
+from manager_output import *
+from manager_calc import *
+from constants import *
+
+win = Window()
+win.create_ui()
 win.mainloop()
 
+# ##############################################################################
 
+print(build_header("Курсовая (обслуживание и ремонт)"))
+print(build_table(win.manager_machines.to_dict()))
+print(build_header("Расчетная часть"))
+print(build_header('K-700'))
 
+# calculate_N()
 
-##############################################################################
-print ()
-print (("_") * 75)
-print ("ЗАДАНИЕ К КУРСОВОМУ ПРОЕКТУ:")
-print (("_") * 75)
-print ()
-
-# ТАБЛИЦА ИЗ ПЕРЕМЕННЫХ
-# pip install tabulate
-from tabulate import tabulate
-
-
-
-d = { 'K-700': K_700, 'K-701': K_701,
-	 'ДТ-75 МВ': DT, 'МТЗ-82': MTZ2, 'МТЗ-80': MZT,
-	 'Т-40': T40, 'Т-25': T25, 'Т-16': T16,
-	  'УАЗ-469': UAZ,  'KAMAЗ-5320':KAMAZ, 'ГАЗ-53 А':GAZ,
-	  'ЗИЛ-130': ZIL, 'CK-5': CK, 'KKУ-2 А': KKU,
-	  'ПЛН-4-35': PLN, 'СЗ-3-6': SZ, 'БДТ-3': BDT,
-	  }
-print(tabulate(d.items(), headers=['МАРКА', 'КОЛ-ВО'], tablefmt="grid"))
-
-
-##############################################################################
-##############################################################################
-
-##############################################################################
-
-from time import sleep
-print(">LOADING")
-sleep(2)
-##############################################################################
-print ()
-print (("_") * 75)
-print ("РАСЧЕТНАЯ ЧАСТЬ:")
-print (("_") * 75)
-print ()
-
-##############################################################################
-##############################################################################
-##############################################################################
-##############################################################################
-
-print ()
-print (("-") * 75)
-print ("К-700:")
-print (("_") * 50)
-print ()
-
-##############################################################################
-##############################################################################
-##############################################################################
-##############################################################################
-
-# ОБЪЯВЛЕНИЕ ФУНКЦИИ ДЛЯ ОКРУГЛЕНИЯ ЗНАЧЕНИЙ
-def int_r(num):
-	num = int(num + (0.5 if num > 0 else -0.5))
-	return num
-
-#____________________________________________________________________________________________________________
-# ОБЪЯВЛЕНИЕ ПОСТОЯННЫХ ЗНАЧЕНИЙС
-K_700_NKR_U = 3200
-K_700_NKR_N = 11970
-K_700_NTR_N = 5120
-K_700_NTO_3_N = 2560
-K_700_NTO_2_N = 640
-K_700_NTO_1_N = 160
-K_700_NCTO = 2
-
-#_____________________________________________________________________________________________________________
 # ВЫПОЛНЕНИЕ ФОРМУЛ
 NKR_K_700 = int (K_700_NKR_U) * int (K_700) / int (K_700_NKR_N) # Nкр
-NKR_K_700_d = int_r(NKR_K_700) # ОКРУГЛЕНИЕ
+NKR_K_700_d = int_round(NKR_K_700) # ОКРУГЛЕНИЕ
 NTR_K_700 = int (K_700_NKR_U) * int (K_700) / int (K_700_NTR_N) - NKR_K_700_d # Nтр
-NTR_K_700_d = int_r(NTR_K_700) # ОКРУГЛЕНИЕ
+NTR_K_700_d = int_round(NTR_K_700) # ОКРУГЛЕНИЕ
 NTO_3_K_700 = int (K_700_NKR_U) * int (K_700) / int (K_700_NTO_3_N) - NKR_K_700_d - NTR_K_700_d # Nто-3
-NTO_3_K_700_d = int_r(NTO_3_K_700) # ОКРУГЛЕНИЕ
+NTO_3_K_700_d = int_round(NTO_3_K_700) # ОКРУГЛЕНИЕ
 NTO_2_K_700 = int (K_700_NKR_U) * int (K_700) / int (K_700_NTO_2_N) - NKR_K_700_d - NTR_K_700_d - NTO_3_K_700_d # Nто-2
-NTO_2_K_700_d = int_r(NTO_2_K_700) # ОКРУГЛЕНИЕ
+NTO_2_K_700_d = int_round(NTO_2_K_700) # ОКРУГЛЕНИЕ
 NTO_1_K_700 = int (K_700_NKR_U) * int (K_700) / int (K_700_NTO_1_N) - NKR_K_700_d - NTR_K_700_d - NTO_3_K_700_d - NTO_2_K_700_d # Nто-1
-NTO_1_K_700_d = int_r(NTO_1_K_700) # ОКРУГЛЕНИЕ
+NTO_1_K_700_d = int_round(NTO_1_K_700) # ОКРУГЛЕНИЕ
 K_700_N_CTO = int (K_700_NCTO) * int (K_700) # Nсто
 
 #______________________________________________________________________________________________________________
@@ -404,9 +105,7 @@ print ()
 
 #___________________________________________________________________________________________________________
 # ОБЪЯВЛЕНИЕ ФУНКЦИИ ДЛЯ ОКРУГЛЕНИЯ ЗНАЧЕНИЙ
-def int_r(num):
-	num = int(num + (0.5 if num > 0 else -0.5))
-	return num
+ 
 
 #____________________________________________________________________________________________________________
 # ОБЪЯВЛЕНИЕ ПОСТОЯННЫХ ЗНАЧЕНИЙ
@@ -421,15 +120,15 @@ K_701_NCTO = 2
 #_____________________________________________________________________________________________________________
 # ВЫПОЛНЕНИЕ ФОРМУЛ
 NKR_K_701 = int (K_701_NKR_U) * int (K_701) / int (K_701_NKR_N) # Nкр
-NKR_K_701_d = int_r(NKR_K_701) # ОКРУГЛЕНИЕ
+NKR_K_701_d = int_round(NKR_K_701) # ОКРУГЛЕНИЕ
 NTR_K_701 = int (K_701_NKR_U) * int (K_701) / int (K_701_NTR_N) - NKR_K_701_d # Nтр
-NTR_K_701_d = int_r(NTR_K_701) # ОКРУГЛЕНИЕ
+NTR_K_701_d = int_round(NTR_K_701) # ОКРУГЛЕНИЕ
 NTO_3_K_701 = int (K_701_NKR_U) * int (K_701) / int (K_700_NTO_3_N) - NKR_K_701_d - NTR_K_701_d # Nто-3
-NTO_3_K_701_d = int_r(NTO_3_K_701) # ОКРУГЛЕНИЕ
+NTO_3_K_701_d = int_round(NTO_3_K_701) # ОКРУГЛЕНИЕ
 NTO_2_K_701 = int (K_701_NKR_U) * int (K_701) / int (K_701_NTO_2_N) - NKR_K_701_d - NTR_K_701_d - NTO_3_K_701_d # Nто-2
-NTO_2_K_701_d = int_r(NTO_2_K_700) # ОКРУГЛЕНИЕ
+NTO_2_K_701_d = int_round(NTO_2_K_700) # ОКРУГЛЕНИЕ
 NTO_1_K_701 = int (K_701_NKR_U) * int (K_701) / int (K_701_NTO_1_N) - NKR_K_701_d - NTR_K_701_d - NTO_3_K_701_d - NTO_2_K_701_d # Nто-1
-NTO_1_K_701_d = int_r(NTO_1_K_701) # ОКРУГЛЕНИЕ
+NTO_1_K_701_d = int_round(NTO_1_K_701) # ОКРУГЛЕНИЕ
 K_701_N_CTO = int (K_701_NCTO) * int (K_701) # Nсто
 
 #______________________________________________________________________________________________________________
@@ -495,9 +194,7 @@ print ()
 
 #___________________________________________________________________________________________________________
 # ОБЪЯВЛЕНИЕ ФУНКЦИИ ДЛЯ ОКРУГЛЕНИЯ ЗНАЧЕНИЙ
-def int_r(num):
-	num = int(num + (0.5 if num > 0 else -0.5))
-	return num
+ 
 
 #____________________________________________________________________________________________________________
 # ОБЪЯВЛЕНИЕ ПОСТОЯННЫХ ЗНАЧЕНИЙ
@@ -512,15 +209,15 @@ DT_NCTO = 2
 #_____________________________________________________________________________________________________________
 # ВЫПОЛНЕНИЕ ФОРМУЛ
 NKR_DT = int (DT_NKR_U) * int (DT) / int (DT_NKR_N) # Nкр
-NKR_DT_d = int_r(NKR_DT) # ОКРУГЛЕНИЕ
+NKR_DT_d = int_round(NKR_DT) # ОКРУГЛЕНИЕ
 NTR_DT = int (DT_NKR_U) * int (DT) / int (DT_NTR_N) - NKR_DT_d # Nтр
-NTR_DT_d = int_r(NTR_DT) # ОКРУГЛЕНИЕ
+NTR_DT_d = int_round(NTR_DT) # ОКРУГЛЕНИЕ
 NTO_3_DT = int (DT_NKR_U) * int (DT) / int (DT_NTO_3_N) - NKR_DT_d - NTR_DT_d # Nто-3
-NTO_3_DT_d = int_r(NTO_3_DT) # ОКРУГЛЕНИЕ
+NTO_3_DT_d = int_round(NTO_3_DT) # ОКРУГЛЕНИЕ
 NTO_2_DT = int (DT_NKR_U) * int (DT) / int (DT_NTO_2_N) - NKR_DT_d - NTR_DT_d - NTO_3_DT_d # Nто-2
-NTO_2_DT_d = int_r(NTO_2_DT) # ОКРУГЛЕНИЕ
+NTO_2_DT_d = int_round(NTO_2_DT) # ОКРУГЛЕНИЕ
 NTO_1_DT = int (DT_NKR_U) * int (DT) / int (DT_NTO_1_N) - NKR_DT_d - NTR_DT_d - NTO_3_DT_d - NTO_2_DT_d # Nто-1
-NTO_1_DT_d = int_r(NTO_1_DT) # ОКРУГЛЕНИЕ
+NTO_1_DT_d = int_round(NTO_1_DT) # ОКРУГЛЕНИЕ
 DT_N_CTO = int (DT_NCTO) * int (DT) # Nсто
 
 #______________________________________________________________________________________________________________
@@ -586,9 +283,7 @@ print ()
 
 #___________________________________________________________________________________________________________
 # ОБЪЯВЛЕНИЕ ФУНКЦИИ ДЛЯ ОКРУГЛЕНИЯ ЗНАЧЕНИЙ
-def int_r(num):
-	num = int(num + (0.5 if num > 0 else -0.5))
-	return num
+ 
 
 #____________________________________________________________________________________________________________
 # ОБЪЯВЛЕНИЕ ПОСТОЯННЫХ ЗНАЧЕНИЙ
@@ -603,15 +298,15 @@ MTZ2_NCTO = 2
 #_____________________________________________________________________________________________________________
 # ВЫПОЛНЕНИЕ ФОРМУЛ
 NKR_MTZ2 = int (MTZ2_NKR_U) * int (MTZ2) / int (MTZ2_NKR_N) # Nкр
-NKR_MTZ2_d = int_r(NKR_MTZ2) # ОКРУГЛЕНИЕ
+NKR_MTZ2_d = int_round(NKR_MTZ2) # ОКРУГЛЕНИЕ
 NTR_MTZ2 = int (MTZ2_NKR_U) * int (MTZ2) / int (MTZ2_NTR_N) - NKR_MTZ2_d # Nтр
-NTR_MTZ2_d = int_r(NTR_MTZ2) # ОКРУГЛЕНИЕ
+NTR_MTZ2_d = int_round(NTR_MTZ2) # ОКРУГЛЕНИЕ
 NTO_3_MTZ2 = int (MTZ2_NKR_U) * int (MTZ2) / int (MTZ2_NTO_3_N) - NKR_MTZ2_d - NTR_MTZ2_d # Nто-3
-NTO_3_MTZ2_d = int_r(NTO_3_MTZ2) # ОКРУГЛЕНИЕ
+NTO_3_MTZ2_d = int_round(NTO_3_MTZ2) # ОКРУГЛЕНИЕ
 NTO_2_MTZ2 = int (MTZ2_NKR_U) * int (MTZ2) / int (MTZ2_NTO_2_N) - NKR_MTZ2_d - NTR_MTZ2_d - NTO_3_MTZ2_d # Nто-2
-NTO_2_MTZ2_d = int_r(NTO_2_MTZ2) # ОКРУГЛЕНИЕ
+NTO_2_MTZ2_d = int_round(NTO_2_MTZ2) # ОКРУГЛЕНИЕ
 NTO_1_MTZ2 = int (MTZ2_NKR_U) * int (MTZ2) / int (MTZ2_NTO_1_N) - NKR_MTZ2_d - NTR_MTZ2_d - NTO_3_MTZ2_d - NTO_2_MTZ2_d # Nто-1
-NTO_1_MTZ2_d = int_r(NTO_1_MTZ2) # ОКРУГЛЕНИЕ
+NTO_1_MTZ2_d = int_round(NTO_1_MTZ2) # ОКРУГЛЕНИЕ
 MTZ2_N_CTO = int (MTZ2_NCTO) * int (MTZ2) # Nсто
 
 #______________________________________________________________________________________________________________
@@ -677,9 +372,7 @@ print ()
 
 #___________________________________________________________________________________________________________
 # ОБЪЯВЛЕНИЕ ФУНКЦИИ ДЛЯ ОКРУГЛЕНИЯ ЗНАЧЕНИЙ
-def int_r(num):
-	num = int(num + (0.5 if num > 0 else -0.5))
-	return num
+ 
 
 #____________________________________________________________________________________________________________
 # ОБЪЯВЛЕНИЕ ПОСТОЯННЫХ ЗНАЧЕНИЙ
@@ -694,15 +387,15 @@ MZT_NCTO = 2
 #_____________________________________________________________________________________________________________
 # ВЫПОЛНЕНИЕ ФОРМУЛ
 NKR_MZT = int (MZT_NKR_U) * int (MZT) / int (MZT_NKR_N) # Nкр
-NKR_MZT_d = int_r(NKR_MZT) # ОКРУГЛЕНИЕ
+NKR_MZT_d = int_round(NKR_MZT) # ОКРУГЛЕНИЕ
 NTR_MZT = int (MZT_NKR_U) * int (MZT) / int (MZT_NTR_N) - NKR_MZT_d # Nтр
-NTR_MZT_d = int_r(NTR_MZT) # ОКРУГЛЕНИЕ
+NTR_MZT_d = int_round(NTR_MZT) # ОКРУГЛЕНИЕ
 NTO_3_MZT = int (MZT_NKR_U) * int (MZT) / int (MZT_NTO_3_N) - NKR_MZT_d - NTR_MZT_d # Nто-3
-NTO_3_MZT_d = int_r(NTO_3_MZT) # ОКРУГЛЕНИЕ
+NTO_3_MZT_d = int_round(NTO_3_MZT) # ОКРУГЛЕНИЕ
 NTO_2_MZT = int (MZT_NKR_U) * int (MZT) / int (MZT_NTO_2_N) - NKR_MZT_d - NTR_MZT_d - NTO_3_MZT_d # Nто-2
-NTO_2_MZT_d = int_r(NTO_2_MZT) # ОКРУГЛЕНИЕ
+NTO_2_MZT_d = int_round(NTO_2_MZT) # ОКРУГЛЕНИЕ
 NTO_1_MZT = int (MZT_NKR_U) * int (MZT) / int (MZT_NTO_1_N) - NKR_MZT_d - NTR_MZT_d - NTO_3_MZT_d - NTO_2_MZT_d # Nто-1
-NTO_1_MZT_d = int_r(NTO_1_MZT) # ОКРУГЛЕНИЕ
+NTO_1_MZT_d = int_round(NTO_1_MZT) # ОКРУГЛЕНИЕ
 MZT_N_CTO = int (MZT_NCTO) * int (MZT) # Nсто
 
 #______________________________________________________________________________________________________________
@@ -768,9 +461,7 @@ print ()
 
 #___________________________________________________________________________________________________________
 # ОБЪЯВЛЕНИЕ ФУНКЦИИ ДЛЯ ОКРУГЛЕНИЯ ЗНАЧЕНИЙ
-def int_r(num):
-	num = int(num + (0.5 if num > 0 else -0.5))
-	return num
+ 
 
 #____________________________________________________________________________________________________________
 # ОБЪЯВЛЕНИЕ ПОСТОЯННЫХ ЗНАЧЕНИЙ
@@ -785,15 +476,15 @@ T40_NCTO = 2
 #_____________________________________________________________________________________________________________
 # ВЫПОЛНЕНИЕ ФОРМУЛ
 NKR_T40 = int (T40_NKR_U) * int (T40) / int (T40_NKR_N) # Nкр
-NKR_T40_d = int_r(NKR_T40) # ОКРУГЛЕНИЕ
+NKR_T40_d = int_round(NKR_T40) # ОКРУГЛЕНИЕ
 NTR_T40 = int (T40_NKR_U) * int (T40) / int (T40_NTR_N) - NKR_T40_d # Nтр
-NTR_T40_d = int_r(NTR_T40) # ОКРУГЛЕНИЕ
+NTR_T40_d = int_round(NTR_T40) # ОКРУГЛЕНИЕ
 NTO_3_T40 = int (T40_NKR_U) * int (T40) / int (T40_NTO_3_N) - NKR_T40_d - NTR_T40_d # Nто-3
-NTO_3_T40_d = int_r(NTO_3_T40) # ОКРУГЛЕНИЕ
+NTO_3_T40_d = int_round(NTO_3_T40) # ОКРУГЛЕНИЕ
 NTO_2_T40 = int (T40_NKR_U) * int (T40) / int (T40_NTO_2_N) - NKR_T40_d - NTR_T40_d - NTO_3_T40_d # Nто-2
-NTO_2_T40_d = int_r(NTO_2_T40) # ОКРУГЛЕНИЕ
+NTO_2_T40_d = int_round(NTO_2_T40) # ОКРУГЛЕНИЕ
 NTO_1_T40 = int (T40_NKR_U) * int (T40) / int (T40_NTO_1_N) - NKR_T40_d - NTR_T40_d - NTO_3_T40_d - NTO_2_T40_d # Nто-1
-NTO_1_T40_d = int_r(NTO_1_T40) # ОКРУГЛЕНИЕ
+NTO_1_T40_d = int_round(NTO_1_T40) # ОКРУГЛЕНИЕ
 T40_N_CTO = int (T40_NCTO) * int (T40) # Nсто
 
 #______________________________________________________________________________________________________________
@@ -857,9 +548,7 @@ print ()
 
 #___________________________________________________________________________________________________________
 # ОБЪЯВЛЕНИЕ ФУНКЦИИ ДЛЯ ОКРУГЛЕНИЯ ЗНАЧЕНИЙ
-def int_r(num):
-	num = int(num + (0.5 if num > 0 else -0.5))
-	return num
+ 
 
 #____________________________________________________________________________________________________________
 # ОБЪЯВЛЕНИЕ ПОСТОЯННЫХ ЗНАЧЕНИЙ
@@ -874,15 +563,15 @@ T25_NCTO = 2
 #_____________________________________________________________________________________________________________
 # ВЫПОЛНЕНИЕ ФОРМУЛ
 NKR_T25 = int (T25_NKR_U) * int (T25) / int (T25_NKR_N) # Nкр
-NKR_T25_d = int_r(NKR_T25) # ОКРУГЛЕНИЕ
+NKR_T25_d = int_round(NKR_T25) # ОКРУГЛЕНИЕ
 NTR_T25 = int (T25_NKR_U) * int (T25) / int (T25_NTR_N) - NKR_T25_d # Nтр
-NTR_T25_d = int_r(NTR_T25) # ОКРУГЛЕНИЕ
+NTR_T25_d = int_round(NTR_T25) # ОКРУГЛЕНИЕ
 NTO_3_T25 = int (T25_NKR_U) * int (T25) / int (T25_NTO_3_N) - NKR_T25_d - NTR_T25_d # Nто-3
-NTO_3_T25_d = int_r(NTO_3_T25) # ОКРУГЛЕНИЕ
+NTO_3_T25_d = int_round(NTO_3_T25) # ОКРУГЛЕНИЕ
 NTO_2_T25 = int (T25_NKR_U) * int (T25) / int (T25_NTO_2_N) - NKR_T25_d - NTR_T25_d - NTO_3_T25_d # Nто-2
-NTO_2_T25_d = int_r(NTO_2_T25) # ОКРУГЛЕНИЕ
+NTO_2_T25_d = int_round(NTO_2_T25) # ОКРУГЛЕНИЕ
 NTO_1_T25 = int (T25_NKR_U) * int (T25) / int (T25_NTO_1_N) - NKR_T25_d - NTR_T25_d - NTO_3_T25_d - NTO_2_T25_d # Nто-1
-NTO_1_T25_d = int_r(NTO_1_T25) # ОКРУГЛЕНИЕ
+NTO_1_T25_d = int_round(NTO_1_T25) # ОКРУГЛЕНИЕ
 T25_N_CTO = int (T25_NCTO) * int (T25) # Nсто
 
 #______________________________________________________________________________________________________________
@@ -948,9 +637,7 @@ print ()
 
 #___________________________________________________________________________________________________________
 # ОБЪЯВЛЕНИЕ ФУНКЦИИ ДЛЯ ОКРУГЛЕНИЯ ЗНАЧЕНИЙ
-def int_r(num):
-	num = int(num + (0.5 if num > 0 else -0.5))
-	return num
+ 
 
 #____________________________________________________________________________________________________________
 # ОБЪЯВЛЕНИЕ ПОСТОЯННЫХ ЗНАЧЕНИЙ
@@ -965,15 +652,15 @@ T16_NCTO = 2
 #_____________________________________________________________________________________________________________
 # ВЫПОЛНЕНИЕ ФОРМУЛ
 NKR_T16 = int (T16_NKR_U) * int (T16) / int (T16_NKR_N) # Nкр
-NKR_T16_d = int_r(NKR_T16) # ОКРУГЛЕНИЕ
+NKR_T16_d = int_round(NKR_T16) # ОКРУГЛЕНИЕ
 NTR_T16 = int (T16_NKR_U) * int (T16) / int (T16_NTR_N) - NKR_T16_d # Nтр
-NTR_T16_d = int_r(NTR_T16) # ОКРУГЛЕНИЕ
+NTR_T16_d = int_round(NTR_T16) # ОКРУГЛЕНИЕ
 NTO_3_T16 = int (T16_NKR_U) * int (T16) / int (T16_NTO_3_N) - NKR_T16_d - NTR_T16_d # Nто-3
-NTO_3_T16_d = int_r(NTO_3_T16) # ОКРУГЛЕНИЕ
+NTO_3_T16_d = int_round(NTO_3_T16) # ОКРУГЛЕНИЕ
 NTO_2_T16 = int (T16_NKR_U) * int (T16) / int (T16_NTO_2_N) - NKR_T16_d - NTR_T16_d - NTO_3_T16_d # Nто-2
-NTO_2_T16_d = int_r(NTO_2_T16) # ОКРУГЛЕНИЕ
+NTO_2_T16_d = int_round(NTO_2_T16) # ОКРУГЛЕНИЕ
 NTO_1_T16 = int (T16_NKR_U) * int (T16) / int (T16_NTO_1_N) - NKR_T16_d - NTR_T16_d - NTO_3_T16_d - NTO_2_T16_d # Nто-1
-NTO_1_T16_d = int_r(NTO_1_T16) # ОКРУГЛЕНИЕ
+NTO_1_T16_d = int_round(NTO_1_T16) # ОКРУГЛЕНИЕ
 T16_N_CTO = int (T16_NCTO) * int (T16) # Nсто
 
 #______________________________________________________________________________________________________________
@@ -1039,9 +726,7 @@ print ()
 
 #_______________________________________________________
 # ЦИКЛ ДЛЯ ОКРУГЛЕНИЯ ЗНАЧЕНИЙ
-def int_r(num):
-	num = int(num + (0.5 if num > 0 else -0.5))
-	return num
+ 
 
 #_______________________________________________________
 # ВВЕДЕНИЕ ПОСТОЯННЫХ ЗНАЧЕНИЙ
@@ -1052,7 +737,7 @@ NCTO_PLN = 2
 #________________________________________________________
 # РАСЧЕТ ФОРМУЛ
 PLN_NTR = int(PLN) * float(NTR_PLN)
-PLN_NTR_d= int_r(PLN_NTR)
+PLN_NTR_d= int_round(PLN_NTR)
 PLN_NCTO = int(PLN) * int(NCTO_PLN)
 
 #
@@ -1081,9 +766,7 @@ print ()
 
 #_______________________________________________________
 # ЦИКЛ ДЛЯ ОКРУГЛЕНИЯ ЗНАЧЕНИЙ
-def int_r(num):
-	num = int(num + (0.5 if num > 0 else -0.5))
-	return num
+ 
 
 #_______________________________________________________
 # ВВЕДЕНИЕ ПОСТОЯННЫХ ЗНАЧЕНИЙ
@@ -1094,7 +777,7 @@ NCTO_BDT = 2
 #________________________________________________________
 # РАСЧЕТ ФОРМУЛ
 BDT_NTR = int(BDT) * float(NTR_BDT)
-BDT_NTR_d = int_r(BDT_NTR)
+BDT_NTR_d = int_round(BDT_NTR)
 BDT_NCTO = int(BDT) * int(NCTO_BDT)
 
 #
@@ -1124,9 +807,7 @@ print ()
 
 #_______________________________________________________
 # ЦИКЛ ДЛЯ ОКРУГЛЕНИЯ ЗНАЧЕНИЙ
-def int_r(num):
-	num = int(num + (0.5 if num > 0 else -0.5))
-	return num
+ 
 
 #_______________________________________________________
 # ВВЕДЕНИЕ ПОСТОЯННЫХ ЗНАЧЕНИЙ
@@ -1137,7 +818,7 @@ NCTO_SZ = 2
 #________________________________________________________
 # РАСЧЕТ ФОРМУЛ
 SZ_NTR = int(SZ) * float(NTR_SZ)
-SZ_NTR_d = int_r(SZ_NTR)
+SZ_NTR_d = int_round(SZ_NTR)
 SZ_NCTO = int(SZ) * int(NCTO_SZ)
 
 #
@@ -1166,9 +847,7 @@ print ()
 
 #_______________________________________________________
 # ЦИКЛ ДЛЯ ОКРУГЛЕНИЯ ЗНАЧЕНИЙ
-def int_r(num):
-	num = int(num + (0.5 if num > 0 else -0.5))
-	return num
+ 
 
 #_______________________________________________________
 # ВВЕДЕНИЕ ПОСТОЯННЫХ ЗНАЧЕНИЙ
@@ -1179,7 +858,7 @@ NCTO_KKU = 2
 #________________________________________________________
 # РАСЧЕТ ФОРМУЛ
 KKU_NTR = int(KKU) * float(NTR_KKU)
-KKU_NTR_d= int_r(KKU_NTR)
+KKU_NTR_d= int_round(KKU_NTR)
 KKU_NCTO = int(KKU) * int(NCTO_KKU)
 
 #
@@ -1206,9 +885,7 @@ print ()
 
 #_______________________________________________________
 # ЦИКЛ ДЛЯ ОКРУГЛЕНИЯ ЗНАЧЕНИЙ
-def int_r(num):
-	num = int(num + (0.5 if num > 0 else -0.5))
-	return num
+ 
 
 #_______________________________________________________
 # ВВЕДЕНИЕ ПОСТОЯННЫХ ЗНАЧЕНИЙ
@@ -1222,16 +899,16 @@ CK_NCTO = 1
 #________________________________________________________
 # РАСЧЕТ ФОРМУЛ
 NKR_CK = int(CK) * float(CK_NKR) # Nкр
-NKR_CK_d = int_r(NKR_CK) # ОКРУГЛЕНИЕ
+NKR_CK_d = int_round(NKR_CK) # ОКРУГЛЕНИЕ
 
 NTR_CK = int(CK) * float(CK_NTR) # Nтр
-NTR_CK_d = int_r(NTR_CK) # ОКРУГЛЕНИЕ
+NTR_CK_d = int_round(NTR_CK) # ОКРУГЛЕНИЕ
 
 NTO_2_CK = int(CK_NTO) * int(CK) / int(CK_NTO_2) - int(CK_NKR) - int(NTR_CK) # Nто-2
-NTO_2_CK_d = int_r(NTO_2_CK) # ОКРУГЛЕНИЕ
+NTO_2_CK_d = int_round(NTO_2_CK) # ОКРУГЛЕНИЕ
 
 NTO_1_CK = int(CK_NTO) * int(CK) / int(CK_NTO_1) - int(NKR_CK) -  int(NTR_CK) - int(NTO_2_CK) # Nто-1
-NTO_1_CK_d = int_r(NTO_1_CK) # ОКРУГЛЕНИЕ
+NTO_1_CK_d = int_round(NTO_1_CK) # ОКРУГЛЕНИЕ
 
 NCTO_CK = int(CK) * int(CK_NCTO) # Nсто
 
@@ -1287,9 +964,7 @@ print ()
 
 #___________________________________________________________________________________________________________
 # ОБЪЯВЛЕНИЕ ФУНКЦИИ ДЛЯ ОКРУГЛЕНИЯ ЗНАЧЕНИЙ
-def int_r(num):
-	num = int(num + (0.5 if num > 0 else -0.5))
-	return num
+ 
 
 #____________________________________________________________________________________________________________
 # ОБЪЯВЛЕНИЕ ПОСТОЯННЫХ ЗНАЧЕНИЙ
@@ -1302,14 +977,14 @@ UAZ_NCTO = 2
 #_____________________________________________________________________________________________________________
 # ВЫПОЛНЕНИЕ ФОРМУЛ
 NKR_UAZ = int (UAZ_NKR_U) * int (UAZ) / int (UAZ_NKR_N) # Nкр
-NKR_UAZ_d = int_r(NKR_UAZ) # ОКРУГЛЕНИЕ
+NKR_UAZ_d = int_round(NKR_UAZ) # ОКРУГЛЕНИЕ
 
 NTO_2_UAZ = int (UAZ_NKR_U) * int (UAZ) / int (UAZ_NTO_2_N) - NKR_UAZ_d # Nто-2
-NTO_2_UAZ_d = int_r(NTO_2_UAZ) # ОКРУГЛЕНИЕ
+NTO_2_UAZ_d = int_round(NTO_2_UAZ) # ОКРУГЛЕНИЕ
 
 
 NTO_1_UAZ = int (UAZ_NKR_U) * int (UAZ) / int (UAZ_NTO_1_N) - NKR_UAZ_d - NTO_2_UAZ_d  # Nто-1
-NTO_1_UAZ_d = int_r(NTO_1_UAZ) # ОКРУГЛЕНИЕ
+NTO_1_UAZ_d = int_round(NTO_1_UAZ) # ОКРУГЛЕНИЕ
 
 UAZ_N_CTO = int (UAZ_NCTO) * int (UAZ) # Nсто
 
@@ -1359,9 +1034,7 @@ print ()
 
 #___________________________________________________________________________________________________________
 # ОБЪЯВЛЕНИЕ ФУНКЦИИ ДЛЯ ОКРУГЛЕНИЯ ЗНАЧЕНИЙ
-def int_r(num):
-	num = int(num + (0.5 if num > 0 else -0.5))
-	return num
+ 
 
 #____________________________________________________________________________________________________________
 # ОБЪЯВЛЕНИЕ ПОСТОЯННЫХ ЗНАЧЕНИЙ
@@ -1374,14 +1047,14 @@ KAMAZ_NCTO = 2
 #_____________________________________________________________________________________________________________
 # ВЫПОЛНЕНИЕ ФОРМУЛ
 NKR_KAMAZ = int (KAMAZ_NKR_U) * int (KAMAZ) / int (KAMAZ_NKR_N) # Nкр
-NKR_KAMAZ_d = int_r(NKR_KAMAZ) # ОКРУГЛЕНИЕ
+NKR_KAMAZ_d = int_round(NKR_KAMAZ) # ОКРУГЛЕНИЕ
 
 NTO_2_KAMAZ = int (KAMAZ_NKR_U) * int (KAMAZ) / int (KAMAZ_NTO_2_N) - NKR_KAMAZ_d # Nто-2
-NTO_2_KAMAZ_d = int_r(NTO_2_KAMAZ) # ОКРУГЛЕНИЕ
+NTO_2_KAMAZ_d = int_round(NTO_2_KAMAZ) # ОКРУГЛЕНИЕ
 
 
 NTO_1_KAMAZ = int (KAMAZ_NKR_U) * int (KAMAZ) / int (KAMAZ_NTO_1_N) - NKR_KAMAZ_d - NTO_2_KAMAZ_d  # Nто-1
-NTO_1_KAMAZ_d = int_r(NTO_1_KAMAZ) # ОКРУГЛЕНИЕ
+NTO_1_KAMAZ_d = int_round(NTO_1_KAMAZ) # ОКРУГЛЕНИЕ
 
 KAMAZ_N_CTO = int (KAMAZ_NCTO) * int (KAMAZ) # Nсто
 
@@ -1432,9 +1105,7 @@ print ()
 
 #___________________________________________________________________________________________________________
 # ОБЪЯВЛЕНИЕ ФУНКЦИИ ДЛЯ ОКРУГЛЕНИЯ ЗНАЧЕНИЙ
-def int_r(num):
-	num = int(num + (0.5 if num > 0 else -0.5))
-	return num
+ 
 
 #____________________________________________________________________________________________________________
 # ОБЪЯВЛЕНИЕ ПОСТОЯННЫХ ЗНАЧЕНИЙ
@@ -1447,14 +1118,14 @@ GAZ_NCTO = 2
 #_____________________________________________________________________________________________________________
 # ВЫПОЛНЕНИЕ ФОРМУЛ
 NKR_GAZ = int (GAZ_NKR_U) * int (GAZ) / int (GAZ_NKR_N) # Nкр
-NKR_GAZ_d = int_r(NKR_GAZ) # ОКРУГЛЕНИЕ
+NKR_GAZ_d = int_round(NKR_GAZ) # ОКРУГЛЕНИЕ
 
 NTO_2_GAZ = int (GAZ_NKR_U) * int (GAZ) / int (GAZ_NTO_2_N) - NKR_GAZ_d # Nто-2
-NTO_2_GAZ_d = int_r(NTO_2_GAZ) # ОКРУГЛЕНИЕ
+NTO_2_GAZ_d = int_round(NTO_2_GAZ) # ОКРУГЛЕНИЕ
 
 
 NTO_1_GAZ = int (GAZ_NKR_U) * int (GAZ) / int (GAZ_NTO_1_N) - NKR_GAZ_d - NTO_2_GAZ_d  # Nто-1
-NTO_1_GAZ_d = int_r(NTO_1_GAZ) # ОКРУГЛЕНИЕ
+NTO_1_GAZ_d = int_round(NTO_1_GAZ) # ОКРУГЛЕНИЕ
 
 GAZ_N_CTO = int (GAZ_NCTO) * int (GAZ) # Nсто
 
@@ -1505,9 +1176,7 @@ print ()
 
 #___________________________________________________________________________________________________________
 # ОБЪЯВЛЕНИЕ ФУНКЦИИ ДЛЯ ОКРУГЛЕНИЯ ЗНАЧЕНИЙ
-def int_r(num):
-	num = int(num + (0.5 if num > 0 else -0.5))
-	return num
+ 
 
 #____________________________________________________________________________________________________________
 # ОБЪЯВЛЕНИЕ ПОСТОЯННЫХ ЗНАЧЕНИЙ
@@ -1520,14 +1189,14 @@ ZIL_NCTO = 2
 #_____________________________________________________________________________________________________________
 # ВЫПОЛНЕНИЕ ФОРМУЛ
 NKR_ZIL = int (ZIL_NKR_U) * int (ZIL) / int (ZIL_NKR_N) # Nкр
-NKR_ZIL_d = int_r(NKR_ZIL) # ОКРУГЛЕНИЕ
+NKR_ZIL_d = int_round(NKR_ZIL) # ОКРУГЛЕНИЕ
 
 NTO_2_ZIL = int (ZIL_NKR_U) * int (ZIL) / int (ZIL_NTO_2_N) - NKR_ZIL_d # Nто-2
-NTO_2_ZIL_d = int_r(NTO_2_ZIL) # ОКРУГЛЕНИЕ
+NTO_2_ZIL_d = int_round(NTO_2_ZIL) # ОКРУГЛЕНИЕ
 
 
 NTO_1_ZIL = int (ZIL_NKR_U) * int (ZIL) / int (ZIL_NTO_1_N) - NKR_ZIL_d - NTO_2_ZIL_d  # Nто-1
-NTO_1_ZIL_d = int_r(NTO_1_ZIL) # ОКРУГЛЕНИЕ
+NTO_1_ZIL_d = int_round(NTO_1_ZIL) # ОКРУГЛЕНИЕ
 
 ZIL_N_CTO = int (ZIL_NCTO) * int (ZIL) # Nсто
 

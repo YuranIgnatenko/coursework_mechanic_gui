@@ -19,6 +19,7 @@ class ManagerEntries():
 		self._data = {} # {'k-700':Entry1, 'k-701':Entry2}
 
 	def append_entry(self, name_machine:str, entry_obj:Entry):
+		print(name_machine)
 		self._data[name_machine] = entry_obj
 
 	def get_value(self, name_machine:str) -> int:

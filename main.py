@@ -2,402 +2,66 @@ from sys import *
 import matplotlib.pyplot as plt
 from tkinter import*
 from manager_ui import Window
-from manager_output import *
-from manager_calc import *
-from constants import *
 
 win = Window()
 win.create_ui()
+win.fill_entry_for_test()
 win.mainloop()
 
-# ##############################################################################
-
-print(build_header("Курсовая (обслуживание и ремонт)"))
-print(build_table(win.manager_machines.to_dict()))
-print(build_header("Расчетная часть"))
-
-for machine in DATA_DIESEL:
-	print(build_header(machine.NAME))
-	calc = CalculatorDiesel(machine, win.manager_machines.get(machine.NAME))
-	storage_res_n, storage_str_n = calc.get_N()
-	print(storage_str_n.to_str())
 
-for machine in DATA_AGROMACHINE:
-	print(build_header(machine.NAME))
-	calc = CalculatorAgromachine(machine, win.manager_machines.get(machine.NAME))
-	storage_res_n, storage_str_n = calc.get_N()
-	print(storage_str_n.to_str())
 
-for machine in DATA_COMBINE:
-	print(build_header(machine.NAME))
-	calc = CalculatorCombine(machine, win.manager_machines.get(machine.NAME))
-	storage_res_n, storage_str_n = calc.get_N()
-	print(storage_str_n.to_str())
+# KKU_T_TR = float(KKU_NTR_d) * int(T_TR_KKU)
+# KKU_T_CTO = float(KKU_NCTO) * int(T_CTO_KKU)
 
-for machine in DATA_CAR:
-	print(build_header(machine.NAME))
-	calc = CalculatorCar(machine, win.manager_machines.get(machine.NAME))
-	storage_res_n, storage_str_n = calc.get_N()
-	print(storage_str_n.to_str())
+# #################################################################
 
+# print("Tтр"+" = "+str(KKU_NTR_d)+" * "+str(T_TR_KKU)+" = "+str(KKU_T_TR))
+# print("Tсто"+" = "+str(KKU_NCTO)+" * "+str(T_CTO_KKU)+" = "+str(KKU_T_CTO))
 
-print(build_header("РАСЧЕТ ФОРМУЛ НА ТРУДОЕМКОСТЬ"))
 
+# PLN_T_TR = float(PLN_NTR_d) * int(T_TR_PLN)
+# PLN_T_CTO = float(PLN_NCTO) * int(T_CTO_PLN)
 
+# #################################################################
 
-# K_T_KR = 410
-# K_T_TR = 297
-# K_T_TO_3 = 43.2
-# K_T_TO_2 = 10.6
-# K_T_TO_1 = 2.5
-# K_T_CTO = 29.3
-
-# K1_T_KR = 451
-# K1_T_TR = 297
-# K1_T_TO_3 = 25.2
-# K1_T_TO_2 = 11.6
-# K1_T_TO_1 = 2.2
-# K1_T_CTO = 182.3
-
-
-# T_KR_DT = 229
-# T_TR_DT = 268
-# T_TO_3_DT = 21.4
-# T_TO_2_DT = 6.4
-# T_TO_1_DT = 2.7
-# T_CTO_DT = 17.1
-
-
-# T_KR_MTZ2 = 193
-# T_TR_MTZ2 = 163
-# T_TO_3_MTZ2 = 19.8
-# T_TO_2_MTZ2 = 6.9
-# T_TO_1_MTZ2 = 2.7
-# T_CTO_MTZ2 = 3.5
+# print("Tтр"+" = "+str(PLN_NTR_d)+" * "+str(T_TR_PLN)+" = "+str(PLN_T_TR))
+# print("Tсто"+" = "+str(PLN_NCTO)+" * "+str(T_CTO_PLN)+" = "+str(PLN_T_CTO))
 
-# T_KR_MZT = 229
-# T_TR_MZT = 268
-# T_TO_3_MZT = 19.8
-# T_TO_2_MZT = 6.9
-# T_TO_1_MZT = 2.7
-# T_CTO_MZT = 3.5
 
 
-
-# T_KR_T40 = 156
-# T_TR_T40 = 127
-# T_TO_3_T40 = 18
-# T_TO_2_T40 = 6.8
-# T_TO_1_T40 = 2
-# T_CTO_T40 = 19.8
 
+# BDT_T_TR = float(BDT_NTR_d) * int(T_TR_BDT)
+# BDT_T_CTO = float(BDT_NCTO) * int(T_CTO_BDT)
 
+# #################################################################
 
-# T_KR_T40 = 156
-# T_TR_T40 = 127
-# T_TO_3_T40 = 18
-# T_TO_2_T40 = 6.8
-# T_TO_1_T40 = 2
-# T_CTO_T40 = 19.8
+# print("Tтр"+" = "+str(BDT_NTR_d)+" * "+str(T_TR_BDT)+" = "+str(BDT_T_TR))
+# print("Tсто"+" = "+str(BDT_NCTO)+" * "+str(T_CTO_BDT)+" = "+str(BDT_T_CTO))
 
-# T_KR_T25 = 132
-# T_TR_T25 = 80
-# T_TO_3_T25 = 7.7
-# T_TO_2_T25 = 2.7
-# T_TO_1_T25 = 0.9
-# T_CTO_T25 = 1.8
 
 
-# T_KR_T16 = 114
-# T_TR_T16 = 80
-# T_TO_3_T16 = 7.7
-# T_TO_2_T16 = 2.7
-# T_TO_1_T16 = 0.9
-# T_CTO_T16 = 1.8
+# SZ_T_TR = float(SZ_NTR_d) * int(T_TR_SZ)
+# SZ_T_CTO = float(SZ_NCTO) * int(T_CTO_SZ)
 
+# #################################################################
 
-# T_TR_KKU = 69
-# T_CTO_KKU = 3.4
+# print("Tтр"+" = "+str(SZ_NTR_d)+" * "+str(T_TR_SZ)+" = "+str(SZ_T_TR))
+# print("Tсто"+" = "+str(SZ_NCTO)+" * "+str(T_CTO_SZ)+" = "+str(SZ_T_CTO))
 
-# T_TR_PLN = 17
-# T_CTO_PLN = 3.4
 
+# T_KR_CK = float(NKR_CK_d) * int(CK_T_KR)
+# T_TR_CK = float(NTR_CK_d) * int(CK_T_TR)
+# T_TO_2_CK = float(NTO_2_CK_d) * int(CK_T_TO_2)
+# T_TO_1_CK = float(NTO_1_CK_d) * int(CK_T_TO_1)
+# T_CTO_CK = float(CK_NCTO) * int(CK_T_CTO)
 
-# T_TR_BDT = 29
-# T_CTO_BDT = 3.4
+# #################################################################
 
-# T_TR_SZ = 29
-# T_CTO_SZ = 3.4
-
-# CK_T_KR = 330
-# CK_T_TR = 150
-# CK_T_TO_2 = 6.6
-# CK_T_TO_1 = 5.1
-# CK_T_CTO = 15
-
-
-# UAZ_T_KR = 280
-# UAZ_T_TO_2 = 11.1
-# UAZ_T_TO_1 = 2.2
-# UAZ_T_CTO = 0.25 * 7.9
-# UAZ_T_TR_U1 = 35000
-# UAZ_T_TR_D = 1000
-# UAZ_T_TR_Z = 10.3
-
-# KAMAZ_T_KR = 380
-# KAMAZ_T_TO_2 = 21.5
-# KAMAZ_T_TO_1 = 4.4
-# KAMAZ_T_CTO = 0.25 * 10.2
-# KAMAZ_T_TR_U1 = 40000
-# KAMAZ_T_TR_D = 1000
-# KAMAZ_T_TR_Z = 10.5
-
-# GAZ_T_KR = 249
-# GAZ_T_TO_2 = 11.8
-# GAZ_T_TO_1 = 2.9
-# GAZ_T_CTO = 0.25 * 4.6
-# GAZ_T_TR_U1 = 36000
-# GAZ_T_TR_D = 1000
-# GAZ_T_TR_Z = 6
-
-# ZIL_T_KR = 302
-# ZIL_T_TO_2 = 14
-# ZIL_T_TO_1 = 3.5
-# ZIL_T_CTO = 0.25 * 5
-# ZIL_T_TR_U1 = 44000
-# ZIL_T_TR_D = 1000
-# ZIL_T_TR_Z = 6.3
-
-
-
-##############################################################################
-
-T_KR_K = float(NKR_K_700_d) * int(K_T_KR)
-T_TR_K = float(NTR_K_700_d) * int(K_T_TR)
-T_TO_3_K = float(NTO_3_K_700_d) * int(K_T_TO_3)
-T_TO_2_K = float(NTO_2_K_700_d) * int(K_T_TO_2)
-T_TO_1_K = float(NTO_1_K_700_d) * int(K_T_TO_1)
-T_CTO_K = float(K_700_N_CTO) * int(K_T_CTO)
-
-#################################################################
-
-print("Tкр"+" = "+str(NKR_K_700_d)+" * "+str(K_T_KR)+" = "+str(T_KR_K))
-print("Tтр"+" = "+str(NTR_K_700_d)+" * "+str(K_T_TR)+" = "+str(T_TR_K))
-print("Tто-3"+" = "+str(NTO_3_K_700_d)+" * "+str(K_T_TO_3)+" = "+str(T_TO_3_K))
-print("Tто-2"+" = "+str(NTO_2_K_700_d)+" * "+str(K_T_TO_2)+" = "+str(T_TO_2_K))
-print("Tто-1"+" = "+str(NTO_1_K_700_d)+" * "+str(K_T_TO_1)+" = "+str(T_TO_1_K))
-print("Tсто"+" = "+str(K_700_N_CTO)+" * "+str(K_T_CTO)+" = "+str(T_CTO_K))
-
-
-
-T_KR_K1 = float(NKR_K_701_d) * int(K1_T_KR)
-T_TR_K1 = float(NTR_K_701_d) * int(K1_T_TR)
-T_TO_3_K1 = float(NTO_3_K_701_d) * int(K1_T_TO_3)
-T_TO_2_K1 = float(NTO_2_K_701_d) * int(K1_T_TO_2)
-T_TO_1_K1 = float(NTO_1_K_701_d) * int(K1_T_TO_1)
-T_CTO_K1 = float(K_701_N_CTO) * int(K1_T_CTO)
-
-#################################################################
-
-
-
-
-print("Tкр"+" = "+str(NKR_DT_d)+" * "+str(K1_T_KR)+" = "+str(T_KR_K1))
-print("Tтр"+" = "+str(NTR_K_701_d)+" * "+str(K1_T_TR)+" = "+str(T_TR_K1))
-print("Tто-3"+" = "+str(NTO_3_K_701_d)+" * "+str(K1_T_TO_3)+" = "+str(T_TO_3_K1))
-print("Tто-2"+" = "+str(NTO_2_K_701_d)+" * "+str(K1_T_TO_2)+" = "+str(T_TO_2_K1))
-print("Tто-1"+" = "+str(NTO_1_K_701_d)+" * "+str(K1_T_TO_1)+" = "+str(T_TO_1_K1))
-print("Tсто"+" = "+str(K_701_N_CTO)+" * "+str(K1_T_CTO)+" = "+str(T_CTO_K1))
-
-
-
-DT_T_KR = float(NKR_DT_d) * int(T_KR_DT)
-DT_T_TR = float(NTR_DT_d) * int(T_TR_DT)
-DT_T_TO_3 = float(NTO_3_DT_d) * int(T_TO_3_DT)
-DT_T_TO_2 = float(NTO_2_DT_d) * int(T_TO_2_DT)
-DT_T_TO_1 = float(NTO_1_DT_d) * int(T_TO_1_DT)
-DT_T_CTO = float(DT_N_CTO) * int(T_CTO_DT)
-
-#################################################################
-
-print("Tкр"+" = "+str(NKR_DT_d)+" * "+str(T_KR_DT)+" = "+str(DT_T_KR))
-print("Tтр"+" = "+str(NTR_DT_d)+" * "+str(T_TR_DT)+" = "+str(DT_T_TR))
-print("Tто-3"+" = "+str(NTO_3_DT_d)+" * "+str(T_TO_3_DT)+" = "+str(DT_T_TO_3))
-print("Tто-2"+" = "+str(NTO_2_DT_d)+" * "+str(T_TO_2_DT)+" = "+str(DT_T_TO_2))
-print("Tто-1"+" = "+str(NTO_1_DT_d)+" * "+str(T_TO_1_DT)+" = "+str(DT_T_TO_1))
-print("Tсто"+" = "+str(DT_N_CTO)+" * "+str(T_CTO_DT)+" = "+str(DT_T_CTO))
-
-
-
-MTZ2_T_KR = float(NKR_MTZ2_d) * int(T_KR_MTZ2)
-MTZ2_T_TR = float(NTR_MTZ2_d) * int(T_TR_MTZ2)
-MTZ2_T_TO_3 = float(NTO_3_MTZ2_d) * int(T_TO_3_MTZ2)
-MTZ2_T_TO_2 = float(NTO_2_MTZ2_d) * int(T_TO_2_MTZ2)
-MTZ2_T_TO_1 = float(NTO_1_MTZ2_d) * int(T_TO_1_MTZ2)
-MTZ2_T_CTO = float(MTZ2_N_CTO) * int(T_CTO_MTZ2)
-
-#################################################################
-
-print("Tкр"+" = "+str(NKR_MTZ2_d)+" * "+str(T_KR_MTZ2)+" = "+str(MTZ2_T_KR))
-print("Tтр"+" = "+str(NTR_MTZ2_d)+" * "+str(T_TR_MTZ2)+" = "+str(MTZ2_T_TR))
-print("Tто-3"+" = "+str(NTO_3_MTZ2_d)+" * "+str(T_TO_3_MTZ2)+" = "+str(MTZ2_T_TO_3))
-print("Tто-2"+" = "+str(NTO_2_MTZ2_d)+" * "+str(T_TO_2_MTZ2)+" = "+str(MTZ2_T_TO_2))
-print("Tто-1"+" = "+str(NTO_1_MTZ2_d)+" * "+str(T_TO_1_MTZ2)+" = "+str(MTZ2_T_TO_1))
-print("Tсто"+" = "+str(MTZ2_N_CTO)+" * "+str(T_CTO_MTZ2)+" = "+str(MTZ2_T_CTO))
-
-
-
-MZT_T_KR = float(NKR_MZT_d) * int(T_KR_MZT)
-MZT_T_TR = float(NTR_MZT_d) * int(T_TR_MZT)
-MZT_T_TO_3 = float(NTO_3_MZT_d) * int(T_TO_3_MZT)
-MZT_T_TO_2 = float(NTO_2_MZT_d) * int(T_TO_2_MZT)
-MZT_T_TO_1 = float(NTO_1_MZT_d) * int(T_TO_1_MZT)
-MZT_T_CTO = float(MZT_N_CTO) * int(T_CTO_MZT)
-
-#################################################################
-
-print("Tкр"+" = "+str(NKR_MZT_d)+" * "+str(T_KR_MZT)+" = "+str(MZT_T_KR))
-print("Tтр"+" = "+str(NTR_MZT_d)+" * "+str(T_TR_MZT)+" = "+str(MZT_T_TR))
-print("Tто-3"+" = "+str(NTO_3_MZT_d)+" * "+str(T_TO_3_MZT)+" = "+str(MZT_T_TO_3))
-print("Tто-2"+" = "+str(NTO_2_MZT_d)+" * "+str(T_TO_2_MZT)+" = "+str(MZT_T_TO_2))
-print("Tто-1"+" = "+str(NTO_1_MZT_d)+" * "+str(T_TO_1_MZT)+" = "+str(MZT_T_TO_1))
-print("Tсто"+" = "+str(MZT_N_CTO)+" * "+str(T_CTO_MZT)+" = "+str(MZT_T_CTO))
-
-
-
-##############################################################################
-
-T40_T_KR = float(NKR_T40_d) * int(T_KR_T40)
-T40_T_TR = float(NTR_T40_d) * int(T_TR_T40)
-T40_T_TO_3 = float(NTO_3_T40_d) * int(T_TO_3_T40)
-T40_T_TO_2 = float(NTO_2_T40_d) * int(T_TO_2_T40)
-T40_T_TO_1 = float(NTO_1_T40_d) * int(T_TO_1_T40)
-T40_T_CTO = float(T40_N_CTO) * int(T_CTO_T40)
-
-#################################################################
-
-print("Tкр"+" = "+str(NKR_T40_d)+" * "+str(T_KR_T40)+" = "+str(T40_T_KR))
-print("Tтр"+" = "+str(NTR_T40_d)+" * "+str(T_TR_T40)+" = "+str(T40_T_TR))
-print("Tто-3"+" = "+str(NTO_3_T40_d)+" * "+str(T_TO_3_T40)+" = "+str(T40_T_TO_3))
-print("Tто-2"+" = "+str(NTO_2_T40_d)+" * "+str(T_TO_2_T40)+" = "+str(T40_T_TO_2))
-print("Tто-1"+" = "+str(NTO_1_T40_d)+" * "+str(T_TO_1_T40)+" = "+str(T40_T_TO_1))
-print("Tсто"+" = "+str(T40_N_CTO)+" * "+str(T_CTO_T40)+" = "+str(T40_T_CTO))
-
-
-##############################################################################
-
-T40_T_KR = float(NKR_T40_d) * int(T_KR_T40)
-T40_T_TR = float(NTR_T40_d) * int(T_TR_T40)
-T40_T_TO_3 = float(NTO_3_T40_d) * int(T_TO_3_T40)
-T40_T_TO_2 = float(NTO_2_T40_d) * int(T_TO_2_T40)
-T40_T_TO_1 = float(NTO_1_T40_d) * int(T_TO_1_T40)
-T40_T_CTO = float(T40_N_CTO) * int(T_CTO_T40)
-
-#################################################################
-
-print("Tкр"+" = "+str(NKR_T40_d)+" * "+str(T_KR_T40)+" = "+str(T40_T_KR))
-print("Tтр"+" = "+str(NTR_T40_d)+" * "+str(T_TR_T40)+" = "+str(T40_T_TR))
-print("Tто-3"+" = "+str(NTO_3_T40_d)+" * "+str(T_TO_3_T40)+" = "+str(T40_T_TO_3))
-print("Tто-2"+" = "+str(NTO_2_T40_d)+" * "+str(T_TO_2_T40)+" = "+str(T40_T_TO_2))
-print("Tто-1"+" = "+str(NTO_1_T40_d)+" * "+str(T_TO_1_T40)+" = "+str(T40_T_TO_1))
-print("Tсто"+" = "+str(T40_N_CTO)+" * "+str(T_CTO_T40)+" = "+str(T40_T_CTO))
-
-
-
-T25_T_KR = float(NKR_T25_d) * int(T_KR_T25)
-T25_T_TR = float(NTR_T25_d) * int(T_TR_T25)
-T25_T_TO_3 = float(NTO_3_T25_d) * int(T_TO_3_T25)
-T25_T_TO_2 = float(NTO_2_T25_d) * int(T_TO_2_T25)
-T25_T_TO_1 = float(NTO_1_T25_d) * int(T_TO_1_T25)
-T25_T_CTO = float(T25_N_CTO) * int(T_CTO_T25)
-
-#################################################################
-
-print("Tкр"+" = "+str(NKR_T25_d)+" * "+str(T_KR_T25)+" = "+str(T25_T_KR))
-print("Tтр"+" = "+str(NTR_T25_d)+" * "+str(T_TR_T25)+" = "+str(T25_T_TR))
-print("Tто-3"+" = "+str(NTO_3_T25_d)+" * "+str(T_TO_3_T25)+" = "+str(T25_T_TO_3))
-print("Tто-2"+" = "+str(NTO_2_T25_d)+" * "+str(T_TO_2_T25)+" = "+str(T25_T_TO_2))
-print("Tто-1"+" = "+str(NTO_1_T25_d)+" * "+str(T_TO_1_T25)+" = "+str(T25_T_TO_1))
-print("Tсто"+" = "+str(T25_N_CTO)+" * "+str(T_CTO_T25)+" = "+str(T25_T_CTO))
-
-
-
-T16_T_KR = float(NKR_T16_d) * int(T_KR_T16)
-T16_T_TR = float(NTR_T16_d) * int(T_TR_T16)
-T16_T_TO_3 = float(NTO_3_T16_d) * int(T_TO_3_T16)
-T16_T_TO_2 = float(NTO_2_T16_d) * int(T_TO_2_T16)
-T16_T_TO_1 = float(NTO_1_T16_d) * int(T_TO_1_T16)
-T16_T_CTO = float(T16_N_CTO) * int(T_CTO_T16)
-
-#################################################################
-
-print("Tкр"+" = "+str(NKR_T16_d)+" * "+str(T_KR_T16)+" = "+str(T16_T_KR))
-print("Tтр"+" = "+str(NTR_T16_d)+" * "+str(T_TR_T16)+" = "+str(T16_T_TR))
-print("Tто-3"+" = "+str(NTO_3_T16_d)+" * "+str(T_TO_3_T16)+" = "+str(T16_T_TO_3))
-print("Tто-2"+" = "+str(NTO_2_T16_d)+" * "+str(T_TO_2_T16)+" = "+str(T16_T_TO_2))
-print("Tто-1"+" = "+str(NTO_1_T16_d)+" * "+str(T_TO_1_T16)+" = "+str(T16_T_TO_1))
-print("Tсто"+" = "+str(T16_N_CTO)+" * "+str(T_CTO_T16)+" = "+str(T16_T_CTO))
-
-
-##############################################################################
-
-print()
-print("С\Х МАШИНЫ: ")
-
-
-
-KKU_T_TR = float(KKU_NTR_d) * int(T_TR_KKU)
-KKU_T_CTO = float(KKU_NCTO) * int(T_CTO_KKU)
-
-#################################################################
-
-print("Tтр"+" = "+str(KKU_NTR_d)+" * "+str(T_TR_KKU)+" = "+str(KKU_T_TR))
-print("Tсто"+" = "+str(KKU_NCTO)+" * "+str(T_CTO_KKU)+" = "+str(KKU_T_CTO))
-
-
-PLN_T_TR = float(PLN_NTR_d) * int(T_TR_PLN)
-PLN_T_CTO = float(PLN_NCTO) * int(T_CTO_PLN)
-
-#################################################################
-
-print("Tтр"+" = "+str(PLN_NTR_d)+" * "+str(T_TR_PLN)+" = "+str(PLN_T_TR))
-print("Tсто"+" = "+str(PLN_NCTO)+" * "+str(T_CTO_PLN)+" = "+str(PLN_T_CTO))
-
-
-
-
-BDT_T_TR = float(BDT_NTR_d) * int(T_TR_BDT)
-BDT_T_CTO = float(BDT_NCTO) * int(T_CTO_BDT)
-
-#################################################################
-
-print("Tтр"+" = "+str(BDT_NTR_d)+" * "+str(T_TR_BDT)+" = "+str(BDT_T_TR))
-print("Tсто"+" = "+str(BDT_NCTO)+" * "+str(T_CTO_BDT)+" = "+str(BDT_T_CTO))
-
-
-
-SZ_T_TR = float(SZ_NTR_d) * int(T_TR_SZ)
-SZ_T_CTO = float(SZ_NCTO) * int(T_CTO_SZ)
-
-#################################################################
-
-print("Tтр"+" = "+str(SZ_NTR_d)+" * "+str(T_TR_SZ)+" = "+str(SZ_T_TR))
-print("Tсто"+" = "+str(SZ_NCTO)+" * "+str(T_CTO_SZ)+" = "+str(SZ_T_CTO))
-
-
-T_KR_CK = float(NKR_CK_d) * int(CK_T_KR)
-T_TR_CK = float(NTR_CK_d) * int(CK_T_TR)
-T_TO_2_CK = float(NTO_2_CK_d) * int(CK_T_TO_2)
-T_TO_1_CK = float(NTO_1_CK_d) * int(CK_T_TO_1)
-T_CTO_CK = float(CK_NCTO) * int(CK_T_CTO)
-
-#################################################################
-
-print("Tкр"+" = "+str(NKR_CK_d)+" * "+str(CK_T_KR)+" = "+str(T_KR_CK))
-print("Tтр"+" = "+str(NTR_CK_d)+" * "+str(CK_T_TR)+" = "+str(T_TR_CK))
-print("Tто-2"+" = "+str(NTO_2_CK_d)+" * "+str(CK_T_TO_2)+" = "+str(T_TO_2_CK))
-print("Tто-1"+" = "+str(NTO_1_CK_d)+" * "+str(CK_T_TO_1)+" = "+str(T_TO_1_CK))
-print("Tсто"+" = "+str(CK_NCTO)+" * "+str(CK_T_CTO)+" = "+str(T_CTO_CK))
+# print("Tкр"+" = "+str(NKR_CK_d)+" * "+str(CK_T_KR)+" = "+str(T_KR_CK))
+# print("Tтр"+" = "+str(NTR_CK_d)+" * "+str(CK_T_TR)+" = "+str(T_TR_CK))
+# print("Tто-2"+" = "+str(NTO_2_CK_d)+" * "+str(CK_T_TO_2)+" = "+str(T_TO_2_CK))
+# print("Tто-1"+" = "+str(NTO_1_CK_d)+" * "+str(CK_T_TO_1)+" = "+str(T_TO_1_CK))
+# print("Tсто"+" = "+str(CK_NCTO)+" * "+str(CK_T_CTO)+" = "+str(T_CTO_CK))
 
 
 

@@ -1,3 +1,6 @@
+# class models for storage 
+# constants values for calculation
+
 class ModelDataDiesel():
 	def __init__(self,NAME,NKR_U,NKR_N,NTR_N,NTO_3_N,NTO_2_N,NTO_1_N,NCTO,TKR,TTR,TTO_3,TTO_2,TTO_1,TCTO):
 		self.NAME = NAME
@@ -54,85 +57,66 @@ class ModelDataCar():
 		self.TTR_D = TTR_D
 		self.TTR_Z = TTR_Z
 
+# models class for save output calculation paramets 'N'
+
 class DataDieselResultN():
-	def __init__(self,NKR,NKR_round,NTR,NTR_round,NTO_3,NTO_3_round,NTO_2,NTO_2_round,NTO_1,NTO_1_round,N_CTO):
+	def __init__(self,NKR,NTR,NTO_3,NTO_2,NTO_1,N_CTO):
 		self.NKR = NKR
-		self.NKR_round = NKR_round
 		self.NTR = NTR
-		self.NTR_round = NTR_round
 		self.NTO_3 = NTO_3
-		self.NTO_3_round = NTO_3_round
 		self.NTO_2 = NTO_2
-		self.NTO_2_round = NTO_2_round
 		self.NTO_1 = NTO_1
-		self.NTO_1_round = NTO_1_round
 		self.N_CTO = N_CTO
 
-class DataDieselStringN():
-	def __init__(self,NKR_str,NTR_str,NTO_3_str,NTO_2_str,NTO_1_str,N_CTO_str):
-		self.NKR_str = NKR_str
-		self.NTR_str = NTR_str
-		self.NTO_3_str = NTO_3_str
-		self.NTO_2_str = NTO_2_str
-		self.NTO_1_str = NTO_1_str
-		self.N_CTO_str = N_CTO_str
-	def to_str(self) -> str:
-		res = "\n".join([self.NKR_str,self.NTR_str,self.NTO_3_str,self.NTO_2_str,self.NTO_1_str,self.N_CTO_str])
-		return res
-	
 class DataAgromachineResultN():
-	def __init__(self, NTR, NTR_d, NCTO):
+	def __init__(self, NTR, NCTO):
 		self.NTR = NTR
-		self.NTR_d = NTR_d
 		self.NCTO = NCTO
-		
-class DataAgromachineStringN():
-	def __init__(self, NTR_str, NCTO_str):
-		self.NTR_str = NTR_str
-		self.NCTO_str = NCTO_str
-	def to_str(self) -> str:
-		res = "\n".join([self.NTR_str, self.NCTO_str])
-		return res
-	
-
+			
 class DataCombineResultN():
-	def __init__(self,NKR,NKR_round,NTR,NTR_round,NTO_2,NTO_2_round,NTO_1,NTO_1_round,N_CTO):
+	def __init__(self,NKR,NTR,NTO_2,NTO_1,N_CTO):
 		self.NKR = NKR
-		self.NKR_round = NKR_round
 		self.NTR = NTR
-		self.NTR_round = NTR_round
 		self.NTO_2 = NTO_2
-		self.NTO_2_round = NTO_2_round
 		self.NTO_1 = NTO_1
-		self.NTO_1_round = NTO_1_round
 		self.N_CTO = N_CTO
 		
-class DataCombineStringN():
-	def __init__(self,NKR_str,NTR_str,NTO_2_str,NTO_1_str,N_CTO_str):
-		self.NKR_str = NKR_str
-		self.NTR_str = NTR_str
-		self.NTO_2_str = NTO_2_str
-		self.NTO_1_str = NTO_1_str
-		self.N_CTO_str = N_CTO_str
-	def to_str(self) -> str:
-		res = "\n".join([self.NKR_str,self.NTR_str,self.NTO_2_str,self.NTO_1_str,self.N_CTO_str])
-		return res
 class DataCarResultN():
-	def __init__(self,NKR,NKR_round,NTO_2,NTO_2_round,NTO_1,NTO_1_round,N_CTO):
+	def __init__(self,NKR,NTO_2,NTO_1,N_CTO):
 		self.NKR = NKR
-		self.NKR_round = NKR_round
 		self.NTO_2 = NTO_2
-		self.NTO_2_round = NTO_2_round
 		self.NTO_1 = NTO_1
-		self.NTO_1_round = NTO_1_round
 		self.N_CTO = N_CTO
+
+# models class for save output calculation paramets 'T'
+
+class DataDieselResultT():
+	def __init__(self,TKR,TTR,TTO_3,TTO_2,TTO_1,T_CTO):
+		self.TKR = TKR
+		self.TTR = TTR
+		self.TTO_3 = TTO_3
+		self.TTO_2 = TTO_2
+		self.TTO_1 = TTO_1
+		self.T_CTO = T_CTO
+	
+class DataAgromachineResultT():
+	def __init__(self, TTR, TCTO):
+		self.TTR = TTR
+		self.TCTO = TCTO
 		
-class DataCarStringN():
-	def __init__(self,NKR_str,NTO_2_str,NTO_1_str,N_CTO_str):
-		self.NKR_str = NKR_str
-		self.NTO_2_str = NTO_2_str
-		self.NTO_1_str = NTO_1_str
-		self.N_CTO_str = N_CTO_str
-	def to_str(self) -> str:
-		res = "\n".join([self.NKR_str,self.NTO_2_str,self.NTO_1_str,self.N_CTO_str])
-		return res
+class DataCombineResultT():
+	def __init__(self,TKR,TTR,TTO_2,TTO_1,T_CTO):
+		self.TKR = TKR
+		self.TTR = TTR
+		self.TTO_2 = TTO_2
+		self.TTO_1 = TTO_1
+		self.T_CTO = T_CTO
+
+class DataCarResultT():
+	def __init__(self,TKR,TTR,TTO_2,TTO_1,T_CTO):
+		self.TKR = TKR
+		self.TTR = TTR
+		self.TTO_2 = TTO_2
+		self.TTO_1 = TTO_1
+		self.T_CTO = T_CTO
+		

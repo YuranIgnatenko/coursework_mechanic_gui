@@ -185,6 +185,9 @@ class Window():
 		textarea.insert("1.0", text_out)
 		print(text_out)
 
+		with open(NAMEFILE_OUTPUT_TXT, "w", encoding="utf-8") as file:
+			file.write(text_out)
+
 		topwin.mainloop()
 
 

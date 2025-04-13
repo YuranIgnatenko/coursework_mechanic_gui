@@ -1,5 +1,7 @@
 from models import *
 
+NAMEFILE_OUTPUT_TXT = "calculation_output.txt"
+
 DATA_DIESEL = [
 	ModelDataDiesel('K-700', 3200, 11970, 5120, 2560, 640, 160, 2, 410, 297, 43.2, 10.6, 2.5, 29.3),
 	ModelDataDiesel('K-701', 3500, 19220, 6200, 3120, 780, 195, 2, 451, 297, 25.2, 11.6, 2.2, 182.3),

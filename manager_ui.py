@@ -88,67 +88,109 @@ class Window():
 			self.launch_calculation()
 		Thread(target=launch_calc).start()
 
+
+	def launch_calculation(self):
+		topwin = Toplevel(self.win)
+		topwin.geometry("800x600+100+100")
+		textarea = Text(topwin)
+		textarea.pack(fill=BOTH,expand=True)
+
+		text_out = ""
+
+		diesels = []
+		agromachines = []
+		combines = []
+		cars = []
+
+		text_out += build_header("Курсовая (обслуживание и ремонт)")
+		text_out += build_header("Расчетная часть")
+		
+		for machine in DATA_DIESEL:
+			print(build_header(machine.NAME))
+			calc = CalculatorDiesel(machine,  self.manager_machines.get(machine.NAME))
+			diesels.append(calc)
+			_, output_str = calc.get_N()
+			text_out += output_str
+
+		for machine in DATA_AGROMACHINE:
+			print(build_header(machine.NAME))
+			calc = CalculatorAgromachine(machine,  self.manager_machines.get(machine.NAME))
+			agromachines.append(calc)
+			_, output_str = calc.get_N()
+			text_out += output_str
+
+		for machine in DATA_COMBINE:
+			print(build_header(machine.NAME))
+			calc = CalculatorCombine(machine,  self.manager_machines.get(machine.NAME))
+			combines.append(calc)
+			_, output_str = calc.get_N()
+			text_out += output_str
+
+		for machine in DATA_CAR:
+			print(build_header(machine.NAME))
+			calc = CalculatorCar(machine,  self.manager_machines.get(machine.NAME))
+			cars.append(calc)
+			_, output_str = calc.get_N()
+			text_out += output_str
+
+		text_out += build_header("РАСЧЕТ ФОРМУЛ НА ТРУДОЕМКОСТЬ")
+		
+		for machine in DATA_DIESEL:
+			print(build_header(machine.NAME))
+			calc = CalculatorDiesel(machine,  self.manager_machines.get(machine.NAME))
+			_, output_str = calc.get_T()
+			text_out += output_str
+
+		for machine in DATA_AGROMACHINE:
+			print(build_header(machine.NAME))
+			calc = CalculatorAgromachine(machine,  self.manager_machines.get(machine.NAME))
+			_, output_str = calc.get_T()
+			text_out += output_str
+
+		for machine in DATA_COMBINE:
+			print(build_header(machine.NAME))
+			calc = CalculatorCombine(machine,  self.manager_machines.get(machine.NAME))
+			_, output_str = calc.get_T()
+			text_out += output_str
+
+		for machine in DATA_CAR:
+			print(build_header(machine.NAME))
+			calc = CalculatorCar(machine,  self.manager_machines.get(machine.NAME))
+			_, output_str = calc.get_T()
+			text_out += output_str
+
+		table_counts_machines = TableCountsMachines(self.manager_machines.to_dict())
+		table_diesel = TableDiesels(diesels)
+		table_agromachine = TableAgromachines(agromachines)
+		table_combine = TableCombines(combines)
+		table_car = TableCars(cars)
+
+		text_out += table_counts_machines.table()
+
+		text_out += table_diesel.table(CONST_MODE_DATA_VAR)
+		text_out += table_agromachine.table(CONST_MODE_DATA_VAR)
+		text_out += table_combine.table(CONST_MODE_DATA_VAR)
+		text_out += table_car.table(CONST_MODE_DATA_VAR)
+
+		text_out += table_diesel.table(CONST_MODE_N_WORK)
+		text_out += table_agromachine.table(CONST_MODE_N_WORK)
+		text_out += table_combine.table(CONST_MODE_N_WORK)
+		text_out += table_car.table(CONST_MODE_N_WORK)
+
+		text_out += table_diesel.table(CONST_MODE_T_WORK)
+		text_out += table_agromachine.table(CONST_MODE_T_WORK)
+		text_out += table_combine.table(CONST_MODE_T_WORK)
+		text_out += table_car.table(CONST_MODE_T_WORK)
+
+		textarea.insert("1.0", text_out)
+		print(text_out)
+
+		topwin.mainloop()
+
+
 	def _managers_write(self, name_machine:str, entry_obj:Entry):
 		self.manager_entries.append_entry(name_machine, entry_obj)
 		self.manager_machines.set(name_machine)
-
-
-
-	def launch_calculation(self):
-		print(build_header("Курсовая (обслуживание и ремонт)"))
-		print(build_header("Расчетная часть"))
-
-		for machine in DATA_DIESEL:
-			print(build_header(machine.NAME))
-			calc = CalculatorDiesel(machine,  self.manager_machines.get(machine.NAME))
-			_, output_str = calc.get_N()
-			print(output_str )
-
-		for machine in DATA_AGROMACHINE:
-			print(build_header(machine.NAME))
-			calc = CalculatorAgromachine(machine,  self.manager_machines.get(machine.NAME))
-			_, output_str = calc.get_N()
-			print(output_str )
-
-		for machine in DATA_COMBINE:
-			print(build_header(machine.NAME))
-			calc = CalculatorCombine(machine,  self.manager_machines.get(machine.NAME))
-			_, output_str = calc.get_N()
-			print(output_str )
-
-		for machine in DATA_CAR:
-			print(build_header(machine.NAME))
-			calc = CalculatorCar(machine,  self.manager_machines.get(machine.NAME))
-			_, output_str = calc.get_N()
-			print(output_str )
-
-
-		print(build_header("РАСЧЕТ ФОРМУЛ НА ТРУДОЕМКОСТЬ"))
-
-
-		for machine in DATA_DIESEL:
-			print(build_header(machine.NAME))
-			calc = CalculatorDiesel(machine,  self.manager_machines.get(machine.NAME))
-			_, output_str = calc.get_T()
-			print(output_str )
-
-		for machine in DATA_AGROMACHINE:
-			print(build_header(machine.NAME))
-			calc = CalculatorAgromachine(machine,  self.manager_machines.get(machine.NAME))
-			_, output_str = calc.get_T()
-			print(output_str )
-
-		for machine in DATA_COMBINE:
-			print(build_header(machine.NAME))
-			calc = CalculatorCombine(machine,  self.manager_machines.get(machine.NAME))
-			_, output_str = calc.get_T()
-			print(output_str )
-
-		for machine in DATA_CAR:
-			print(build_header(machine.NAME))
-			calc = CalculatorCar(machine,  self.manager_machines.get(machine.NAME))
-			_, output_str = calc.get_T()
-			print(output_str )
 
 
 	def mainloop(self):

@@ -1,8 +1,15 @@
+from constants import *
 # class models for storage 
 # constants values for calculation
 
+CATEGORY_DIESEL = 1
+CATEGORY_AGROMACHINE = 2
+CATEGORY_COMBINE = 3
+CATEGORY_CAR = 4
+
 class ModelDataDiesel():
 	def __init__(self,NAME,NKR_U,NKR_N,NTR_N,NTO_3_N,NTO_2_N,NTO_1_N,NCTO,TKR,TTR,TTO_3,TTO_2,TTO_1,TCTO):
+		self.category = CATEGORY_DIESEL
 		self.NAME = NAME
 		self.NKR_U = NKR_U
 		self.NKR_N = NKR_N
@@ -20,6 +27,7 @@ class ModelDataDiesel():
 
 class ModelDataAgromachine():
 	def __init__(self, NAME, NTR, NCTO, TTR, TCTO):
+		self.category = CATEGORY_AGROMACHINE
 		self.NAME = NAME
 		self.NTR = NTR
 		self.NCTO = NCTO
@@ -28,6 +36,7 @@ class ModelDataAgromachine():
 
 class ModelDataCombine():
 	def __init__(self,NAME,NKR,NTR,NTO,NTO_2,NTO_1,NCTO,TKR,TTR,TTO_2,TTO_1,TCTO):
+		self.category = CATEGORY_COMBINE
 		self.NAME = NAME
 		self.NKR = NKR
 		self.NTR = NTR
@@ -43,6 +52,7 @@ class ModelDataCombine():
 
 class ModelDataCar():
 	def __init__(self,NAME,NKR_U,NKR_N,NTO_2_N,NTO_1_N,NCTO,TKR,TTO_2,TTO_1,TCTO,TTR_U1,TTR_D,TTR_Z):
+		self.category = CATEGORY_CAR
 		self.NAME = NAME
 		self.NKR_U = NKR_U
 		self.NKR_N = NKR_N

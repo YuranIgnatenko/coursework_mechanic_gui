@@ -1,5 +1,6 @@
 from tkinter import *
 from constants import DATA_MACHINES_ALL
+from models import *
 from manager_calc import *
 from manager_output import build_header
 from threading import Thread
@@ -107,67 +108,28 @@ class Window():
 		text_out += build_header("Курсовая (обслуживание и ремонт)")
 		text_out += build_header("Расчетная часть")
 		
-		for machine in DATA_DIESEL:
-			 
-			calc = CalculatorDiesel(machine,  self.manager_machines.get(machine.NAME))
-			diesels.append(calc)
+		for machine in DATA_MACHINES_ALL:
+			if machine.category == CATEGORY_DIESEL:
+				calc = CalculatorDiesel(machine,  self.manager_machines.get(machine.NAME))
+				diesels.append(calc)
+			elif machine.category == CATEGORY_AGROMACHINE:
+				calc = CalculatorAgromachine(machine,  self.manager_machines.get(machine.NAME))
+				agromachines.append(calc)
+			elif machine.category == CATEGORY_COMBINE:
+				calc = CalculatorCombine(machine,  self.manager_machines.get(machine.NAME))
+				combines.append(calc)
+			elif machine.category == CATEGORY_CAR:
+				calc = CalculatorCar(machine,  self.manager_machines.get(machine.NAME))
+				cars.append(calc)
+
 			temp_storage, output_str = calc.get_N()
 			self.list_storages_results.append(temp_storage)
 			text_out += output_str
-
-		for machine in DATA_AGROMACHINE:
-			 
-			calc = CalculatorAgromachine(machine,  self.manager_machines.get(machine.NAME))
-			agromachines.append(calc)
-			temp_storage, output_str = calc.get_N()
-			self.list_storages_results.append(temp_storage)
-			text_out += output_str
-
-		for machine in DATA_COMBINE:
-			 
-			calc = CalculatorCombine(machine,  self.manager_machines.get(machine.NAME))
-			combines.append(calc)
-			temp_storage, output_str = calc.get_N()
-			self.list_storages_results.append(temp_storage)
-			text_out += output_str
-
-		for machine in DATA_CAR:
-			 
-			calc = CalculatorCar(machine,  self.manager_machines.get(machine.NAME))
-			cars.append(calc)
-			temp_storage, output_str = calc.get_N()
-			self.list_storages_results.append(temp_storage)
-			text_out += output_str
-
-		text_out += build_header("РАСЧЕТ ФОРМУЛ НА ТРУДОЕМКОСТЬ")
-		
-		for machine in DATA_DIESEL:
-			 
-			calc = CalculatorDiesel(machine,  self.manager_machines.get(machine.NAME))
+			
 			temp_storage, output_str = calc.get_T()
 			self.list_storages_results.append(temp_storage)
 			text_out += output_str
 
-		for machine in DATA_AGROMACHINE:
-			 
-			calc = CalculatorAgromachine(machine,  self.manager_machines.get(machine.NAME))
-			temp_storage, output_str = calc.get_T()
-			self.list_storages_results.append(temp_storage)
-			text_out += output_str
-
-		for machine in DATA_COMBINE:
-			 
-			calc = CalculatorCombine(machine,  self.manager_machines.get(machine.NAME))
-			temp_storage, output_str = calc.get_T()
-			self.list_storages_results.append(temp_storage)
-			text_out += output_str
-
-		for machine in DATA_CAR:
-			 
-			calc = CalculatorCar(machine,  self.manager_machines.get(machine.NAME))
-			temp_storage, output_str = calc.get_T()
-			self.list_storages_results.append(temp_storage)
-			text_out += output_str
 
 		table_counts_machines = TableCountsMachines(self.manager_machines.to_dict())
 		table_diesel = TableDiesels(diesels)

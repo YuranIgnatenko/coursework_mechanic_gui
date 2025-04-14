@@ -1,10 +1,10 @@
 from tkinter import *
 from constants import DATA_MACHINES_ALL
 from models import *
-from manager_calc import *
-from manager_output import build_header
+from calc import *
 from threading import Thread
 import matplotlib.pyplot as plt
+from tables import *
 
 class ManagerMachines():
 	def __init__(self):
@@ -132,6 +132,7 @@ class Window():
 
 
 		table_counts_machines = TableCountsMachines(self.manager_machines.to_dict())
+
 		table_diesel = TableDiesels(diesels)
 		table_agromachine = TableAgromachines(agromachines)
 		table_combine = TableCombines(combines)
@@ -166,7 +167,6 @@ class Window():
 		text_out += table_graph.table(res)
 
 		textarea.insert("1.0", text_out)
-		# print(text_out)
 		self.btn_appply_machines['bg']='green'
 
 		self.create_graph(list_mounth, list_season)

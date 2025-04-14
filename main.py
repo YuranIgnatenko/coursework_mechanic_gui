@@ -1,7 +1,7 @@
 from sys import *
 import matplotlib.pyplot as plt
 from tkinter import*
-from manager_ui import Window
+from ui import Window
 
 win = Window()
 win.create_ui()

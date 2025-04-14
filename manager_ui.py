@@ -1,8 +1,9 @@
 from tkinter import *
 from constants import DATA_MACHINES_ALL
 from manager_calc import *
-from manager_output import build_table, build_header
+from manager_output import build_header
 from threading import Thread
+import matplotlib.pyplot as plt
 
 class ManagerMachines():
 	def __init__(self):
@@ -46,6 +47,8 @@ class Window():
 		self.list_machines = DATA_MACHINES_ALL
 		self.manager_machines = ManagerMachines()
 		self.manager_entries = ManagerEntries()
+		self.list_storages_results = []
+
 
 	def create_ui(self):
 		self.win = Tk()
@@ -78,13 +81,12 @@ class Window():
 			e.insert(0,1)
 
 	def _command_apply(self):
+		self.btn_appply_machines['bg']='yellow'
 		def launch_calc():
 			for machine in self.list_machines:
 				name = machine.NAME
 				temp_count = self.manager_entries.get_value(name)
 				self.manager_machines.set(name, temp_count)
-			# print("apply")
-			# build_table(self.manager_machines.to_dict())
 			self.launch_calculation()
 		Thread(target=launch_calc).start()
 
@@ -106,57 +108,65 @@ class Window():
 		text_out += build_header("Расчетная часть")
 		
 		for machine in DATA_DIESEL:
-			print(build_header(machine.NAME))
+			 
 			calc = CalculatorDiesel(machine,  self.manager_machines.get(machine.NAME))
 			diesels.append(calc)
-			_, output_str = calc.get_N()
+			temp_storage, output_str = calc.get_N()
+			self.list_storages_results.append(temp_storage)
 			text_out += output_str
 
 		for machine in DATA_AGROMACHINE:
-			print(build_header(machine.NAME))
+			 
 			calc = CalculatorAgromachine(machine,  self.manager_machines.get(machine.NAME))
 			agromachines.append(calc)
-			_, output_str = calc.get_N()
+			temp_storage, output_str = calc.get_N()
+			self.list_storages_results.append(temp_storage)
 			text_out += output_str
 
 		for machine in DATA_COMBINE:
-			print(build_header(machine.NAME))
+			 
 			calc = CalculatorCombine(machine,  self.manager_machines.get(machine.NAME))
 			combines.append(calc)
-			_, output_str = calc.get_N()
+			temp_storage, output_str = calc.get_N()
+			self.list_storages_results.append(temp_storage)
 			text_out += output_str
 
 		for machine in DATA_CAR:
-			print(build_header(machine.NAME))
+			 
 			calc = CalculatorCar(machine,  self.manager_machines.get(machine.NAME))
 			cars.append(calc)
-			_, output_str = calc.get_N()
+			temp_storage, output_str = calc.get_N()
+			self.list_storages_results.append(temp_storage)
 			text_out += output_str
 
 		text_out += build_header("РАСЧЕТ ФОРМУЛ НА ТРУДОЕМКОСТЬ")
 		
 		for machine in DATA_DIESEL:
-			print(build_header(machine.NAME))
+			 
 			calc = CalculatorDiesel(machine,  self.manager_machines.get(machine.NAME))
-			_, output_str = calc.get_T()
+			temp_storage, output_str = calc.get_T()
+			self.list_storages_results.append(temp_storage)
 			text_out += output_str
 
 		for machine in DATA_AGROMACHINE:
-			print(build_header(machine.NAME))
+			 
 			calc = CalculatorAgromachine(machine,  self.manager_machines.get(machine.NAME))
-			_, output_str = calc.get_T()
+			temp_storage, output_str = calc.get_T()
+			self.list_storages_results.append(temp_storage)
 			text_out += output_str
 
 		for machine in DATA_COMBINE:
-			print(build_header(machine.NAME))
+			 
 			calc = CalculatorCombine(machine,  self.manager_machines.get(machine.NAME))
-			_, output_str = calc.get_T()
+			temp_storage, output_str = calc.get_T()
+			self.list_storages_results.append(temp_storage)
 			text_out += output_str
 
 		for machine in DATA_CAR:
-			print(build_header(machine.NAME))
+			 
 			calc = CalculatorCar(machine,  self.manager_machines.get(machine.NAME))
-			_, output_str = calc.get_T()
+			temp_storage, output_str = calc.get_T()
+			self.list_storages_results.append(temp_storage)
 			text_out += output_str
 
 		table_counts_machines = TableCountsMachines(self.manager_machines.to_dict())
@@ -182,19 +192,93 @@ class Window():
 		text_out += table_combine.table(CONST_MODE_T_WORK)
 		text_out += table_car.table(CONST_MODE_T_WORK)
 
-		textarea.insert("1.0", text_out)
-		print(text_out)
+
 
 		with open(NAMEFILE_OUTPUT_TXT, "w", encoding="utf-8") as file:
 			file.write(text_out)
 
-		topwin.mainloop()
+		list_season, list_mounth = self.get_all_results()
+		table_graph = TableDateGraph()
+		
+		res = self.sorted_values(list_mounth, list_season)
+		text_out += table_graph.table(res)
 
+		textarea.insert("1.0", text_out)
+		# print(text_out)
+		self.btn_appply_machines['bg']='green'
+
+		self.create_graph(list_mounth, list_season)
+		
+
+
+
+	def get_all_results(self) -> tuple:
+		'''1 - list season 2 - list other mounth'''
+		list_season_values = []
+		list_other_mounth_values = []
+
+		for storage in self.list_storages_results:
+			dict_results = storage.__dict__
+			for key in dict_results:
+				value = dict_results[key]
+				if str(key).find("CTO") != -1:
+					list_season_values.append(value)
+				else:
+					list_other_mounth_values.append(value)
+		return (list_other_mounth_values, list_season_values)
+
+	def sorted_values(self, list_mounth:list[float], list_season:list[float]) -> list:
+		list_mounth.sort(reverse=True)
+		list_season.sort()
+		new_list_mounth = [[] for _ in range(10)]
+		c = 0
+		for value in list_mounth:
+			new_list_mounth[c].append(value)
+			if c==9:c=0
+			else:c+=1
+
+		new_list_result = []
+		c = 0
+		for i in new_list_mounth:
+			if c % 2 == 0:
+				new_list_result.append(new_list_mounth.pop(c))
+			c+=1
+		new_list_result.reverse()
+		new_list_mounth+=new_list_result
+		
+		num1, num2 = 0,0
+		# c=0
+		# for value in list_season:
+		# 	if c % 2 == 0:
+		# 		num1 += value
+		# 	else:
+		# 		num2 += value
+		# 	c+=1
+
+		result = new_list_mounth[:2]+[[0]]+new_list_mounth[2:-2]+[[0]]+new_list_mounth[-2:]
+		return result
+
+	def create_graph(self, list_mounth:list[float], list_season:list[float]):
+		res = self.sorted_values(list_mounth, list_season)
+
+		data = []
+		for arr in res:
+			data.append(sum(arr))
+
+		ax = [i+1 for i in range (12)]
+		plt.plot(ax, data, marker="o", color='skyblue', label='Трудоёмкость')
+		plt.title("График ремонтов и обслуживания по месяцам")
+		plt.xlabel("mounth")
+		plt.ylabel("value")
+		plt.axhline(0, color='black', linewidth=1, linestyle="--")
+		plt.grid(True)
+		plt.legend()
+		plt.savefig("plot.png", format='png')
+		plt.show()
 
 	def _managers_write(self, name_machine:str, entry_obj:Entry):
 		self.manager_entries.append_entry(name_machine, entry_obj)
 		self.manager_machines.set(name_machine)
-
 
 	def mainloop(self):
 		self.win.mainloop()

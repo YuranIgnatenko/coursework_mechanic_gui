@@ -3,6 +3,7 @@ from models import *
 from manager_output import *
 from constants import *
 from prettytable import PrettyTable
+import numpy as np
 
 CONST_MODE_N_WORK = 1
 CONST_MODE_T_WORK = 2
@@ -357,4 +358,24 @@ class TableCountsMachines():
 		while td_data:
 			table.add_row(td_data[:columns])
 			td_data = td_data[columns:]
+		return f"{table}\n"
+	
+class TableDateGraph():
+	def __init__(self):
+		pass
+	def table(self, data_array_2d) -> str:
+		table = PrettyTable()
+		table.field_names = [
+			'jan', 'feb', 'march', 
+			'apr', "may", 'jun', 
+			'jul', 'aug', 'sept', 
+			'oct', 'nov', 'dec']
+
+		
+		max_length = max(len(row) for row in data_array_2d)
+		fulled_data = [row + [0] * (max_length - len(row)) for row in data_array_2d]
+		temp = [list(row) for row in zip(*fulled_data)]
+
+		for arr in temp:
+			table.add_row(arr)
 		return f"{table}\n"

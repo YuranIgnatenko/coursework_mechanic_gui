@@ -1,7 +1,7 @@
 from models import *
 
-NAMEFILE_OUTPUT_TXT = "calculation_output.txt"
-
+NAMEFILE_OUTPUT_TXT = "output/calculation_output.txt"
+NAMEFILE_OUTPUT_GRAPH_PNG = "output/plot.png"
 
 DATA_DIESEL = [
 	ModelDataDiesel('K-700', 3200, 11970, 5120, 2560, 640, 160, 2, 410, 297, 43.2, 10.6, 2.5, 29.3),

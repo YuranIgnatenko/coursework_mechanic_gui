@@ -1,5 +1,5 @@
 from tkinter import *
-from constants import DATA_MACHINES_ALL
+from constants import *
 from models import *
 from calc import *
 from threading import Thread
@@ -94,7 +94,7 @@ class Window():
 
 	def launch_calculation(self):
 		topwin = Toplevel(self.win)
-		topwin.geometry("800x600+100+100")
+		topwin.geometry("800x600+300+100")
 		textarea = Text(topwin)
 		textarea.pack(fill=BOTH,expand=True)
 
@@ -109,6 +109,7 @@ class Window():
 		text_out += build_header("Расчетная часть")
 		
 		for machine in DATA_MACHINES_ALL:
+			text_out += build_header(machine.NAME)
 			if machine.category == CATEGORY_DIESEL:
 				calc = CalculatorDiesel(machine,  self.manager_machines.get(machine.NAME))
 				diesels.append(calc)
@@ -235,7 +236,7 @@ class Window():
 		plt.axhline(0, color='black', linewidth=1, linestyle="--")
 		plt.grid(True)
 		plt.legend()
-		plt.savefig("plot.png", format='png')
+		plt.savefig(NAMEFILE_OUTPUT_GRAPH_PNG, format='png')
 		plt.show()
 
 	def _managers_write(self, name_machine:str, entry_obj:Entry):
